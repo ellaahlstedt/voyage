@@ -21,7 +21,7 @@
             "userName": "Test5"
         }
     ],
-    "countries": [
+    "destinations": [
         {
             "id": 1,
             "region": "British Isles",
