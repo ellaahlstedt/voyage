@@ -1,0 +1,61 @@
+{
+    "users": [
+        {
+            "userId": 1,
+            "name": "Test"
+        },
+        {
+            "userId": 2,
+            "name": "Test2"
+        },
+        {
+            "userId": 3,
+            "name": "Test3"
+        },
+        {
+            "userId": 4,
+            "name": "Test4"
+        },
+        {
+            "userId": 5,
+            "name": "Test5"
+        }
+    ],
+    "countries": [
+        {
+            "id": 1,
+            "region": "British Isles",
+            "country": "England",
+            "city": "London",
+            "likedBy": []
+        },
+        {
+            "id": 2,
+            "region": "Northern Europe",
+            "name": "Norway",
+            "city": "Bergen",
+            "likedBy": []
+        },
+        {
+            "id": 3,
+            "region": "Western Europe",
+            "country": "France",
+            "city": "Paris",
+            "likedBy": []
+        },
+        {
+            "id": 4,
+            "region": "The Baltics",
+            "country": "Estonia",
+            "city": "Tallinn",
+            "likedBy": []
+        },
+        {
+            "id": 5,
+            "region": "Southern Europe",
+            "country": "Greece",
+            "city": "Athens",
+            "likedBy": []
+        }
+    ]
+}
