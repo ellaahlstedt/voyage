@@ -1121,5 +1121,1052 @@
                 }
             ]
         }
-    ]
-}
+    ],
+
+"destinations2": [
+            {
+                "id": 1,
+                "name": "British Isles",
+                "countries": [
+                    {
+                        "id": 101,
+                        "name": "England",
+                        "images": "../images/england.jpeg",
+                        "cities": [
+                            {
+                                "id": 10101,
+                                "name": "London"
+                            },
+                            {
+                                "id": 10102,
+                                "name": "Manchester"
+                            },
+                            {
+                                "id": 10103,
+                                "name": "Birmingham"
+                            },
+                            {
+                                "id": 10104,
+                                "name": "Liverpool"
+                            },
+                            {
+                                "id": 10105,
+                                "name": "Leeds"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 102,
+                        "name": "Wales",
+                        "images": "../images/wales.jpeg",
+                        "cities": [
+                            {
+                                "id": 10201,
+                                "name": "Cardiff"
+                            },
+                            {
+                                "id": 10202,
+                                "name": "Swansea"
+                            },
+                            {
+                                "id": 10203,
+                                "name": "Newport"
+                            },
+                            {
+                                "id": 10204,
+                                "name": "Bangor"
+                            },
+                            {
+                                "id": 10205,
+                                "name": "Wrexham"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 103,
+                        "name": "Scotland",
+                        "images": "../images/scotland.jpeg",
+                        "cities": [
+                            {
+                                "id": 10301,
+                                "name": "Edinburgh"
+                            },
+                            {
+                                "id": 10302,
+                                "name": "Glasgow"
+                            },
+                            {
+                                "id": 10303,
+                                "name": "Aberdeen"
+                            },
+                            {
+                                "id": 10304,
+                                "name": "Dundee"
+                            },
+                            {
+                                "id": 10305,
+                                "name": "Inverness"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 104,
+                        "name": "Northern Ireland",
+                        "images": "../images/northernireland.jpeg",
+                        "cities": [
+                            {
+                                "id": 10401,
+                                "name": "Belfast"
+                            },
+                            {
+                                "id": 10402,
+                                "name": "Derry"
+                            },
+                            {
+                                "id": 10403,
+                                "name": "Armagh"
+                            },
+                            {
+                                "id": 10404,
+                                "name": "Newry"
+                            },
+                            {
+                                "id": 10405,
+                                "name": "Lisburn"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 105,
+                        "name": "Ireland",
+                        "images": "../images/ireland.jpeg",
+                        "cities": [
+                            {
+                                "id": 10501,
+                                "name": "Dublin"
+                            },
+                            {
+                                "id": 10502,
+                                "name": "Cork"
+                            },
+                            {
+                                "id": 10503,
+                                "name": "Galway"
+                            },
+                            {
+                                "id": 10504,
+                                "name": "Limerick"
+                            },
+                            {
+                                "id": 10505,
+                                "name": "Waterford"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Northern Europe",
+                "countries": [
+                    {
+                        "id": 201,
+                        "name": "Denmark",
+                        "images": "../images/denmark.jpeg",
+                        "cities": [
+                            {
+                                "id": 20101,
+                                "name": "Copenhagen"
+                            },
+                            {
+                                "id": 20102,
+                                "name": "Aarhus"
+                            },
+                            {
+                                "id": 20103,
+                                "name": "Odense"
+                            },
+                            {
+                                "id": 20104,
+                                "name": "Aalborg"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 202,
+                        "name": "Sweden",
+                        "images": "../images/sweden.jpeg",
+                        "cities": [
+                            {
+                                "id": 20201,
+                                "name": "Stockholm"
+                            },
+                            {
+                                "id": 20202,
+                                "name": "Gothenburg"
+                            },
+                            {
+                                "id": 20203,
+                                "name": "Malmö"
+                            },
+                            {
+                                "id": 20204,
+                                "name": "Uppsala"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 203,
+                        "name": "Norway",
+                        "images": "../images/norway.jpeg",
+                        "cities": [
+                            {
+                                "id": 20301,
+                                "name": "Oslo"
+                            },
+                            {
+                                "id": 20302,
+                                "name": "Bergen"
+                            },
+                            {
+                                "id": 20303,
+                                "name": "Trondheim"
+                            },
+                            {
+                                "id": 20304,
+                                "name": "Stavanger"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 204,
+                        "name": "Finland",
+                        "images": "../images/finland.jpeg",
+                        "cities": [
+                            {
+                                "id": 20401,
+                                "name": "Helsinki"
+                            },
+                            {
+                                "id": 20402,
+                                "name": "Espoo"
+                            },
+                            {
+                                "id": 20403,
+                                "name": "Tampere"
+                            },
+                            {
+                                "id": 20404,
+                                "name": "Vantaa"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 205,
+                        "name": "Iceland",
+                        "images": "../images/iceland.jpeg",
+                        "cities": [
+                            {
+                                "id": 20501,
+                                "name": "Reykjavik"
+                            },
+                            {
+                                "id": 20502,
+                                "name": "Kópavogur"
+                            },
+                            {
+                                "id": 20503,
+                                "name": "Hafnarfjörður"
+                            },
+                            {
+                                "id": 20504,
+                                "name": "Akureyri"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 206,
+                        "name": "Estonia",
+                        "images": "../images/estonia.jpeg",
+                        "cities": [
+                            {
+                                "id": 20601,
+                                "name": "Tallinn"
+                            },
+                            {
+                                "id": 20602,
+                                "name": "Tartu"
+                            },
+                            {
+                                "id": 20603,
+                                "name": "Narva"
+                            },
+                            {
+                                "id": 20604,
+                                "name": "Pärnu"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 207,
+                        "name": "Latvia",
+                        "images": "../images/latvia.jpeg",
+                        "cities": [
+                            {
+                                "id": 20701,
+                                "name": "Riga"
+                            },
+                            {
+                                "id": 20702,
+                                "name": "Daugavpils"
+                            },
+                            {
+                                "id": 20703,
+                                "name": "Liepāja"
+                            },
+                            {
+                                "id": 20704,
+                                "name": "Jelgava"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 208,
+                        "name": "Lithuania",
+                        "images": "../images/lithuania.jpeg",
+                        "cities": [
+                            {
+                                "id": 20801,
+                                "name": "Vilnius"
+                            },
+                            {
+                                "id": 20802,
+                                "name": "Kaunas"
+                            },
+                            {
+                                "id": 20803,
+                                "name": "Klaipėda"
+                            },
+                            {
+                                "id": 20804,
+                                "name": "Šiauliai"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Western Europe",
+                "countries": [
+                    {
+                        "id": 301,
+                        "name": "France",
+                        "images": "../images/france.jpeg",
+                        "cities": [
+                            {
+                                "id": 30101,
+                                "name": "Paris"
+                            },
+                            {
+                                "id": 30102,
+                                "name": "Marseille"
+                            },
+                            {
+                                "id": 30103,
+                                "name": "Lyon"
+                            },
+                            {
+                                "id": 30104,
+                                "name": "Toulouse"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 302,
+                        "name": "Germany",
+                        "images": "../images/germany.jpeg",
+                        "cities": [
+                            {
+                                "id": 30201,
+                                "name": "Berlin"
+                            },
+                            {
+                                "id": 30202,
+                                "name": "Hamburg"
+                            },
+                            {
+                                "id": 30203,
+                                "name": "Munich"
+                            },
+                            {
+                                "id": 30204,
+                                "name": "Cologne"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 303,
+                        "name": "Belgium",
+                        "images": "../images/belgium.jpeg",
+                        "cities": [
+                            {
+                                "id": 30301,
+                                "name": "Brussels"
+                            },
+                            {
+                                "id": 30302,
+                                "name": "Antwerp"
+                            },
+                            {
+                                "id": 30303,
+                                "name": "Ghent"
+                            },
+                            {
+                                "id": 30304,
+                                "name": "Bruges"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 304,
+                        "name": "Netherlands",
+                        "images": "../images/netherlands.jpeg",
+                        "cities": [
+                            {
+                                "id": 30401,
+                                "name": "Amsterdam"
+                            },
+                            {
+                                "id": 30402,
+                                "name": "Rotterdam"
+                            },
+                            {
+                                "id": 30403,
+                                "name": "The Hague"
+                            },
+                            {
+                                "id": 30404,
+                                "name": "Utrecht"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 305,
+                        "name": "Luxembourg",
+                        "images": "../images/luxembourg.jpeg",
+                        "cities": [
+                            {
+                                "id": 30501,
+                                "name": "Luxembourg City"
+                            },
+                            {
+                                "id": 30502,
+                                "name": "Esch-sur-Alzette"
+                            },
+                            {
+                                "id": 30503,
+                                "name": "Differdange"
+                            },
+                            {
+                                "id": 30504,
+                                "name": "Dudelange"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 306,
+                        "name": "Switzerland",
+                        "images": "../images/switzerland.jpeg",
+                        "cities": [
+                            {
+                                "id": 30601,
+                                "name": "Zurich"
+                            },
+                            {
+                                "id": 30602,
+                                "name": "Geneva"
+                            },
+                            {
+                                "id": 30603,
+                                "name": "Basel"
+                            },
+                            {
+                                "id": 30604,
+                                "name": "Bern"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 307,
+                        "name": "Austria",
+                        "images": "../images/austria.jpeg",
+                        "cities": [
+                            {
+                                "id": 30701,
+                                "name": "Vienna"
+                            },
+                            {
+                                "id": 30702,
+                                "name": "Graz"
+                            },
+                            {
+                                "id": 30703,
+                                "name": "Linz"
+                            },
+                            {
+                                "id": 30704,
+                                "name": "Salzburg"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "The Balkans",
+                "countries": [
+                    {
+                        "id": 401,
+                        "name": "Greece",
+                        "images": "../images/greece.jpeg",
+                        "cities": [
+                            {
+                                "id": 40101,
+                                "name": "Athens"
+                            },
+                            {
+                                "id": 40102,
+                                "name": "Thessaloniki"
+                            },
+                            {
+                                "id": 40103,
+                                "name": "Patras"
+                            },
+                            {
+                                "id": 40104,
+                                "name": "Heraklion"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 402,
+                        "name": "Albania",
+                        "images": "../images/albania.jpeg",
+                        "cities": [
+                            {
+                                "id": 40201,
+                                "name": "Tirana"
+                            },
+                            {
+                                "id": 40202,
+                                "name": "Durrës"
+                            },
+                            {
+                                "id": 40203,
+                                "name": "Vlorë"
+                            },
+                            {
+                                "id": 40204,
+                                "name": "Shkodër"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 403,
+                        "name": "North Macedonia",
+                        "images": "../images/macedonia.jpeg",
+                        "cities": [
+                            {
+                                "id": 40301,
+                                "name": "Skopje"
+                            },
+                            {
+                                "id": 40302,
+                                "name": "Bitola"
+                            },
+                            {
+                                "id": 40303,
+                                "name": "Kumanovo"
+                            },
+                            {
+                                "id": 40304,
+                                "name": "Prilep"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 404,
+                        "name": "Serbia",
+                        "images": "../images/serbia.jpeg",
+                        "cities": [
+                            {
+                                "id": 40401,
+                                "name": "Belgrade"
+                            },
+                            {
+                                "id": 40402,
+                                "name": "Novi Sad"
+                            },
+                            {
+                                "id": 40403,
+                                "name": "Niš"
+                            },
+                            {
+                                "id": 40404,
+                                "name": "Kragujevac"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 405,
+                        "name": "Montenegro",
+                        "images": "../images/montenegro.jpeg",
+                        "cities": [
+                            {
+                                "id": 40501,
+                                "name": "Podgorica"
+                            },
+                            {
+                                "id": 40502,
+                                "name": "Nikšić"
+                            },
+                            {
+                                "id": 40503,
+                                "name": "Pljevlja"
+                            },
+                            {
+                                "id": 40504,
+                                "name": "Herceg Novi"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 406,
+                        "name": "Bosnia and Herzegovina",
+                        "images": "../images/bosniaherzegovina.jpeg",
+                        "cities": [
+                            {
+                                "id": 40601,
+                                "name": "Sarajevo"
+                            },
+                            {
+                                "id": 40602,
+                                "name": "Banja Luka"
+                            },
+                            {
+                                "id": 40603,
+                                "name": "Tuzla"
+                            },
+                            {
+                                "id": 40604,
+                                "name": "Zenica"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 407,
+                        "name": "Croatia",
+                        "images": "../images/croatia.jpeg",
+                        "cities": [
+                            {
+                                "id": 40701,
+                                "name": "Zagreb"
+                            },
+                            {
+                                "id": 40702,
+                                "name": "Split"
+                            },
+                            {
+                                "id": 40703,
+                                "name": "Rijeka"
+                            },
+                            {
+                                "id": 40704,
+                                "name": "Osijek"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 408,
+                        "name": "Slovenia",
+                        "images": "../images/slovenia.jpeg",
+                        "cities": [
+                            {
+                                "id": 40801,
+                                "name": "Ljubljana"
+                            },
+                            {
+                                "id": 40802,
+                                "name": "Maribor"
+                            },
+                            {
+                                "id": 40803,
+                                "name": "Celje"
+                            },
+                            {
+                                "id": 40804,
+                                "name": "Kranj"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 409,
+                        "name": "Kosovo",
+                        "images": "../images/kosovo.jpeg",
+                        "cities": [
+                            {
+                                "id": 40901,
+                                "name": "Pristina"
+                            },
+                            {
+                                "id": 40902,
+                                "name": "Prizren"
+                            },
+                            {
+                                "id": 40903,
+                                "name": "Gjakova"
+                            },
+                            {
+                                "id": 40904,
+                                "name": "Peja"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 410,
+                        "name": "Bulgaria",
+                        "images": "../images/bulgaria.jpeg",
+                        "cities": [
+                            {
+                                "id": 41001,
+                                "name": "Sofia"
+                            },
+                            {
+                                "id": 41002,
+                                "name": "Plovdiv"
+                            },
+                            {
+                                "id": 41003,
+                                "name": "Varna"
+                            },
+                            {
+                                "id": 41004,
+                                "name": "Burgas"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Southern Europe",
+                "countries": [
+                    {
+                        "id": 501,
+                        "name": "Italy",
+                        "images": "../images/italy.jpeg",
+                        "cities": [
+                            {
+                                "id": 50101,
+                                "name": "Rome"
+                            },
+                            {
+                                "id": 50102,
+                                "name": "Milan"
+                            },
+                            {
+                                "id": 50103,
+                                "name": "Naples"
+                            },
+                            {
+                                "id": 50104,
+                                "name": "Turin"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 502,
+                        "name": "Spain",
+                        "images": "../images/spain.jpeg",
+                        "cities": [
+                            {
+                                "id": 50201,
+                                "name": "Madrid"
+                            },
+                            {
+                                "id": 50202,
+                                "name": "Barcelona"
+                            },
+                            {
+                                "id": 50203,
+                                "name": "Valencia"
+                            },
+                            {
+                                "id": 50204,
+                                "name": "Seville"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 503,
+                        "name": "Portugal",
+                        "images": "../images/portugal.jpeg",
+                        "cities": [
+                            {
+                                "id": 50301,
+                                "name": "Lisbon"
+                            },
+                            {
+                                "id": 50302,
+                                "name": "Porto"
+                            },
+                            {
+                                "id": 50303,
+                                "name": "Vila Nova de Gaia"
+                            },
+                            {
+                                "id": 50304,
+                                "name": "Amadora"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 504,
+                        "name": "Malta",
+                        "images": "../images/malta.jpeg",
+                        "cities": [
+                            {
+                                "id": 50401,
+                                "name": "Valletta"
+                            },
+                            {
+                                "id": 50402,
+                                "name": "Birkirkara"
+                            },
+                            {
+                                "id": 50403,
+                                "name": "Mosta"
+                            },
+                            {
+                                "id": 50404,
+                                "name": "Qormi"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 505,
+                        "name": "Cyprus",
+                        "images": "../images/cyprus.jpeg",
+                        "cities": [
+                            {
+                                "id": 50501,
+                                "name": "Nicosia"
+                            },
+                            {
+                                "id": 50502,
+                                "name": "Limassol"
+                            },
+                            {
+                                "id": 50503,
+                                "name": "Larnaca"
+                            },
+                            {
+                                "id": 50504,
+                                "name": "Famagusta"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 506,
+                        "name": "Andorra",
+                        "images": "../images/andorra.jpeg",
+                        "cities": [
+                            {
+                                "id": 50601,
+                                "name": "Andorra la Vella"
+                            },
+                            {
+                                "id": 50602,
+                                "name": "Escaldes-Engordany"
+                            },
+                            {
+                                "id": 50603,
+                                "name": "Encamp"
+                            },
+                            {
+                                "id": 50604,
+                                "name": "Sant Julià de Lòria"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 507,
+                        "name": "Monaco",
+                        "images": "../images/monaco.jpeg",
+                        "cities": [
+                            {
+                                "id": 50701,
+                                "name": "Monaco"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 508,
+                        "name": "San Marino",
+                        "images": "../images/sanmarino.jpeg",
+                        "cities": [
+                            {
+                                "id": 50801,
+                                "name": "San Marino"
+                            },
+                            {
+                                "id": 50802,
+                                "name": "Serravalle"
+                            },
+                            {
+                                "id": 50803,
+                                "name": "Borgo Maggiore"
+                            },
+                            {
+                                "id": 50804,
+                                "name": "Domagnano"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 509,
+                        "name": "Vatican City",
+                        "images": "../images/vatican.jpeg",
+                        "cities": [
+                            {
+                                "id": 50901,
+                                "name": "Vatican City"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 7,
+                "name": "Eastern Europe",
+                "countries": [
+                    {
+                        "id": 701,
+                        "name": "Russia",
+                        "images": "../images/russia.jpeg",
+                        "cities": [
+                            {
+                                "id": 70101,
+                                "name": "Moscow"
+                            },
+                            {
+                                "id": 70102,
+                                "name": "Saint Petersburg"
+                            },
+                            {
+                                "id": 70103,
+                                "name": "Novosibirsk"
+                            },
+                            {
+                                "id": 70104,
+                                "name": "Yekaterinburg"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 702,
+                        "name": "Ukraine",
+                        "images": "../images/ukraine.jpeg",
+                        "cities": [
+                            {
+                                "id": 70201,
+                                "name": "Kyiv"
+                            },
+                            {
+                                "id": 70202,
+                                "name": "Kharkiv"
+                            },
+                            {
+                                "id": 70203,
+                                "name": "Odesa"
+                            },
+                            {
+                                "id": 70204,
+                                "name": "Dnipro"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 703,
+                        "name": "Belarus",
+                        "images": "../images/belarus.jpeg",
+                        "cities": [
+                            {
+                                "id": 70301,
+                                "name": "Minsk"
+                            },
+                            {
+                                "id": 70302,
+                                "name": "Gomel"
+                            },
+                            {
+                                "id": 70303,
+                                "name": "Mogilev"
+                            },
+                            {
+                                "id": 70304,
+                                "name": "Vitebsk"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 704,
+                        "name": "Romania",
+                        "images": "../images/romania.jpeg",
+                        "cities": [
+                            {
+                                "id": 70401,
+                                "name": "Bucharest"
+                            },
+                            {
+                                "id": 70402,
+                                "name": "Cluj-Napoca"
+                            },
+                            {
+                                "id": 70403,
+                                "name": "Timișoara"
+                            },
+                            {
+                                "id": 70404,
+                                "name": "Iași"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 705,
+                        "name": "Moldova",
+                        "images": "../images/moldova.jpeg",
+                        "cities": [
+                            {
+                                "id": 70501,
+                                "name": "Chișinău"
+                            },
+                            {
+                                "id": 70502,
+                                "name": "Bălți"
+                            },
+                            {
+                                "id": 70503,
+                                "name": "Tiraspol"
+                            },
+                            {
+                                "id": 70504,
+                                "name": "Bender"
+                            }
+                        ]
+                    }
+                ]
+            }
+    ]    
+}      
