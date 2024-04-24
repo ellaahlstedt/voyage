@@ -1871,6 +1871,30 @@
                         {
                             "id": 60104,
                             "name": "Plzeň"
+                        },
+                        {
+                            "id": 60105,
+                            "name": "Liberec"
+                        },
+                        {
+                            "id": 60106,
+                            "name": "Olomouc"
+                        },
+                        {
+                            "id": 60107,
+                            "name": "České Budějovice"
+                        },
+                        {
+                            "id": 60108,
+                            "name": "Hradec Králové"
+                        },
+                        {
+                            "id": 60109,
+                            "name": "Pardubice"
+                        },
+                        {
+                            "id": 60110,
+                            "name": "Jihlava"
                         }
                     ]
                 },
@@ -1894,6 +1918,30 @@
                         {
                             "id": 60204,
                             "name": "Žilina"
+                        },
+                        {
+                            "id": 60205,
+                            "name": "Nitra"
+                        },
+                        {
+                            "id": 60206,
+                            "name": "Trnava"
+                        },
+                        {
+                            "id": 60207,
+                            "name": "Martin"
+                        },
+                        {
+                            "id": 60208,
+                            "name": "Banská Bystrica"
+                        },
+                        {
+                            "id": 60209,
+                            "name": "Poprad"
+                        },
+                        {
+                            "id": 60210,
+                            "name": "Trenčín"
                         }
                     ]
                 },
@@ -1917,6 +1965,30 @@
                         {
                             "id": 60304,
                             "name": "Miskolc"
+                        },
+                        {
+                            "id": 60305,
+                            "name": "Pécs"
+                        },
+                        {
+                            "id": 60306,
+                            "name": "Győr"
+                        },
+                        {
+                            "id": 60307,
+                            "name": "Nyíregyháza"
+                        },
+                        {
+                            "id": 60308,
+                            "name": "Kecskemét"
+                        },
+                        {
+                            "id": 60309,
+                            "name": "Szombathely"
+                        },
+                        {
+                            "id": 60310,
+                            "name": "Székesfehérvár"
                         }
                     ]
                 },
@@ -1940,6 +2012,30 @@
                         {
                             "id": 60404,
                             "name": "Wrocław"
+                        },
+                        {
+                            "id": 60405,
+                            "name": "Poznań"
+                        },
+                        {
+                            "id": 60406,
+                            "name": "Gdańsk"
+                        },
+                        {
+                            "id": 60407,
+                            "name": "Szczecin"
+                        },
+                        {
+                            "id": 60408,
+                            "name": "Bydgoszcz"
+                        },
+                        {
+                            "id": 60409,
+                            "name": "Lublin"
+                        },
+                        {
+                            "id": 60410,
+                            "name": "Katowice"
                         }
                     ]
                 }
