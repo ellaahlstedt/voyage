@@ -3,7 +3,7 @@ function renderLogo(parent, fontSize, color = false) {
     const colors = ["#3568C1", "#87A7FC", "#B4C8FF", "#FFDD95", "#FFBC85", "#FE9843"];
 
     let link = document.createElement("a");
-    link.setAttribute("href", "./pages/landing/landing.html");
+    link.setAttribute("href", "./");
     link.classList.add("logo");
     link.style.height = fontSize;
     parent.appendChild(link);

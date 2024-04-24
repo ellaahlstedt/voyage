@@ -1,6 +1,7 @@
 function renderNav(parent, currentPage) {
     let nav = document.createElement("nav");
     nav.id = "mainPagesNav";
+    nav.classList.add("sticky");
     parent.appendChild(nav);
 
     let navItems = document.createElement("div");
@@ -15,7 +16,7 @@ function renderNav(parent, currentPage) {
     const links = [
         {
             name: "Regions",
-            link: "./pages/landing/landing.html"
+            link: "./"
         },
         {
             name: "Countries",
@@ -45,7 +46,14 @@ function renderNav(parent, currentPage) {
 
     let profileCon = document.createElement("div");
     profileCon.id = "navProfileCon";
+    profileCon.addEventListener("click", dropDownNav);
     nav.appendChild(profileCon);
+
+    // Får ändras senare
+    let username = document.createElement("p");
+    username.textContent = "username";
+    username.classList.add("usernameNav");
+    profileCon.appendChild(username);
 
     let userIcon = document.createElement("img");
     userIcon.setAttribute("src", "./fonts/icons/user.png");
@@ -53,5 +61,27 @@ function renderNav(parent, currentPage) {
     userIcon.classList.add("userIconNav");
     profileCon.appendChild(userIcon);
 
+}
+
+// Drop-down
+// Profile & Log out
+function dropDownNav(event) {
+    let profileCon = document.querySelector("#navProfileCon");
+
+    let dropDownCon = document.createElement("ul");
+    dropDownCon.id = "dropDownNav";
+    profileCon.appendChild(dropDownCon);
+
+    let profileListItem = document.createElement("li");
+    dropDownCon.appendChild(profileListItem);
+
+    let LogOutListItem = document.createElement("li");
+    dropDownCon.appendChild(LogOutListItem);
+
+    let profileLink = document.createElement("a");
+    profileLink.setAttribute("href", "./pages/logIn/logIn.html");
+    profileLink.textContent = "Profile";
+    profileListItem.appendChild(profileLink);
 
 }
+
