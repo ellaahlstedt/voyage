@@ -527,6 +527,29 @@
                             "name": "Salzburg"
                         }
                     ]
+                },
+                {
+                    "id": 308,
+                    "name": "Liechtenstein",
+                    "images": "../images/liechtenstein.jpeg",
+                    "cities": [
+                        {
+                            "id": 30801,
+                            "name": "Schaan"
+                        },
+                        {
+                            "id": 30802,
+                            "name": "Vaduz"
+                        },
+                        {
+                            "id": 30803,
+                            "name": "Triesen"
+                        },
+                        {
+                            "id": 30804,
+                            "name": "Balzers"
+                        }
+                    ]
                 }
             ]
         },
@@ -959,116 +982,116 @@
             "id": 6,
             "name": "Central Europe",
             "countries": [
-              {
-                "id": 601,
-                "name": "Czech Republic",
-                "images": "../images/czechrepublic.jpeg",
-                "cities": [
-                  {
-                    "id": 60101,
-                    "name": "Prague",
-                    "images": "../images/prague.jpeg"
-                  },
-                  {
-                    "id": 60102,
-                    "name": "Brno",
-                    "images": "../images/brno.jpeg"
-                  },
-                  {
-                    "id": 60103,
-                    "name": "Ostrava",
-                    "images": "../images/ostrava.jpeg"
-                  },
-                  {
-                    "id": 60104,
-                    "name": "Plzeň",
-                    "images": "../images/plzen.jpeg"
-                  }
-                ]
-              },
-              {
-                "id": 602,
-                "name": "Slovakia",
-                "images": "../images/slovakia.jpeg",
-                "cities": [
-                  {
-                    "id": 60201,
-                    "name": "Bratislava",
-                    "images": "../images/bratislava.jpeg"
-                  },
-                  {
-                    "id": 60202,
-                    "name": "Košice",
-                    "images": "../images/kosice.jpeg"
-                  },
-                  {
-                    "id": 60203,
-                    "name": "Prešov",
-                    "images": "../images/presov.jpeg"
-                  },
-                  {
-                    "id": 60204,
-                    "name": "Žilina",
-                    "images": "../images/zilina.jpeg"
-                  }
-                ]
-              },
-              {
-                "id": 603,
-                "name": "Hungary",
-                "images": "../images/hungary.jpeg",
-                "cities": [
-                  {
-                    "id": 60301,
-                    "name": "Budapest",
-                    "images": "../images/budapest.jpeg"
-                  },
-                  {
-                    "id": 60302,
-                    "name": "Debrecen",
-                    "images": "../images/debrecen.jpeg"
-                  },
-                  {
-                    "id": 60303,
-                    "name": "Szeged",
-                    "images": "../images/szeged.jpeg"
-                  },
-                  {
-                    "id": 60304,
-                    "name": "Miskolc",
-                    "images": "../images/miskolc.jpeg"
-                  }
-                ]
-              },
-              {
-                "id": 604,
-                "name": "Poland",
-                "images": "../images/poland.jpeg",
-                "cities": [
-                  {
-                    "id": 60401,
-                    "name": "Warsaw",
-                    "images": "../images/warsaw.jpeg"
-                  },
-                  {
-                    "id": 60402,
-                    "name": "Kraków",
-                    "images": "../images/krakow.jpeg"
-                  },
-                  {
-                    "id": 60403,
-                    "name": "Łódź",
-                    "images": "../images/lodz.jpeg"
-                  },
-                  {
-                    "id": 60404,
-                    "name": "Wrocław",
-                    "images": "../images/wroclaw.jpeg"
-                  }
-                ]
-              }
+                {
+                    "id": 601,
+                    "name": "Czech Republic",
+                    "images": "../images/czechrepublic.jpeg",
+                    "cities": [
+                        {
+                            "id": 60101,
+                            "name": "Prague",
+                            "images": "../images/prague.jpeg"
+                        },
+                        {
+                            "id": 60102,
+                            "name": "Brno",
+                            "images": "../images/brno.jpeg"
+                        },
+                        {
+                            "id": 60103,
+                            "name": "Ostrava",
+                            "images": "../images/ostrava.jpeg"
+                        },
+                        {
+                            "id": 60104,
+                            "name": "Plzeň",
+                            "images": "../images/plzen.jpeg"
+                        }
+                    ]
+                },
+                {
+                    "id": 602,
+                    "name": "Slovakia",
+                    "images": "../images/slovakia.jpeg",
+                    "cities": [
+                        {
+                            "id": 60201,
+                            "name": "Bratislava",
+                            "images": "../images/bratislava.jpeg"
+                        },
+                        {
+                            "id": 60202,
+                            "name": "Košice",
+                            "images": "../images/kosice.jpeg"
+                        },
+                        {
+                            "id": 60203,
+                            "name": "Prešov",
+                            "images": "../images/presov.jpeg"
+                        },
+                        {
+                            "id": 60204,
+                            "name": "Žilina",
+                            "images": "../images/zilina.jpeg"
+                        }
+                    ]
+                },
+                {
+                    "id": 603,
+                    "name": "Hungary",
+                    "images": "../images/hungary.jpeg",
+                    "cities": [
+                        {
+                            "id": 60301,
+                            "name": "Budapest",
+                            "images": "../images/budapest.jpeg"
+                        },
+                        {
+                            "id": 60302,
+                            "name": "Debrecen",
+                            "images": "../images/debrecen.jpeg"
+                        },
+                        {
+                            "id": 60303,
+                            "name": "Szeged",
+                            "images": "../images/szeged.jpeg"
+                        },
+                        {
+                            "id": 60304,
+                            "name": "Miskolc",
+                            "images": "../images/miskolc.jpeg"
+                        }
+                    ]
+                },
+                {
+                    "id": 604,
+                    "name": "Poland",
+                    "images": "../images/poland.jpeg",
+                    "cities": [
+                        {
+                            "id": 60401,
+                            "name": "Warsaw",
+                            "images": "../images/warsaw.jpeg"
+                        },
+                        {
+                            "id": 60402,
+                            "name": "Kraków",
+                            "images": "../images/krakow.jpeg"
+                        },
+                        {
+                            "id": 60403,
+                            "name": "Łódź",
+                            "images": "../images/lodz.jpeg"
+                        },
+                        {
+                            "id": 60404,
+                            "name": "Wrocław",
+                            "images": "../images/wroclaw.jpeg"
+                        }
+                    ]
+                }
             ]
-        },          
+        },
         {
             "id": 7,
             "name": "Eastern Europe",
