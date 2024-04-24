@@ -1,0 +1,35 @@
+Login för flera sidor
+
+Fördel inbyggd bakåtknapp
+
+if (response.ok) {
+
+window.location.href = "./pages/frontpage"
+window.localStorage.setItem("token", resource.token); //localStorage är universalt object
+}
+
+else {
+    console.log(error)
+};
+
+
+vi vill spara token i localStorage
+
+log in = token: 23er4thyqedwefdqf
+
+if (localStorage.getItem(key:"token")) === undefined || null
+
+
+localStorage.clear
+
+rensar eller loggar ut i vårt fall.
+
+window.location.href = "../../";
+
+log out 
+
+är clear 
+refresh
+nekad pga tom localStorage
+window.location.reload
+

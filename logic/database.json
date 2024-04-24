@@ -31,6 +31,7 @@
             "liked": []
         }
     ],
+
     "destinations": [
         {
             "id": 1,
@@ -47,11 +48,11 @@
                         },
                         {
                             "id": 10102,
-                            "name": "Manchester"
+                            "name": "Birmingham"
                         },
                         {
                             "id": 10103,
-                            "name": "Birmingham"
+                            "name": "Manchester"
                         },
                         {
                             "id": 10104,
@@ -60,6 +61,26 @@
                         {
                             "id": 10105,
                             "name": "Leeds"
+                        },
+                        {
+                            "id": 10106,
+                            "name": "Sheffield"
+                        },
+                        {
+                            "id": 10107,
+                            "name": "Bristol"
+                        },
+                        {
+                            "id": 10108,
+                            "name": "Leicester"
+                        },
+                        {
+                            "id": 10109,
+                            "name": "Coventry"
+                        },
+                        {
+                            "id": 10110,
+                            "name": "Bradford"
                         }
                     ]
                 },
@@ -82,11 +103,31 @@
                         },
                         {
                             "id": 10204,
-                            "name": "Bangor"
+                            "name": "Wrexham"
                         },
                         {
                             "id": 10205,
-                            "name": "Wrexham"
+                            "name": "Barry"
+                        },
+                        {
+                            "id": 10206,
+                            "name": "Cwmbran"
+                        },
+                        {
+                            "id": 10207,
+                            "name": "Llanelli"
+                        },
+                        {
+                            "id": 10208,
+                            "name": "Bridgend"
+                        },
+                        {
+                            "id": 10209,
+                            "name": "Bangor"
+                        },
+                        {
+                            "id": 10210,
+                            "name": "Neath"
                         }
                     ]
                 },
@@ -97,11 +138,11 @@
                     "cities": [
                         {
                             "id": 10301,
-                            "name": "Edinburgh"
+                            "name": "Glasgow"
                         },
                         {
                             "id": 10302,
-                            "name": "Glasgow"
+                            "name": "Edinburgh"
                         },
                         {
                             "id": 10303,
@@ -113,7 +154,27 @@
                         },
                         {
                             "id": 10305,
-                            "name": "Inverness"
+                            "name": "Paisley"
+                        },
+                        {
+                            "id": 10306,
+                            "name": "East Kilbride"
+                        },
+                        {
+                            "id": 10307,
+                            "name": "Livingston"
+                        },
+                        {
+                            "id": 10308,
+                            "name": "Hamilton"
+                        },
+                        {
+                            "id": 10309,
+                            "name": "Cumbernauld"
+                        },
+                        {
+                            "id": 10310,
+                            "name": "Dunfermline"
                         }
                     ]
                 },
@@ -128,19 +189,39 @@
                         },
                         {
                             "id": 10402,
-                            "name": "Derry"
+                            "name": "Derry/Londonderry"
                         },
                         {
                             "id": 10403,
-                            "name": "Armagh"
+                            "name": "Lisburn"
                         },
                         {
                             "id": 10404,
-                            "name": "Newry"
+                            "name": "Newtownabbey"
                         },
                         {
                             "id": 10405,
-                            "name": "Lisburn"
+                            "name": "Bangor"
+                        },
+                        {
+                            "id": 10406,
+                            "name": "Craigavon"
+                        },
+                        {
+                            "id": 10407,
+                            "name": "Coleraine"
+                        },
+                        {
+                            "id": 10408,
+                            "name": "Newtownards"
+                        },
+                        {
+                            "id": 10409,
+                            "name": "Antrim"
+                        },
+                        {
+                            "id": 10410,
+                            "name": "Ballymena"
                         }
                     ]
                 },
@@ -159,15 +240,35 @@
                         },
                         {
                             "id": 10503,
-                            "name": "Galway"
+                            "name": "Limerick"
                         },
                         {
                             "id": 10504,
-                            "name": "Limerick"
+                            "name": "Galway"
                         },
                         {
                             "id": 10505,
                             "name": "Waterford"
+                        },
+                        {
+                            "id": 10506,
+                            "name": "Drogheda"
+                        },
+                        {
+                            "id": 10507,
+                            "name": "Dundalk"
+                        },
+                        {
+                            "id": 10508,
+                            "name": "Swords"
+                        },
+                        {
+                            "id": 10509,
+                            "name": "Bray"
+                        },
+                        {
+                            "id": 10510,
+                            "name": "Navan"
                         }
                     ]
                 }
@@ -183,20 +284,44 @@
                     "images": "../images/denmark.jpeg",
                     "cities": [
                         {
-                            "id": 20101,
+                            "id": 10601,
                             "name": "Copenhagen"
                         },
                         {
-                            "id": 20102,
+                            "id": 10602,
                             "name": "Aarhus"
                         },
                         {
-                            "id": 20103,
+                            "id": 10603,
                             "name": "Odense"
                         },
                         {
-                            "id": 20104,
+                            "id": 10604,
                             "name": "Aalborg"
+                        },
+                        {
+                            "id": 10605,
+                            "name": "Esbjerg"
+                        },
+                        {
+                            "id": 10606,
+                            "name": "Randers"
+                        },
+                        {
+                            "id": 10607,
+                            "name": "Kolding"
+                        },
+                        {
+                            "id": 10608,
+                            "name": "Horsens"
+                        },
+                        {
+                            "id": 10609,
+                            "name": "Vejle"
+                        },
+                        {
+                            "id": 10610,
+                            "name": "Roskilde"
                         }
                     ]
                 },
@@ -206,20 +331,44 @@
                     "images": "../images/sweden.jpeg",
                     "cities": [
                         {
-                            "id": 20201,
+                            "id": 10701,
                             "name": "Stockholm"
                         },
                         {
-                            "id": 20202,
+                            "id": 10702,
                             "name": "Gothenburg"
                         },
                         {
-                            "id": 20203,
+                            "id": 10703,
                             "name": "Malmö"
                         },
                         {
-                            "id": 20204,
+                            "id": 10704,
                             "name": "Uppsala"
+                        },
+                        {
+                            "id": 10705,
+                            "name": "Västerås"
+                        },
+                        {
+                            "id": 10706,
+                            "name": "Örebro"
+                        },
+                        {
+                            "id": 10707,
+                            "name": "Linköping"
+                        },
+                        {
+                            "id": 10708,
+                            "name": "Helsingborg"
+                        },
+                        {
+                            "id": 10709,
+                            "name": "Jönköping"
+                        },
+                        {
+                            "id": 10710,
+                            "name": "Norrköping"
                         }
                     ]
                 },
@@ -229,20 +378,44 @@
                     "images": "../images/norway.jpeg",
                     "cities": [
                         {
-                            "id": 20301,
+                            "id": 10801,
                             "name": "Oslo"
                         },
                         {
-                            "id": 20302,
+                            "id": 10802,
                             "name": "Bergen"
                         },
                         {
-                            "id": 20303,
+                            "id": 10803,
+                            "name": "Stavanger"
+                        },
+                        {
+                            "id": 10804,
                             "name": "Trondheim"
                         },
                         {
-                            "id": 20304,
-                            "name": "Stavanger"
+                            "id": 10805,
+                            "name": "Drammen"
+                        },
+                        {
+                            "id": 10806,
+                            "name": "Fredrikstad"
+                        },
+                        {
+                            "id": 10807,
+                            "name": "Skien"
+                        },
+                        {
+                            "id": 10808,
+                            "name": "Kristiansand"
+                        },
+                        {
+                            "id": 10809,
+                            "name": "Ålesund"
+                        },
+                        {
+                            "id": 10810,
+                            "name": "Tromsø"
                         }
                     ]
                 },
@@ -252,20 +425,44 @@
                     "images": "../images/finland.jpeg",
                     "cities": [
                         {
-                            "id": 20401,
+                            "id": 10901,
                             "name": "Helsinki"
                         },
                         {
-                            "id": 20402,
+                            "id": 10902,
                             "name": "Espoo"
                         },
                         {
-                            "id": 20403,
+                            "id": 10903,
                             "name": "Tampere"
                         },
                         {
-                            "id": 20404,
+                            "id": 10904,
                             "name": "Vantaa"
+                        },
+                        {
+                            "id": 10905,
+                            "name": "Oulu"
+                        },
+                        {
+                            "id": 10906,
+                            "name": "Turku"
+                        },
+                        {
+                            "id": 10907,
+                            "name": "Jyväskylä"
+                        },
+                        {
+                            "id": 10908,
+                            "name": "Lahti"
+                        },
+                        {
+                            "id": 10909,
+                            "name": "Kuopio"
+                        },
+                        {
+                            "id": 10910,
+                            "name": "Pori"
                         }
                     ]
                 },
@@ -275,20 +472,44 @@
                     "images": "../images/iceland.jpeg",
                     "cities": [
                         {
-                            "id": 20501,
-                            "name": "Reykjavik"
+                            "id": 11001,
+                            "name": "Reykjavík"
                         },
                         {
-                            "id": 20502,
+                            "id": 11002,
                             "name": "Kópavogur"
                         },
                         {
-                            "id": 20503,
+                            "id": 11003,
                             "name": "Hafnarfjörður"
                         },
                         {
-                            "id": 20504,
+                            "id": 11004,
                             "name": "Akureyri"
+                        },
+                        {
+                            "id": 11005,
+                            "name": "Reykjanesbær"
+                        },
+                        {
+                            "id": 11006,
+                            "name": "Garðabær"
+                        },
+                        {
+                            "id": 11007,
+                            "name": "Mosfellsbær"
+                        },
+                        {
+                            "id": 11008,
+                            "name": "Árborg"
+                        },
+                        {
+                            "id": 11009,
+                            "name": "Fjarðabyggð"
+                        },
+                        {
+                            "id": 11010,
+                            "name": "Akranes"
                         }
                     ]
                 },
@@ -298,20 +519,44 @@
                     "images": "../images/estonia.jpeg",
                     "cities": [
                         {
-                            "id": 20601,
+                            "id": 11101,
                             "name": "Tallinn"
                         },
                         {
-                            "id": 20602,
+                            "id": 11102,
                             "name": "Tartu"
                         },
                         {
-                            "id": 20603,
+                            "id": 11103,
                             "name": "Narva"
                         },
                         {
-                            "id": 20604,
+                            "id": 11104,
                             "name": "Pärnu"
+                        },
+                        {
+                            "id": 11105,
+                            "name": "Kohtla-Järve"
+                        },
+                        {
+                            "id": 11106,
+                            "name": "Viljandi"
+                        },
+                        {
+                            "id": 11107,
+                            "name": "Rakvere"
+                        },
+                        {
+                            "id": 11108,
+                            "name": "Maardu"
+                        },
+                        {
+                            "id": 11109,
+                            "name": "Sillamäe"
+                        },
+                        {
+                            "id": 11110,
+                            "name": "Kärdla"
                         }
                     ]
                 },
@@ -321,20 +566,44 @@
                     "images": "../images/latvia.jpeg",
                     "cities": [
                         {
-                            "id": 20701,
+                            "id": 11201,
                             "name": "Riga"
                         },
                         {
-                            "id": 20702,
+                            "id": 11202,
                             "name": "Daugavpils"
                         },
                         {
-                            "id": 20703,
-                            "name": "Liepāja"
+                            "id": 11203,
+                            "name": "Liepaja"
                         },
                         {
-                            "id": 20704,
+                            "id": 11204,
                             "name": "Jelgava"
+                        },
+                        {
+                            "id": 11205,
+                            "name": "Jurmala"
+                        },
+                        {
+                            "id": 11206,
+                            "name": "Ventspils"
+                        },
+                        {
+                            "id": 11207,
+                            "name": "Rezekne"
+                        },
+                        {
+                            "id": 11208,
+                            "name": "Ogre"
+                        },
+                        {
+                            "id": 11209,
+                            "name": "Valmiera"
+                        },
+                        {
+                            "id": 11210,
+                            "name": "Jekabpils"
                         }
                     ]
                 },
@@ -344,20 +613,44 @@
                     "images": "../images/lithuania.jpeg",
                     "cities": [
                         {
-                            "id": 20801,
+                            "id": 11301,
                             "name": "Vilnius"
                         },
                         {
-                            "id": 20802,
+                            "id": 11302,
                             "name": "Kaunas"
                         },
                         {
-                            "id": 20803,
+                            "id": 11303,
                             "name": "Klaipėda"
                         },
                         {
-                            "id": 20804,
+                            "id": 11304,
                             "name": "Šiauliai"
+                        },
+                        {
+                            "id": 11305,
+                            "name": "Panevėžys"
+                        },
+                        {
+                            "id": 11306,
+                            "name": "Alytus"
+                        },
+                        {
+                            "id": 11307,
+                            "name": "Marijampolė"
+                        },
+                        {
+                            "id": 11308,
+                            "name": "Mažeikiai"
+                        },
+                        {
+                            "id": 11309,
+                            "name": "Jonava"
+                        },
+                        {
+                            "id": 11310,
+                            "name": "Utena"
                         }
                     ]
                 }
@@ -373,20 +666,44 @@
                     "images": "../images/france.jpeg",
                     "cities": [
                         {
-                            "id": 30101,
+                            "id": 11401,
                             "name": "Paris"
                         },
                         {
-                            "id": 30102,
+                            "id": 11402,
                             "name": "Marseille"
                         },
                         {
-                            "id": 30103,
+                            "id": 11403,
                             "name": "Lyon"
                         },
                         {
-                            "id": 30104,
+                            "id": 11404,
                             "name": "Toulouse"
+                        },
+                        {
+                            "id": 11405,
+                            "name": "Nice"
+                        },
+                        {
+                            "id": 11406,
+                            "name": "Nantes"
+                        },
+                        {
+                            "id": 11407,
+                            "name": "Montpellier"
+                        },
+                        {
+                            "id": 11408,
+                            "name": "Strasbourg"
+                        },
+                        {
+                            "id": 11409,
+                            "name": "Bordeaux"
+                        },
+                        {
+                            "id": 11410,
+                            "name": "Lille"
                         }
                     ]
                 },
@@ -396,20 +713,44 @@
                     "images": "../images/germany.jpeg",
                     "cities": [
                         {
-                            "id": 30201,
+                            "id": 11501,
                             "name": "Berlin"
                         },
                         {
-                            "id": 30202,
+                            "id": 11502,
                             "name": "Hamburg"
                         },
                         {
-                            "id": 30203,
+                            "id": 11503,
                             "name": "Munich"
                         },
                         {
-                            "id": 30204,
+                            "id": 11504,
                             "name": "Cologne"
+                        },
+                        {
+                            "id": 11505,
+                            "name": "Frankfurt"
+                        },
+                        {
+                            "id": 11506,
+                            "name": "Stuttgart"
+                        },
+                        {
+                            "id": 11507,
+                            "name": "Düsseldorf"
+                        },
+                        {
+                            "id": 11508,
+                            "name": "Leipzig"
+                        },
+                        {
+                            "id": 11509,
+                            "name": "Dortmund"
+                        },
+                        {
+                            "id": 11510,
+                            "name": "Essen"
                         }
                     ]
                 },
@@ -433,6 +774,30 @@
                         {
                             "id": 30304,
                             "name": "Bruges"
+                        },
+                        {
+                            "id": 30305,
+                            "name": "Liège"
+                        },
+                        {
+                            "id": 30306,
+                            "name": "Leuven"
+                        },
+                        {
+                            "id": 30307,
+                            "name": "Mons"
+                        },
+                        {
+                            "id": 30308,
+                            "name": "Aalst"
+                        },
+                        {
+                            "id": 30309,
+                            "name": "Mechelen"
+                        },
+                        {
+                            "id": 30310,
+                            "name": "Hasselt"
                         }
                     ]
                 },
@@ -456,6 +821,30 @@
                         {
                             "id": 30404,
                             "name": "Utrecht"
+                        },
+                        {
+                            "id": 30405,
+                            "name": "Eindhoven"
+                        },
+                        {
+                            "id": 30406,
+                            "name": "Tilburg"
+                        },
+                        {
+                            "id": 30407,
+                            "name": "Groningen"
+                        },
+                        {
+                            "id": 30408,
+                            "name": "Almere"
+                        },
+                        {
+                            "id": 30409,
+                            "name": "Breda"
+                        },
+                        {
+                            "id": 30410,
+                            "name": "Nijmegen"
                         }
                     ]
                 },
@@ -479,6 +868,30 @@
                         {
                             "id": 30504,
                             "name": "Dudelange"
+                        },
+                        {
+                            "id": 30505,
+                            "name": "Ettelbruck"
+                        },
+                        {
+                            "id": 30506,
+                            "name": "Diekirch"
+                        },
+                        {
+                            "id": 30507,
+                            "name": "Strassen"
+                        },
+                        {
+                            "id": 30508,
+                            "name": "Mertert"
+                        },
+                        {
+                            "id": 30509,
+                            "name": "Grevenmacher"
+                        },
+                        {
+                            "id": 30510,
+                            "name": "Petange"
                         }
                     ]
                 },
@@ -502,6 +915,30 @@
                         {
                             "id": 30604,
                             "name": "Bern"
+                        },
+                        {
+                            "id": 30605,
+                            "name": "Lausanne"
+                        },
+                        {
+                            "id": 30606,
+                            "name": "Winterthur"
+                        },
+                        {
+                            "id": 30607,
+                            "name": "Lucerne"
+                        },
+                        {
+                            "id": 30608,
+                            "name": "St. Gallen"
+                        },
+                        {
+                            "id": 30609,
+                            "name": "Lugano"
+                        },
+                        {
+                            "id": 30610,
+                            "name": "Biel/Bienne"
                         }
                     ]
                 },
@@ -525,6 +962,30 @@
                         {
                             "id": 30704,
                             "name": "Salzburg"
+                        },
+                        {
+                            "id": 30705,
+                            "name": "Innsbruck"
+                        },
+                        {
+                            "id": 30706,
+                            "name": "Klagenfurt"
+                        },
+                        {
+                            "id": 30707,
+                            "name": "Villach"
+                        },
+                        {
+                            "id": 30708,
+                            "name": "Wels"
+                        },
+                        {
+                            "id": 30709,
+                            "name": "St. Pölten"
+                        },
+                        {
+                            "id": 30710,
+                            "name": "Dornbirn"
                         }
                     ]
                 },
@@ -577,6 +1038,30 @@
                         {
                             "id": 40104,
                             "name": "Heraklion"
+                        },
+                        {
+                            "id": 40105,
+                            "name": "Larissa"
+                        },
+                        {
+                            "id": 40106,
+                            "name": "Volos"
+                        },
+                        {
+                            "id": 40107,
+                            "name": "Ioannina"
+                        },
+                        {
+                            "id": 40108,
+                            "name": "Chania"
+                        },
+                        {
+                            "id": 40109,
+                            "name": "Chalcis"
+                        },
+                        {
+                            "id": 40110,
+                            "name": "Kavala"
                         }
                     ]
                 },
@@ -600,6 +1085,30 @@
                         {
                             "id": 40204,
                             "name": "Shkodër"
+                        },
+                        {
+                            "id": 40205,
+                            "name": "Fier"
+                        },
+                        {
+                            "id": 40206,
+                            "name": "Elbasan"
+                        },
+                        {
+                            "id": 40207,
+                            "name": "Korçë"
+                        },
+                        {
+                            "id": 40208,
+                            "name": "Berat"
+                        },
+                        {
+                            "id": 40209,
+                            "name": "Lushnjë"
+                        },
+                        {
+                            "id": 40210,
+                            "name": "Kukës"
                         }
                     ]
                 },
@@ -623,6 +1132,30 @@
                         {
                             "id": 40304,
                             "name": "Prilep"
+                        },
+                        {
+                            "id": 40305,
+                            "name": "Tetovo"
+                        },
+                        {
+                            "id": 40306,
+                            "name": "Veles"
+                        },
+                        {
+                            "id": 40307,
+                            "name": "Ohrid"
+                        },
+                        {
+                            "id": 40308,
+                            "name": "Gostivar"
+                        },
+                        {
+                            "id": 40309,
+                            "name": "Strumica"
+                        },
+                        {
+                            "id": 40310,
+                            "name": "Kavadarci"
                         }
                     ]
                 },
@@ -646,6 +1179,30 @@
                         {
                             "id": 40404,
                             "name": "Kragujevac"
+                        },
+                        {
+                            "id": 40405,
+                            "name": "Subotica"
+                        },
+                        {
+                            "id": 40406,
+                            "name": "Zrenjanin"
+                        },
+                        {
+                            "id": 40407,
+                            "name": "Pančevo"
+                        },
+                        {
+                            "id": 40408,
+                            "name": "Čačak"
+                        },
+                        {
+                            "id": 40409,
+                            "name": "Kraljevo"
+                        },
+                        {
+                            "id": 40410,
+                            "name": "Smederevo"
                         }
                     ]
                 },
@@ -669,6 +1226,30 @@
                         {
                             "id": 40504,
                             "name": "Herceg Novi"
+                        },
+                        {
+                            "id": 40505,
+                            "name": "Bijelo Polje"
+                        },
+                        {
+                            "id": 40506,
+                            "name": "Bar"
+                        },
+                        {
+                            "id": 40507,
+                            "name": "Budva"
+                        },
+                        {
+                            "id": 40508,
+                            "name": "Cetinje"
+                        },
+                        {
+                            "id": 40509,
+                            "name": "Ulcinj"
+                        },
+                        {
+                            "id": 40510,
+                            "name": "Kotor"
                         }
                     ]
                 },
@@ -692,6 +1273,30 @@
                         {
                             "id": 40604,
                             "name": "Zenica"
+                        },
+                        {
+                            "id": 40605,
+                            "name": "Mostar"
+                        },
+                        {
+                            "id": 40606,
+                            "name": "Doboj"
+                        },
+                        {
+                            "id": 40607,
+                            "name": "Bihać"
+                        },
+                        {
+                            "id": 40608,
+                            "name": "Brčko"
+                        },
+                        {
+                            "id": 40609,
+                            "name": "Bijeljina"
+                        },
+                        {
+                            "id": 40610,
+                            "name": "Travnik"
                         }
                     ]
                 },
@@ -715,6 +1320,30 @@
                         {
                             "id": 40704,
                             "name": "Osijek"
+                        },
+                        {
+                            "id": 40705,
+                            "name": "Zadar"
+                        },
+                        {
+                            "id": 40706,
+                            "name": "Pula"
+                        },
+                        {
+                            "id": 40707,
+                            "name": "Slavonski Brod"
+                        },
+                        {
+                            "id": 40708,
+                            "name": "Karlovac"
+                        },
+                        {
+                            "id": 40709,
+                            "name": "Varazdin"
+                        },
+                        {
+                            "id": 40710,
+                            "name": "Sibenik"
                         }
                     ]
                 },
@@ -738,6 +1367,30 @@
                         {
                             "id": 40804,
                             "name": "Kranj"
+                        },
+                        {
+                            "id": 40805,
+                            "name": "Velenje"
+                        },
+                        {
+                            "id": 40806,
+                            "name": "Koper"
+                        },
+                        {
+                            "id": 40807,
+                            "name": "Novo Mesto"
+                        },
+                        {
+                            "id": 40808,
+                            "name": "Ptuj"
+                        },
+                        {
+                            "id": 40809,
+                            "name": "Trbovlje"
+                        },
+                        {
+                            "id": 40810,
+                            "name": "Kamnik"
                         }
                     ]
                 },
@@ -761,6 +1414,30 @@
                         {
                             "id": 40904,
                             "name": "Peja"
+                        },
+                        {
+                            "id": 40905,
+                            "name": "Mitrovica"
+                        },
+                        {
+                            "id": 40906,
+                            "name": "Ferizaj"
+                        },
+                        {
+                            "id": 40907,
+                            "name": "Gjilan"
+                        },
+                        {
+                            "id": 40908,
+                            "name": "Suhareka"
+                        },
+                        {
+                            "id": 40909,
+                            "name": "Vushtrri"
+                        },
+                        {
+                            "id": 40910,
+                            "name": "Fushë Kosovë"
                         }
                     ]
                 },
@@ -784,6 +1461,30 @@
                         {
                             "id": 41004,
                             "name": "Burgas"
+                        },
+                        {
+                            "id": 41005,
+                            "name": "Ruse"
+                        },
+                        {
+                            "id": 41006,
+                            "name": "Stara Zagora"
+                        },
+                        {
+                            "id": 41007,
+                            "name": "Pleven"
+                        },
+                        {
+                            "id": 41008,
+                            "name": "Sliven"
+                        },
+                        {
+                            "id": 41009,
+                            "name": "Dobrich"
+                        },
+                        {
+                            "id": 41010,
+                            "name": "Shumen"
                         }
                     ]
                 }
@@ -813,6 +1514,30 @@
                         {
                             "id": 50104,
                             "name": "Turin"
+                        },
+                        {
+                            "id": 50105,
+                            "name": "Palermo"
+                        },
+                        {
+                            "id": 50106,
+                            "name": "Genoa"
+                        },
+                        {
+                            "id": 50107,
+                            "name": "Bologna"
+                        },
+                        {
+                            "id": 50108,
+                            "name": "Florence"
+                        },
+                        {
+                            "id": 50109,
+                            "name": "Bari"
+                        },
+                        {
+                            "id": 50110,
+                            "name": "Catania"
                         }
                     ]
                 },
@@ -836,6 +1561,30 @@
                         {
                             "id": 50204,
                             "name": "Seville"
+                        },
+                        {
+                            "id": 50205,
+                            "name": "Zaragoza"
+                        },
+                        {
+                            "id": 50206,
+                            "name": "Málaga"
+                        },
+                        {
+                            "id": 50207,
+                            "name": "Murcia"
+                        },
+                        {
+                            "id": 50208,
+                            "name": "Palma"
+                        },
+                        {
+                            "id": 50209,
+                            "name": "Las Palmas"
+                        },
+                        {
+                            "id": 50210,
+                            "name": "Bilbao"
                         }
                     ]
                 },
@@ -859,6 +1608,30 @@
                         {
                             "id": 50304,
                             "name": "Amadora"
+                        },
+                        {
+                            "id": 50305,
+                            "name": "Braga"
+                        },
+                        {
+                            "id": 50306,
+                            "name": "Coimbra"
+                        },
+                        {
+                            "id": 50307,
+                            "name": "Funchal"
+                        },
+                        {
+                            "id": 50308,
+                            "name": "Almada"
+                        },
+                        {
+                            "id": 50309,
+                            "name": "Setúbal"
+                        },
+                        {
+                            "id": 50310,
+                            "name": "Leiria"
                         }
                     ]
                 },
@@ -882,6 +1655,30 @@
                         {
                             "id": 50404,
                             "name": "Qormi"
+                        },
+                        {
+                            "id": 50405,
+                            "name": "Sliema"
+                        },
+                        {
+                            "id": 50406,
+                            "name": "Saint Paul's Bay"
+                        },
+                        {
+                            "id": 50407,
+                            "name": "Mellieħa"
+                        },
+                        {
+                            "id": 50408,
+                            "name": "Vittoriosa"
+                        },
+                        {
+                            "id": 50409,
+                            "name": "Victoria"
+                        },
+                        {
+                            "id": 50410,
+                            "name": "Marsaxlokk"
                         }
                     ]
                 },
@@ -905,6 +1702,30 @@
                         {
                             "id": 50504,
                             "name": "Famagusta"
+                        },
+                        {
+                            "id": 50505,
+                            "name": "Paphos"
+                        },
+                        {
+                            "id": 50506,
+                            "name": "Kyrenia"
+                        },
+                        {
+                            "id": 50507,
+                            "name": "Protaras"
+                        },
+                        {
+                            "id": 50508,
+                            "name": "Ayia Napa"
+                        },
+                        {
+                            "id": 50509,
+                            "name": "Paralimni"
+                        },
+                        {
+                            "id": 50510,
+                            "name": "Dherynia"
                         }
                     ]
                 },
@@ -928,6 +1749,30 @@
                         {
                             "id": 50604,
                             "name": "Sant Julià de Lòria"
+                        },
+                        {
+                            "id": 50605,
+                            "name": "La Massana"
+                        },
+                        {
+                            "id": 50606,
+                            "name": "Canillo"
+                        },
+                        {
+                            "id": 50607,
+                            "name": "Ordino"
+                        },
+                        {
+                            "id": 50608,
+                            "name": "Pas de la Casa"
+                        },
+                        {
+                            "id": 50609,
+                            "name": "El Tarter"
+                        },
+                        {
+                            "id": 50610,
+                            "name": "Arinsal"
                         }
                     ]
                 },
@@ -962,6 +1807,30 @@
                         {
                             "id": 50804,
                             "name": "Domagnano"
+                        },
+                        {
+                            "id": 50805,
+                            "name": "Acquaviva"
+                        },
+                        {
+                            "id": 50806,
+                            "name": "Faetano"
+                        },
+                        {
+                            "id": 50807,
+                            "name": "Chiesanuova"
+                        },
+                        {
+                            "id": 50808,
+                            "name": "Fiorentino"
+                        },
+                        {
+                            "id": 50809,
+                            "name": "Montegiardino"
+                        },
+                        {
+                            "id": 50810,
+                            "name": "Dogana"
                         }
                     ]
                 },
@@ -977,7 +1846,7 @@
                     ]
                 }
             ]
-        },
+        },  
         {
             "id": 6,
             "name": "Central Europe",
@@ -1002,6 +1871,30 @@
                         {
                             "id": 60104,
                             "name": "Plzeň"
+                        },
+                        {
+                            "id": 60105,
+                            "name": "Liberec"
+                        },
+                        {
+                            "id": 60106,
+                            "name": "Olomouc"
+                        },
+                        {
+                            "id": 60107,
+                            "name": "České Budějovice"
+                        },
+                        {
+                            "id": 60108,
+                            "name": "Hradec Králové"
+                        },
+                        {
+                            "id": 60109,
+                            "name": "Pardubice"
+                        },
+                        {
+                            "id": 60110,
+                            "name": "Jihlava"
                         }
                     ]
                 },
@@ -1025,6 +1918,30 @@
                         {
                             "id": 60204,
                             "name": "Žilina"
+                        },
+                        {
+                            "id": 60205,
+                            "name": "Nitra"
+                        },
+                        {
+                            "id": 60206,
+                            "name": "Trnava"
+                        },
+                        {
+                            "id": 60207,
+                            "name": "Martin"
+                        },
+                        {
+                            "id": 60208,
+                            "name": "Banská Bystrica"
+                        },
+                        {
+                            "id": 60209,
+                            "name": "Poprad"
+                        },
+                        {
+                            "id": 60210,
+                            "name": "Trenčín"
                         }
                     ]
                 },
@@ -1048,6 +1965,30 @@
                         {
                             "id": 60304,
                             "name": "Miskolc"
+                        },
+                        {
+                            "id": 60305,
+                            "name": "Pécs"
+                        },
+                        {
+                            "id": 60306,
+                            "name": "Győr"
+                        },
+                        {
+                            "id": 60307,
+                            "name": "Nyíregyháza"
+                        },
+                        {
+                            "id": 60308,
+                            "name": "Kecskemét"
+                        },
+                        {
+                            "id": 60309,
+                            "name": "Szombathely"
+                        },
+                        {
+                            "id": 60310,
+                            "name": "Székesfehérvár"
                         }
                     ]
                 },
@@ -1071,6 +2012,30 @@
                         {
                             "id": 60404,
                             "name": "Wrocław"
+                        },
+                        {
+                            "id": 60405,
+                            "name": "Poznań"
+                        },
+                        {
+                            "id": 60406,
+                            "name": "Gdańsk"
+                        },
+                        {
+                            "id": 60407,
+                            "name": "Szczecin"
+                        },
+                        {
+                            "id": 60408,
+                            "name": "Bydgoszcz"
+                        },
+                        {
+                            "id": 60409,
+                            "name": "Lublin"
+                        },
+                        {
+                            "id": 60410,
+                            "name": "Katowice"
                         }
                     ]
                 }
@@ -1100,6 +2065,30 @@
                         {
                             "id": 70104,
                             "name": "Yekaterinburg"
+                        },
+                        {
+                            "id": 70105,
+                            "name": "Kazan"
+                        },
+                        {
+                            "id": 70106,
+                            "name": "Nizhny Novgorod"
+                        },
+                        {
+                            "id": 70107,
+                            "name": "Samara"
+                        },
+                        {
+                            "id": 70108,
+                            "name": "Omsk"
+                        },
+                        {
+                            "id": 70109,
+                            "name": "Rostov-on-Don"
+                        },
+                        {
+                            "id": 70110,
+                            "name": "Ufa"
                         }
                     ]
                 },
@@ -1123,6 +2112,30 @@
                         {
                             "id": 70204,
                             "name": "Dnipro"
+                        },
+                        {
+                            "id": 70205,
+                            "name": "Lviv"
+                        },
+                        {
+                            "id": 70206,
+                            "name": "Zaporizhzhia"
+                        },
+                        {
+                            "id": 70207,
+                            "name": "Vinnytsia"
+                        },
+                        {
+                            "id": 70208,
+                            "name": "Mykolaiv"
+                        },
+                        {
+                            "id": 70209,
+                            "name": "Mariupol"
+                        },
+                        {
+                            "id": 70210,
+                            "name": "Kherson"
                         }
                     ]
                 },
@@ -1146,6 +2159,30 @@
                         {
                             "id": 70304,
                             "name": "Vitebsk"
+                        },
+                        {
+                            "id": 70305,
+                            "name": "Hrodna"
+                        },
+                        {
+                            "id": 70306,
+                            "name": "Brest"
+                        },
+                        {
+                            "id": 70307,
+                            "name": "Baranovichi"
+                        },
+                        {
+                            "id": 70308,
+                            "name": "Pinsk"
+                        },
+                        {
+                            "id": 70309,
+                            "name": "Orsha"
+                        },
+                        {
+                            "id": 70310,
+                            "name": "Mazyr"
                         }
                     ]
                 },
@@ -1169,6 +2206,30 @@
                         {
                             "id": 70404,
                             "name": "Iași"
+                        },
+                        {
+                            "id": 70405,
+                            "name": "Constanța"
+                        },
+                        {
+                            "id": 70406,
+                            "name": "Craiova"
+                        },
+                        {
+                            "id": 70407,
+                            "name": "Galați"
+                        },
+                        {
+                            "id": 70408,
+                            "name": "Brașov"
+                        },
+                        {
+                            "id": 70409,
+                            "name": "Ploiești"
+                        },
+                        {
+                            "id": 70410,
+                            "name": "Oradea"
                         }
                     ]
                 },
@@ -1192,10 +2253,34 @@
                         {
                             "id": 70504,
                             "name": "Bender"
+                        },
+                        {
+                            "id": 70505,
+                            "name": "Rîbnița"
+                        },
+                        {
+                            "id": 70506,
+                            "name": "Cahul"
+                        },
+                        {
+                            "id": 70507,
+                            "name": "Ungheni"
+                        },
+                        {
+                            "id": 70508,
+                            "name": "Orhei"
+                        },
+                        {
+                            "id": 70509,
+                            "name": "Soroca"
+                        },
+                        {
+                            "id": 70510,
+                            "name": "Comrat"
                         }
                     ]
                 }
             ]
-        }
+        }        
     ]
 }
