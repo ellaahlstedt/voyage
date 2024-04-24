@@ -1,0 +1,15 @@
+footer {
+    background-color: #ffdd95;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#logoBox {
+    align-self: center;
+}
+
+#contactBox {
+    align-self: center;
+    font-family: Metrophobic;
+}
