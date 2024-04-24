@@ -3,27 +3,32 @@
         {
             "userId": 1,
             "userName": "Test",
-            "userPassword": "Test123"
+            "userPassword": "Test123",
+            "liked": []
         },
         {
             "userId": 2,
             "userName": "Test2",
-            "userPassword": "Test123"
+            "userPassword": "Test123",
+            "liked": []
         },
         {
             "userId": 3,
             "userName": "Test3",
-            "userPassword": "Test123"
+            "userPassword": "Test123",
+            "liked": []
         },
         {
             "userId": 4,
             "userName": "Test4",
-            "userPassword": "Test123"
+            "userPassword": "Test123",
+            "liked": []
         },
         {
             "userId": 5,
             "userName": "Test5",
-            "userPassword": "Test123"
+            "userPassword": "Test123",
+            "liked": []
         }
     ],
     "destinations": [
