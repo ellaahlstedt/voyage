@@ -966,23 +966,19 @@
                 "cities": [
                   {
                     "id": 60101,
-                    "name": "Prague",
-                    "images": "../images/prague.jpeg"
+                    "name": "Prague"
                   },
                   {
                     "id": 60102,
-                    "name": "Brno",
-                    "images": "../images/brno.jpeg"
+                    "name": "Brno"
                   },
                   {
                     "id": 60103,
-                    "name": "Ostrava",
-                    "images": "../images/ostrava.jpeg"
+                    "name": "Ostrava"
                   },
                   {
                     "id": 60104,
-                    "name": "Plzeň",
-                    "images": "../images/plzen.jpeg"
+                    "name": "Plzeň"
                   }
                 ]
               },
@@ -993,23 +989,19 @@
                 "cities": [
                   {
                     "id": 60201,
-                    "name": "Bratislava",
-                    "images": "../images/bratislava.jpeg"
+                    "name": "Bratislava"
                   },
                   {
                     "id": 60202,
-                    "name": "Košice",
-                    "images": "../images/kosice.jpeg"
+                    "name": "Košice"
                   },
                   {
                     "id": 60203,
-                    "name": "Prešov",
-                    "images": "../images/presov.jpeg"
+                    "name": "Prešov"
                   },
                   {
                     "id": 60204,
-                    "name": "Žilina",
-                    "images": "../images/zilina.jpeg"
+                    "name": "Žilina"
                   }
                 ]
               },
@@ -1020,23 +1012,19 @@
                 "cities": [
                   {
                     "id": 60301,
-                    "name": "Budapest",
-                    "images": "../images/budapest.jpeg"
+                    "name": "Budapest"
                   },
                   {
                     "id": 60302,
-                    "name": "Debrecen",
-                    "images": "../images/debrecen.jpeg"
+                    "name": "Debrecen"
                   },
                   {
                     "id": 60303,
-                    "name": "Szeged",
-                    "images": "../images/szeged.jpeg"
+                    "name": "Szeged"
                   },
                   {
                     "id": 60304,
-                    "name": "Miskolc",
-                    "images": "../images/miskolc.jpeg"
+                    "name": "Miskolc"
                   }
                 ]
               },
@@ -1047,23 +1035,19 @@
                 "cities": [
                   {
                     "id": 60401,
-                    "name": "Warsaw",
-                    "images": "../images/warsaw.jpeg"
+                    "name": "Warsaw"
                   },
                   {
                     "id": 60402,
-                    "name": "Kraków",
-                    "images": "../images/krakow.jpeg"
+                    "name": "Kraków"
                   },
                   {
                     "id": 60403,
-                    "name": "Łódź",
-                    "images": "../images/lodz.jpeg"
+                    "name": "Łódź"
                   },
                   {
                     "id": 60404,
-                    "name": "Wrocław",
-                    "images": "../images/wroclaw.jpeg"
+                    "name": "Wrocław"
                   }
                 ]
               }
