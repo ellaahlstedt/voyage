@@ -20,11 +20,11 @@ function renderNav(parent, currentPage) {
         },
         {
             name: "Countries",
-            link: "./pages/countries/countries.html"
+            link: "./pages/countriesPage/countries.html"
         },
         {
             name: "Cities",
-            link: "./pages/cities/cities.html"
+            link: "./pages/citiesPage/cities.html"
         }
     ];
 
