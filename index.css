@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Metal';
+    src: url('fonts/Metal/Metal-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Metrophobic';
+    src: url('fonts/Metrophobic/Metrophobic-Regular.ttf')
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}

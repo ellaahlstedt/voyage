@@ -988,6 +988,29 @@
                             "name": "Dornbirn"
                         }
                     ]
+                },
+                {
+                    "id": 308,
+                    "name": "Liechtenstein",
+                    "images": "../images/liechtenstein.jpeg",
+                    "cities": [
+                        {
+                            "id": 30801,
+                            "name": "Schaan"
+                        },
+                        {
+                            "id": 30802,
+                            "name": "Vaduz"
+                        },
+                        {
+                            "id": 30803,
+                            "name": "Triesen"
+                        },
+                        {
+                            "id": 30804,
+                            "name": "Balzers"
+                        }
+                    ]
                 }
             ]
         },
@@ -1824,6 +1847,104 @@
                 }
             ]
         },  
+        {
+            "id": 6,
+            "name": "Central Europe",
+            "countries": [
+                {
+                    "id": 601,
+                    "name": "Czech Republic",
+                    "images": "../images/czechrepublic.jpeg",
+                    "cities": [
+                        {
+                            "id": 60101,
+                            "name": "Prague"
+                        },
+                        {
+                            "id": 60102,
+                            "name": "Brno"
+                        },
+                        {
+                            "id": 60103,
+                            "name": "Ostrava"
+                        },
+                        {
+                            "id": 60104,
+                            "name": "Plzeň"
+                        }
+                    ]
+                },
+                {
+                    "id": 602,
+                    "name": "Slovakia",
+                    "images": "../images/slovakia.jpeg",
+                    "cities": [
+                        {
+                            "id": 60201,
+                            "name": "Bratislava"
+                        },
+                        {
+                            "id": 60202,
+                            "name": "Košice"
+                        },
+                        {
+                            "id": 60203,
+                            "name": "Prešov"
+                        },
+                        {
+                            "id": 60204,
+                            "name": "Žilina"
+                        }
+                    ]
+                },
+                {
+                    "id": 603,
+                    "name": "Hungary",
+                    "images": "../images/hungary.jpeg",
+                    "cities": [
+                        {
+                            "id": 60301,
+                            "name": "Budapest"
+                        },
+                        {
+                            "id": 60302,
+                            "name": "Debrecen"
+                        },
+                        {
+                            "id": 60303,
+                            "name": "Szeged"
+                        },
+                        {
+                            "id": 60304,
+                            "name": "Miskolc"
+                        }
+                    ]
+                },
+                {
+                    "id": 604,
+                    "name": "Poland",
+                    "images": "../images/poland.jpeg",
+                    "cities": [
+                        {
+                            "id": 60401,
+                            "name": "Warsaw"
+                        },
+                        {
+                            "id": 60402,
+                            "name": "Kraków"
+                        },
+                        {
+                            "id": 60403,
+                            "name": "Łódź"
+                        },
+                        {
+                            "id": 60404,
+                            "name": "Wrocław"
+                        }
+                    ]
+                }
+            ]
+        },
         {
             "id": 7,
             "name": "Eastern Europe",
