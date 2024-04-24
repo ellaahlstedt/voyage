@@ -5,6 +5,13 @@
     border-bottom: 1px solid #B0B0B0;
     padding: 15px 50px;
     justify-content: space-between;
+    background-color: white;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 #navItemsCon {
@@ -33,15 +40,64 @@
 }
 
 #navProfileCon {
-    height: 50px;
     width: 150px;
-    background-color: rgb(217, 217, 217, 0.38);
+    height: 50px;
+    background-color: #F1F1F1;
+
+    padding: 10px 10px;
+    position: relative;
+    border-radius: 7px;
+
+}
+
+#navProfileCon:hover {
+    cursor: pointer;
+}
+
+#navUserCon {
     display: flex;
-    gap: 10px;
     align-items: center;
-    padding: 5px 10px;
+    justify-content: space-between;
+}
+
+.usernameNav {
+    margin: 0;
 }
 
 .userIconNav {
     width: 30px;
+}
+
+#dropDownNav {
+    background-color: #F1F1F1;
+    position: absolute;
+    margin: 0;
+    /* margin-bottom: 5px; */
+    padding: 5px 0;
+    list-style-type: none;
+    width: 150px;
+    margin-left: -10px;
+    border-radius: 7px;
+}
+
+#dropDownNav:hover {
+    cursor: initial;
+}
+
+#dropDownNav li {
+    padding: 10px;
+}
+
+#dropDownNav li a {
+    text-decoration: none;
+    color: black;
+}
+
+#dropDownNav li p {
+    margin: 0;
+    color: #FF2424;
+}
+
+#dropDownNav li p:hover {
+    cursor: pointer;
 }
