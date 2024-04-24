@@ -1,0 +1,47 @@
+#mainPagesNav {
+    display: flex;
+    align-items: center;
+    gap: 75px;
+    border-bottom: 1px solid #B0B0B0;
+    padding: 15px 50px;
+    justify-content: space-between;
+}
+
+#navItemsCon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+}
+
+#linksCon {
+    display: flex;
+    gap: 50px;
+}
+
+#linksCon>a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-family: "Metrophobic";
+    display: flex;
+    gap: 5px;
+}
+
+.markerIconNav {
+    width: 18px;
+}
+
+#navProfileCon {
+    height: 50px;
+    width: 150px;
+    background-color: rgb(217, 217, 217, 0.38);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.userIconNav {
+    width: 30px;
+}
