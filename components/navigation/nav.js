@@ -49,39 +49,56 @@ function renderNav(parent, currentPage) {
     profileCon.addEventListener("click", dropDownNav);
     nav.appendChild(profileCon);
 
-    // Får ändras senare
+    let UserCon = document.createElement("div");
+    UserCon.id = "navUserCon";
+    profileCon.appendChild(UserCon);
+
+    // Får ändras senare till localstorage username
     let username = document.createElement("p");
     username.textContent = "username";
     username.classList.add("usernameNav");
-    profileCon.appendChild(username);
+    UserCon.appendChild(username);
 
     let userIcon = document.createElement("img");
     userIcon.setAttribute("src", "./fonts/icons/user.png");
     userIcon.setAttribute("alt", "User Icon");
     userIcon.classList.add("userIconNav");
-    profileCon.appendChild(userIcon);
-
-}
-
-// Drop-down
-// Profile & Log out
-function dropDownNav(event) {
-    let profileCon = document.querySelector("#navProfileCon");
+    UserCon.appendChild(userIcon);
 
     let dropDownCon = document.createElement("ul");
     dropDownCon.id = "dropDownNav";
     profileCon.appendChild(dropDownCon);
+}
 
-    let profileListItem = document.createElement("li");
-    dropDownCon.appendChild(profileListItem);
+let profileConClicked = false;
+function dropDownNav(event) {
+    if (profileConClicked) {
+        profileConClicked = false;
+        let dropDown = document.querySelector("#dropDownNav");
+        dropDown.innerHTML = "";
+    } else {
+        profileConClicked = true;
+        let dropDownCon = document.querySelector("#dropDownNav");
 
-    let LogOutListItem = document.createElement("li");
-    dropDownCon.appendChild(LogOutListItem);
+        let profileListItem = document.createElement("li");
+        dropDownCon.appendChild(profileListItem);
 
-    let profileLink = document.createElement("a");
-    profileLink.setAttribute("href", "./pages/logIn/logIn.html");
-    profileLink.textContent = "Profile";
-    profileListItem.appendChild(profileLink);
+        let LogOutListItem = document.createElement("li");
+        dropDownCon.appendChild(LogOutListItem);
 
+        let profileLink = document.createElement("a");
+        profileLink.setAttribute("href", "./pages/logIn/logIn.html");
+        profileLink.textContent = "Profile";
+        profileListItem.appendChild(profileLink);
+
+        let logOut = document.createElement("p");
+        logOut.textContent = "Log Out";
+        logOut.addEventListener("click", logOut);
+        LogOutListItem.appendChild(logOut);
+    }
+}
+
+function logOut() {
+    // clear localstorage
 }
 
