@@ -35,7 +35,7 @@
     "destinations": [
         {
             "id": 1,
-            "name": "British Isles",
+            "region": "British Isles",
             "countries": [
                 {
                     "id": 101,
@@ -276,7 +276,7 @@
         },
         {
             "id": 2,
-            "name": "Northern Europe",
+            "region": "Northern Europe",
             "countries": [
                 {
                     "id": 201,
@@ -658,7 +658,7 @@
         },
         {
             "id": 3,
-            "name": "Western Europe",
+            "region": "Western Europe",
             "countries": [
                 {
                     "id": 301,
@@ -1016,7 +1016,7 @@
         },
         {
             "id": 4,
-            "name": "The Balkans",
+            "region": "The Balkans",
             "countries": [
                 {
                     "id": 401,
@@ -1492,7 +1492,7 @@
         },
         {
             "id": 5,
-            "name": "Southern Europe",
+            "region": "Southern Europe",
             "countries": [
                 {
                     "id": 501,
@@ -1849,7 +1849,7 @@
         },  
         {
             "id": 6,
-            "name": "Central Europe",
+            "region": "Central Europe",
             "countries": [
                 {
                     "id": 601,
@@ -2043,7 +2043,7 @@
         },
         {
             "id": 7,
-            "name": "Eastern Europe",
+            "region": "Eastern Europe",
             "countries": [
                 {
                     "id": 701,
