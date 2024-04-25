@@ -5,14 +5,14 @@ function renderLogo(parent, fontSize, color = false) {
     let link = document.createElement("a");
     link.setAttribute("href", "./");
     link.classList.add("logo");
-    link.style.height = fontSize;
+    link.style.height = fontSize + "px";
     parent.appendChild(link);
 
     if (color) {
         let whiteLogo = document.createElement("h1");
         whiteLogo.textContent = "VOYAGE";
         whiteLogo.style.color = color;
-        whiteLogo.style.fontSize = fontSize;
+        whiteLogo.style.fontSize = fontSize + "px";
         whiteLogo.id = "whiteLogo";
         link.appendChild(whiteLogo);
     } else {
@@ -21,7 +21,7 @@ function renderLogo(parent, fontSize, color = false) {
             letter.classList.add("multiLogoLetter");
             letter.textContent = letters[i];
             letter.style.color = colors[i];
-            letter.style.fontSize = fontSize;
+            letter.style.fontSize = fontSize + "px";
             link.appendChild(letter);
         }
     }
