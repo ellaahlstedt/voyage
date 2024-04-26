@@ -1,0 +1,39 @@
+header {
+background: url("../../images/europemap.jpg");
+background-size: cover;
+height: 800px;
+display: flex;
+align-items: center;
+}
+
+#myVoyages {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+
+#logoBox {
+   display: block ruby;
+}
+
+#sText {
+    font-family: Metal;
+    color: white;
+    font-size: 50px;
+}
+
+#myTextBox {
+    display: flex;
+    justify-content: center;
+}
+
+#myText {
+    position: absolute;
+    bottom: 100px;
+
+    font-family: Metal;
+    color: white;
+    margin: 0;
+    font-size: 50px;
+
+}
