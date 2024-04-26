@@ -6,12 +6,12 @@ function renderUserHeader(parent) {
     let myVoyages = document.createElement("div");
     myVoyages.id = "myVoyages";
 
-    let MyTextBox = document.createElement ("div");
-    MyTextBox.id = "MyTextBox";
+    let myTextBox = document.createElement("div");
+    myTextBox.id = "myTextBox";
     let myText = document.createElement("h1");
     myText.id = "myText";
     myText.textContent = "MY";
-    MyTextBox.appendChild(myText);
+    myTextBox.appendChild(myText);
 
 
     let logoBox = document.createElement("div");
@@ -27,7 +27,7 @@ function renderUserHeader(parent) {
     logoBox.appendChild(sText);
 
     header.appendChild(myVoyages);
-    myVoyages.appendChild(MyTextBox);
+    myVoyages.appendChild(myTextBox);
     myVoyages.appendChild(logoBox);
 }
 renderNav(wrapper);

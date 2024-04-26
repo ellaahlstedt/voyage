@@ -1,9 +1,9 @@
 header {
-background: url("../../images/europemap.jpg");
-background-size: cover;
-height: 800px;
-display: flex;
-align-items: center;
+    background: url("../../images/europemap.jpg");
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    align-items: center;
 }
 
 #myVoyages {
@@ -13,7 +13,7 @@ align-items: center;
 }
 
 #logoBox {
-   display: block ruby;
+    display: block ruby;
 }
 
 #sText {
