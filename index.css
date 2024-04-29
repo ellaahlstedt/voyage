@@ -16,3 +16,39 @@ body {
     margin: 0;
     font-family: "Metrophobic";
 }
+
+#regionsCon {
+    margin-bottom: 100px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.regionsItem {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    position: relative;
+}
+
+.regionsItem > h1 {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    color: white;
+    writing-mode: sideways-lr;
+    font-size: 70px; /* Ändras sen beroende på namnlängden */
+    font-family: 'Metal';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+    position: absolute;
+}
+
+.regionsItem > h1:hover {
+    cursor: pointer;
+}
