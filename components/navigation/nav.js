@@ -8,7 +8,7 @@ function renderNav(parent, currentPage) {
     navItems.id = "navItemsCon";
     nav.appendChild(navItems);
 
-    renderLogo(navItems, "45px", "");
+    renderLogo(navItems, "42", "");
 
     let linksCon = document.createElement("div");
     linksCon.id = "linksCon";
