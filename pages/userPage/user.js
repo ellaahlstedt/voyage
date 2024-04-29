@@ -32,3 +32,4 @@ function renderUserHeader(parent) {
 }
 renderNav(wrapper);
 renderUserHeader(wrapper);
+renderFooter(wrapper);
