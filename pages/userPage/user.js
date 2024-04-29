@@ -18,7 +18,7 @@ function renderUserHeader(parent) {
     logoBox.id = "logoBox";
 
     let logo = document.createElement("div");
-    renderLogo(logo, "70px", "");
+    renderLogo(logo, "70", "");
     logoBox.appendChild(logo);
 
     let sText = document.createElement("h1");
