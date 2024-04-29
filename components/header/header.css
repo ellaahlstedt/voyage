@@ -1,0 +1,64 @@
+header {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#infoCon {
+    height: 350px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: -50px;
+}
+
+#infoBox {
+    background-color: #ffdd95;
+    color: rgb(70, 70, 70);
+    font-family: 'Metrophobic';
+    height: 170px;
+    margin: 0 40px 0 40px;
+    padding: 25px 240px 20px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    line-height: 1.5;
+}
+
+#infoCircle {
+    background-color: #ffbc85;
+    color: white;
+    font-family: 'Metal';
+    height: 175px;
+    width: 175px;
+    border-radius: 100px;
+    font-size: 27px;
+    line-height: 1.5;
+
+    position: absolute;
+    right: 100px;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chooseCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#chooseCon > p:first-child {
+    font-family: 'Metrophobic';
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+#chooseCon > p:nth-child(2) {
+    font-family: 'Metal';
+    font-size: 52px;
+    margin-top: 0;
+}
