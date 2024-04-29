@@ -3,7 +3,7 @@ function renderHeader(parent, currentPage) {
     header.id = "header";
     parent.appendChild(header);
 
-    renderLogo(header, "100px");
+    renderLogo(header, "100");
 
     if (currentPage == "Regions") {
         let infoCon = document.createElement("div");
