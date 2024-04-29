@@ -1,4 +1,4 @@
 const wrapper = document.querySelector("#wrapper");
 renderNav(wrapper, "Regions");
-renderHeader(wrapper, "Cities");
+renderHeader(wrapper, "Regions");
 renderFooter(wrapper);
