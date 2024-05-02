@@ -5,7 +5,7 @@ function renderFooter (parent) {
 
     let logoBox = document.createElement("div");
     logoBox.id = "logoBox";
-    renderLogo(logoBox, "45px", "white");
+    renderLogo(logoBox, "60", "white");
     footer.appendChild(logoBox);
 
     let contactBox = document.createElement("div");

@@ -1,6 +1,6 @@
 function renderNav(parent, currentPage) {
 
-    let img_src = window.location.href.includes("pages") ? "../../fonts/icons/user.png" : "./fonts/icons/user.png"; // adams kod
+    let img_src = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/user.png" : "./fonts/icons/user.png"; // adams kod
 
     let nav = document.createElement("nav");
     nav.id = "mainPagesNav";
@@ -28,10 +28,6 @@ function renderNav(parent, currentPage) {
         {
             name: "Cities",
             link: "./pages/citiesPage/cities.html"
-        },
-        {
-            name: "User Page",
-            link: "./pages/user.html",
         }
     ];
 
@@ -67,7 +63,7 @@ function renderNav(parent, currentPage) {
     UserCon.appendChild(username);
 
     let userIcon = document.createElement("img");
-    userIcon.setAttribute("src", img_src); // Adams kod
+    userIcon.setAttribute("src", img_src); // Adams
     userIcon.setAttribute("alt", "User Icon");
     userIcon.classList.add("userIconNav");
     UserCon.appendChild(userIcon);

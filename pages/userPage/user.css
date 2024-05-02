@@ -1,15 +1,15 @@
 header {
     background: url("../../images/europemap.jpg");
     background-size: cover;
-    height: 800px;
+    height: 750px;
     display: flex;
     align-items: center;
 }
 
 #myVoyages {
     position: absolute;
-    top: 300px;
-    right: 100px;
+    top: 200px;
+    right: 80px;
 }
 
 #logoBox {
@@ -19,7 +19,7 @@ header {
 #sText {
     font-family: Metal;
     color: white;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #myTextBox {
@@ -32,8 +32,8 @@ header {
     bottom: 100px;
 
     font-family: Metal;
-    color: white;
     margin: 0;
-    font-size: 50px;
-
+    font-size: 60px;
+    color: white;
+    margin-bottom: 10px;
 }
