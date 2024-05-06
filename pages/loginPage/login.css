@@ -1,0 +1,58 @@
+body {
+    background-color: darkslategrey;
+    padding: 20px;
+}
+
+#loginPageCon {
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginPageForm {
+    background-color: rgba(205, 208, 210, 0.7);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 65px 50px;
+}
+
+#formHeader {
+    margin: 0;
+    font-size: 30px;
+}
+
+#inputsCon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#updateFormCon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#buttonHeader {
+    margin: 0;
+    font-size: 15px;
+}
+
+#updateFormButton {
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 120px;
+}
+
+#updateFormButton:hover {
+    cursor: pointer;
+}

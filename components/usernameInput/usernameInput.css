@@ -1,0 +1,12 @@
+#inputCon {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 85px auto;
+    align-items: center;
+}
+
+#inputCon input {
+    border: none;
+    background-color: #D9D9D9;
+    width: 180px;
+}
