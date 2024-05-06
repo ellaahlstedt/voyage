@@ -28,7 +28,6 @@ function renderNav(parent, currentPage) {
         {
             name: "Cities",
             link: window.location.href.toLowerCase().includes("pages") ? "../citiesPage/cities.html" : "./pages/citiesPage/cities.html"
-            // link: "./pages/citiesPage/cities.html"
         }
     ];
 
@@ -92,7 +91,8 @@ function dropDownNav(event) {
         dropDownCon.appendChild(LogOutListItem);
 
         let profileLink = document.createElement("a");
-        profileLink.setAttribute("href", "./pages/logIn/logIn.html");
+        const userSrc = window.location.href.toLowerCase().includes("pages") ? "../../pages/userPage/user.html" : "./pages/userPage/user.html";
+        profileLink.setAttribute("href", userSrc);
         profileLink.textContent = "Profile";
         profileListItem.appendChild(profileLink);
 
