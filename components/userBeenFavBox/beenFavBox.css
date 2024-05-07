@@ -47,6 +47,8 @@
     margin-right: 50px;
     margin-top: 20px;
     justify-self: flex-end;
+
+    cursor: pointer;
 }
 
 .beenFavCon#beenList .listBox:nth-of-type(1) {
