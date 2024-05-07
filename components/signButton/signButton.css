@@ -1,0 +1,12 @@
+#signButton {
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px 10px;
+    width: 120px;
+}
+
+#signButton:hover {
+    cursor: pointer;
+}
