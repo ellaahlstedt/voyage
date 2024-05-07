@@ -3,6 +3,19 @@ renderLogin();
 function renderLogin() {
     const parent = document.querySelector("#wrapper");
 
+    // background video
+    let backgroundVideo = document.createElement("video");
+    backgroundVideo.setAttribute("autoplay", "");
+    backgroundVideo.setAttribute("muted", "");
+    backgroundVideo.setAttribute("loop", "");
+    backgroundVideo.id = "loginBgVideo";
+    parent.appendChild(backgroundVideo);
+
+    let videoSource = document.createElement("source");
+    videoSource.setAttribute("src", "../../images/loginBackground.mp4");
+    videoSource.setAttribute("type", "video/mp4");
+    backgroundVideo.appendChild(videoSource);
+
     // logo
     renderLogo(parent, 80, "#FFFFFF");
 
