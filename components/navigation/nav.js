@@ -1,6 +1,6 @@
 function renderNav(parent, currentPage) {
 
-    let img_src = window.location.href.includes("pages") ? "../../fonts/icons/user.png" : "./fonts/icons/user.png"; // adams kod
+    let imgSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/user.png" : "./fonts/icons/user.png"; // adams kod
 
     let nav = document.createElement("nav");
     nav.id = "mainPagesNav";
@@ -19,19 +19,15 @@ function renderNav(parent, currentPage) {
     const links = [
         {
             name: "Regions",
-            link: "./"
+            link: window.location.href.toLowerCase().includes("pages") ? "../../" : "./"
         },
         {
             name: "Countries",
-            link: "./pages/countriesPage/countries.html"
+            link: window.location.href.toLowerCase().includes("pages") ? "../countriesPage/countries.html" : "./pages/countriesPage/countries.html"
         },
         {
             name: "Cities",
-            link: "./pages/citiesPage/cities.html"
-        },
-        {
-            name: "User Page",
-            link: "./pages/user.html",
+            link: window.location.href.toLowerCase().includes("pages") ? "../citiesPage/cities.html" : "./pages/citiesPage/cities.html"
         }
     ];
 
@@ -43,7 +39,8 @@ function renderNav(parent, currentPage) {
         if (item.name == currentPage) {
             a.style.fontWeight = "bold";
             let markerIcon = document.createElement("img");
-            markerIcon.setAttribute("src", "./fonts/icons/marker.svg");
+            const markerSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/marker.svg" : "./fonts/icons/marker.svg";
+            markerIcon.setAttribute("src", markerSrc);
             markerIcon.setAttribute("alt", "Marker Icon");
             markerIcon.classList.add("markerIconNav");
             a.appendChild(markerIcon);
@@ -67,7 +64,7 @@ function renderNav(parent, currentPage) {
     UserCon.appendChild(username);
 
     let userIcon = document.createElement("img");
-    userIcon.setAttribute("src", img_src); // Adams kod
+    userIcon.setAttribute("src", imgSrc); // Adams
     userIcon.setAttribute("alt", "User Icon");
     userIcon.classList.add("userIconNav");
     UserCon.appendChild(userIcon);
@@ -94,7 +91,8 @@ function dropDownNav(event) {
         dropDownCon.appendChild(LogOutListItem);
 
         let profileLink = document.createElement("a");
-        profileLink.setAttribute("href", "./pages/logIn/logIn.html");
+        const userSrc = window.location.href.toLowerCase().includes("pages") ? "../../pages/userPage/user.html" : "./pages/userPage/user.html";
+        profileLink.setAttribute("href", userSrc);
         profileLink.textContent = "Profile";
         profileListItem.appendChild(profileLink);
 

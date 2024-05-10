@@ -10,7 +10,7 @@ function renderUserHeader(parent) {
     myTextBox.id = "myTextBox";
     let myText = document.createElement("h1");
     myText.id = "myText";
-    myText.textContent = "MY";
+    myText.textContent = "My";
     myTextBox.appendChild(myText);
 
 
@@ -23,7 +23,7 @@ function renderUserHeader(parent) {
 
     let sText = document.createElement("h1");
     sText.id = "sText";
-    sText.textContent = "S";
+    sText.textContent = "s";
     logoBox.appendChild(sText);
 
     header.appendChild(myVoyages);
@@ -32,4 +32,6 @@ function renderUserHeader(parent) {
 }
 renderNav(wrapper);
 renderUserHeader(wrapper);
+renderBeenfavCon(wrapper, "beenList", "beenList");
+renderBeenfavCon(wrapper, "wishlistList", "wishlistList");
 renderFooter(wrapper);
