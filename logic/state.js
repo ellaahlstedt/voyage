@@ -1,3 +1,4 @@
+
 const _state = {
     users: [],
     destinations: []
@@ -83,3 +84,4 @@ const state_handler = {
 
     }
 }
+
