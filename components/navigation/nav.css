@@ -84,6 +84,9 @@
 
 #dropDownNav li {
     padding: 10px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 #dropDownNav li a {
@@ -93,9 +96,73 @@
 
 #dropDownNav li p {
     margin: 0;
+    font-size: 16px;
+}
+
+#dropDownNav li img {
+    width: 19px;
+}
+
+#dropDownNav li #navLogout {
     color: #FF2424;
 }
 
-#dropDownNav li p:hover {
+#dropDownNav li p:hover,
+#dropDownNav li img:hover {
     cursor: pointer;
+}
+
+#settingsPopupCon {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+#settingsPopupForm {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 380px;
+    width: 480px;
+    gap: 60px;
+    position: fixed;
+    color: #FFFFFF;
+    border-radius: 10px;
+}
+
+#popupExitIcon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 32px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+#settingsPopupHeader {
+    margin: 0;
+    font-size: 30px;
+}
+
+#settingsPopupInputCon>div {
+    grid-template-columns: 120px auto;
+}
+
+#settingsPopupBtn {
+    border: none;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 5px 10px;
+    width: 120px;
 }
