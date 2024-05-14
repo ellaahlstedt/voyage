@@ -1,6 +1,10 @@
 const _state = {
-    users: [],
-    destinations: []
+        // const data = await fetcher(url, options);
+        // _state.token = data.token;
+    token: "asokdaoskdasodkas",
+    username: "Tyrla",
+    destinations: [],
+    been: []
 }
 
 const state_handler = {

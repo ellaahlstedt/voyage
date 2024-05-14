@@ -1,7 +1,7 @@
 .beenFavCon {
     display: grid;
     grid-template-rows: 1fr;
-    margin: 40px;
+    justify-content: center;
 }
 
 .icon {
@@ -23,8 +23,8 @@
 }
 
 .listBox {
-    width: 380px;
-    height: 520px;
+    width: 300px;
+    height: 450px;
     border-radius: 10px;
     justify-self: center;
     }
@@ -39,11 +39,15 @@
 
 .listCon {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
+    width: fit-content;
+    gap: 30px;
 }
 
 #deleteButton {
     width: fit-content;
+    color: #83ADF6;
+    text-decoration: underline;
     margin-right: 50px;
     margin-top: 20px;
     justify-self: flex-end;
