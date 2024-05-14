@@ -4,34 +4,330 @@
             "userId": 1,
             "userName": "Test",
             "userPassword": "Test123",
-            "liked": []
+            "liked": [
+                "303",
+                "10602"
+            ],
+            "been": []
         },
         {
             "userId": 2,
             "userName": "Test2",
             "userPassword": "Test123",
-            "liked": []
+            "liked": [],
+            "been": [
+                "30409"
+            ]
         },
         {
             "userId": 3,
             "userName": "Test3",
             "userPassword": "Test123",
-            "liked": []
+            "liked": [],
+            "been": []
         },
         {
             "userId": 4,
             "userName": "Test4",
             "userPassword": "Test123",
-            "liked": []
+            "liked": [],
+            "been": []
         },
         {
             "userId": 5,
             "userName": "Test5",
             "userPassword": "Test123",
-            "liked": []
-        }
+            "liked": [],
+            "been": []
+        },
+        [
+            {
+                "userId": 1,
+                "userName": "Test",
+                "userPassword": "Test123",
+                "liked": [
+                    "303"
+                ],
+                "been": []
+            },
+            {
+                "userId": 2,
+                "userName": "Test2",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": [
+                    "30409"
+                ]
+            },
+            {
+                "userId": 3,
+                "userName": "Test3",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            {
+                "userId": 4,
+                "userName": "Test4",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            {
+                "userId": 5,
+                "userName": "Test5",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            }
+        ],
+        [
+            {
+                "userId": 1,
+                "userName": "Test",
+                "userPassword": "Test123",
+                "liked": [
+                    "303"
+                ],
+                "been": []
+            },
+            {
+                "userId": 2,
+                "userName": "Test2",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": [
+                    "30409"
+                ]
+            },
+            {
+                "userId": 3,
+                "userName": "Test3",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            {
+                "userId": 4,
+                "userName": "Test4",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            {
+                "userId": 5,
+                "userName": "Test5",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            [
+                {
+                    "userId": 1,
+                    "userName": "Test",
+                    "userPassword": "Test123",
+                    "liked": [
+                        "303"
+                    ],
+                    "been": []
+                },
+                {
+                    "userId": 2,
+                    "userName": "Test2",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": [
+                        "30409"
+                    ]
+                },
+                {
+                    "userId": 3,
+                    "userName": "Test3",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                {
+                    "userId": 4,
+                    "userName": "Test4",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                {
+                    "userId": 5,
+                    "userName": "Test5",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                }
+            ]
+        ],
+        [
+            {
+                "userId": 1,
+                "userName": "Test",
+                "userPassword": "Test123",
+                "liked": [
+                    "303"
+                ],
+                "been": []
+            },
+            {
+                "userId": 2,
+                "userName": "Test2",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": [
+                    "30409"
+                ]
+            },
+            {
+                "userId": 3,
+                "userName": "Test3",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            {
+                "userId": 4,
+                "userName": "Test4",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            {
+                "userId": 5,
+                "userName": "Test5",
+                "userPassword": "Test123",
+                "liked": [],
+                "been": []
+            },
+            [
+                {
+                    "userId": 1,
+                    "userName": "Test",
+                    "userPassword": "Test123",
+                    "liked": [
+                        "303"
+                    ],
+                    "been": []
+                },
+                {
+                    "userId": 2,
+                    "userName": "Test2",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": [
+                        "30409"
+                    ]
+                },
+                {
+                    "userId": 3,
+                    "userName": "Test3",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                {
+                    "userId": 4,
+                    "userName": "Test4",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                {
+                    "userId": 5,
+                    "userName": "Test5",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                }
+            ],
+            [
+                {
+                    "userId": 1,
+                    "userName": "Test",
+                    "userPassword": "Test123",
+                    "liked": [
+                        "303"
+                    ],
+                    "been": []
+                },
+                {
+                    "userId": 2,
+                    "userName": "Test2",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": [
+                        "30409"
+                    ]
+                },
+                {
+                    "userId": 3,
+                    "userName": "Test3",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                {
+                    "userId": 4,
+                    "userName": "Test4",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                {
+                    "userId": 5,
+                    "userName": "Test5",
+                    "userPassword": "Test123",
+                    "liked": [],
+                    "been": []
+                },
+                [
+                    {
+                        "userId": 1,
+                        "userName": "Test",
+                        "userPassword": "Test123",
+                        "liked": [
+                            "303"
+                        ],
+                        "been": []
+                    },
+                    {
+                        "userId": 2,
+                        "userName": "Test2",
+                        "userPassword": "Test123",
+                        "liked": [],
+                        "been": [
+                            "30409"
+                        ]
+                    },
+                    {
+                        "userId": 3,
+                        "userName": "Test3",
+                        "userPassword": "Test123",
+                        "liked": [],
+                        "been": []
+                    },
+                    {
+                        "userId": 4,
+                        "userName": "Test4",
+                        "userPassword": "Test123",
+                        "liked": [],
+                        "been": []
+                    },
+                    {
+                        "userId": 5,
+                        "userName": "Test5",
+                        "userPassword": "Test123",
+                        "liked": [],
+                        "been": []
+                    }
+                ]
+            ]
+        ]
     ],
-
     "destinations": [
         {
             "id": 1,
@@ -40,7 +336,7 @@
                 {
                     "id": 101,
                     "name": "England",
-                    "images": "../images/england.jpeg",
+                    "images": "..\/images\/england.jpeg",
                     "cities": [
                         {
                             "id": 10101,
@@ -87,7 +383,7 @@
                 {
                     "id": 102,
                     "name": "Wales",
-                    "images": "../images/wales.jpeg",
+                    "images": "..\/images\/wales.jpeg",
                     "cities": [
                         {
                             "id": 10201,
@@ -134,7 +430,7 @@
                 {
                     "id": 103,
                     "name": "Scotland",
-                    "images": "../images/scotland.jpeg",
+                    "images": "..\/images\/scotland.jpeg",
                     "cities": [
                         {
                             "id": 10301,
@@ -181,7 +477,7 @@
                 {
                     "id": 104,
                     "name": "Northern Ireland",
-                    "images": "../images/northernireland.jpeg",
+                    "images": "..\/images\/northernireland.jpeg",
                     "cities": [
                         {
                             "id": 10401,
@@ -189,7 +485,7 @@
                         },
                         {
                             "id": 10402,
-                            "name": "Derry/Londonderry"
+                            "name": "Derry\/Londonderry"
                         },
                         {
                             "id": 10403,
@@ -228,7 +524,7 @@
                 {
                     "id": 105,
                     "name": "Ireland",
-                    "images": "../images/ireland.jpeg",
+                    "images": "..\/images\/ireland.jpeg",
                     "cities": [
                         {
                             "id": 10501,
@@ -281,7 +577,7 @@
                 {
                     "id": 201,
                     "name": "Denmark",
-                    "images": "../images/denmark.jpeg",
+                    "images": "..\/images\/denmark.jpeg",
                     "cities": [
                         {
                             "id": 10601,
@@ -328,7 +624,7 @@
                 {
                     "id": 202,
                     "name": "Sweden",
-                    "images": "../images/sweden.jpeg",
+                    "images": "..\/images\/sweden.jpeg",
                     "cities": [
                         {
                             "id": 10701,
@@ -340,7 +636,7 @@
                         },
                         {
                             "id": 10703,
-                            "name": "Malmö"
+                            "name": "Malm\u00f6"
                         },
                         {
                             "id": 10704,
@@ -348,15 +644,15 @@
                         },
                         {
                             "id": 10705,
-                            "name": "Västerås"
+                            "name": "V\u00e4ster\u00e5s"
                         },
                         {
                             "id": 10706,
-                            "name": "Örebro"
+                            "name": "\u00d6rebro"
                         },
                         {
                             "id": 10707,
-                            "name": "Linköping"
+                            "name": "Link\u00f6ping"
                         },
                         {
                             "id": 10708,
@@ -364,18 +660,18 @@
                         },
                         {
                             "id": 10709,
-                            "name": "Jönköping"
+                            "name": "J\u00f6nk\u00f6ping"
                         },
                         {
                             "id": 10710,
-                            "name": "Norrköping"
+                            "name": "Norrk\u00f6ping"
                         }
                     ]
                 },
                 {
                     "id": 203,
                     "name": "Norway",
-                    "images": "../images/norway.jpeg",
+                    "images": "..\/images\/norway.jpeg",
                     "cities": [
                         {
                             "id": 10801,
@@ -411,18 +707,18 @@
                         },
                         {
                             "id": 10809,
-                            "name": "Ålesund"
+                            "name": "\u00c5lesund"
                         },
                         {
                             "id": 10810,
-                            "name": "Tromsø"
+                            "name": "Troms\u00f8"
                         }
                     ]
                 },
                 {
                     "id": 204,
                     "name": "Finland",
-                    "images": "../images/finland.jpeg",
+                    "images": "..\/images\/finland.jpeg",
                     "cities": [
                         {
                             "id": 10901,
@@ -450,7 +746,7 @@
                         },
                         {
                             "id": 10907,
-                            "name": "Jyväskylä"
+                            "name": "Jyv\u00e4skyl\u00e4"
                         },
                         {
                             "id": 10908,
@@ -469,19 +765,19 @@
                 {
                     "id": 205,
                     "name": "Iceland",
-                    "images": "../images/iceland.jpeg",
+                    "images": "..\/images\/iceland.jpeg",
                     "cities": [
                         {
                             "id": 11001,
-                            "name": "Reykjavík"
+                            "name": "Reykjav\u00edk"
                         },
                         {
                             "id": 11002,
-                            "name": "Kópavogur"
+                            "name": "K\u00f3pavogur"
                         },
                         {
                             "id": 11003,
-                            "name": "Hafnarfjörður"
+                            "name": "Hafnarfj\u00f6r\u00f0ur"
                         },
                         {
                             "id": 11004,
@@ -489,23 +785,23 @@
                         },
                         {
                             "id": 11005,
-                            "name": "Reykjanesbær"
+                            "name": "Reykjanesb\u00e6r"
                         },
                         {
                             "id": 11006,
-                            "name": "Garðabær"
+                            "name": "Gar\u00f0ab\u00e6r"
                         },
                         {
                             "id": 11007,
-                            "name": "Mosfellsbær"
+                            "name": "Mosfellsb\u00e6r"
                         },
                         {
                             "id": 11008,
-                            "name": "Árborg"
+                            "name": "\u00c1rborg"
                         },
                         {
                             "id": 11009,
-                            "name": "Fjarðabyggð"
+                            "name": "Fjar\u00f0abygg\u00f0"
                         },
                         {
                             "id": 11010,
@@ -516,7 +812,7 @@
                 {
                     "id": 206,
                     "name": "Estonia",
-                    "images": "../images/estonia.jpeg",
+                    "images": "..\/images\/estonia.jpeg",
                     "cities": [
                         {
                             "id": 11101,
@@ -532,11 +828,11 @@
                         },
                         {
                             "id": 11104,
-                            "name": "Pärnu"
+                            "name": "P\u00e4rnu"
                         },
                         {
                             "id": 11105,
-                            "name": "Kohtla-Järve"
+                            "name": "Kohtla-J\u00e4rve"
                         },
                         {
                             "id": 11106,
@@ -552,18 +848,18 @@
                         },
                         {
                             "id": 11109,
-                            "name": "Sillamäe"
+                            "name": "Sillam\u00e4e"
                         },
                         {
                             "id": 11110,
-                            "name": "Kärdla"
+                            "name": "K\u00e4rdla"
                         }
                     ]
                 },
                 {
                     "id": 207,
                     "name": "Latvia",
-                    "images": "../images/latvia.jpeg",
+                    "images": "..\/images\/latvia.jpeg",
                     "cities": [
                         {
                             "id": 11201,
@@ -610,7 +906,7 @@
                 {
                     "id": 208,
                     "name": "Lithuania",
-                    "images": "../images/lithuania.jpeg",
+                    "images": "..\/images\/lithuania.jpeg",
                     "cities": [
                         {
                             "id": 11301,
@@ -622,15 +918,15 @@
                         },
                         {
                             "id": 11303,
-                            "name": "Klaipėda"
+                            "name": "Klaip\u0117da"
                         },
                         {
                             "id": 11304,
-                            "name": "Šiauliai"
+                            "name": "\u0160iauliai"
                         },
                         {
                             "id": 11305,
-                            "name": "Panevėžys"
+                            "name": "Panev\u0117\u017eys"
                         },
                         {
                             "id": 11306,
@@ -638,11 +934,11 @@
                         },
                         {
                             "id": 11307,
-                            "name": "Marijampolė"
+                            "name": "Marijampol\u0117"
                         },
                         {
                             "id": 11308,
-                            "name": "Mažeikiai"
+                            "name": "Ma\u017eeikiai"
                         },
                         {
                             "id": 11309,
@@ -663,7 +959,7 @@
                 {
                     "id": 301,
                     "name": "France",
-                    "images": "../images/france.jpeg",
+                    "images": "..\/images\/france.jpeg",
                     "cities": [
                         {
                             "id": 11401,
@@ -710,7 +1006,7 @@
                 {
                     "id": 302,
                     "name": "Germany",
-                    "images": "../images/germany.jpeg",
+                    "images": "..\/images\/germany.jpeg",
                     "cities": [
                         {
                             "id": 11501,
@@ -738,7 +1034,7 @@
                         },
                         {
                             "id": 11507,
-                            "name": "Düsseldorf"
+                            "name": "D\u00fcsseldorf"
                         },
                         {
                             "id": 11508,
@@ -757,7 +1053,7 @@
                 {
                     "id": 303,
                     "name": "Belgium",
-                    "images": "../images/belgium.jpeg",
+                    "images": "..\/images\/belgium.jpeg",
                     "cities": [
                         {
                             "id": 30301,
@@ -777,7 +1073,7 @@
                         },
                         {
                             "id": 30305,
-                            "name": "Liège"
+                            "name": "Li\u00e8ge"
                         },
                         {
                             "id": 30306,
@@ -804,7 +1100,7 @@
                 {
                     "id": 304,
                     "name": "Netherlands",
-                    "images": "../images/netherlands.jpeg",
+                    "images": "..\/images\/netherlands.jpeg",
                     "cities": [
                         {
                             "id": 30401,
@@ -851,7 +1147,7 @@
                 {
                     "id": 305,
                     "name": "Luxembourg",
-                    "images": "../images/luxembourg.jpeg",
+                    "images": "..\/images\/luxembourg.jpeg",
                     "cities": [
                         {
                             "id": 30501,
@@ -898,7 +1194,7 @@
                 {
                     "id": 306,
                     "name": "Switzerland",
-                    "images": "../images/switzerland.jpeg",
+                    "images": "..\/images\/switzerland.jpeg",
                     "cities": [
                         {
                             "id": 30601,
@@ -938,14 +1234,14 @@
                         },
                         {
                             "id": 30610,
-                            "name": "Biel/Bienne"
+                            "name": "Biel\/Bienne"
                         }
                     ]
                 },
                 {
                     "id": 307,
                     "name": "Austria",
-                    "images": "../images/austria.jpeg",
+                    "images": "..\/images\/austria.jpeg",
                     "cities": [
                         {
                             "id": 30701,
@@ -981,7 +1277,7 @@
                         },
                         {
                             "id": 30709,
-                            "name": "St. Pölten"
+                            "name": "St. P\u00f6lten"
                         },
                         {
                             "id": 30710,
@@ -992,7 +1288,7 @@
                 {
                     "id": 308,
                     "name": "Liechtenstein",
-                    "images": "../images/liechtenstein.jpeg",
+                    "images": "..\/images\/liechtenstein.jpeg",
                     "cities": [
                         {
                             "id": 30801,
@@ -1021,7 +1317,7 @@
                 {
                     "id": 401,
                     "name": "Greece",
-                    "images": "../images/greece.jpeg",
+                    "images": "..\/images\/greece.jpeg",
                     "cities": [
                         {
                             "id": 40101,
@@ -1068,7 +1364,7 @@
                 {
                     "id": 402,
                     "name": "Albania",
-                    "images": "../images/albania.jpeg",
+                    "images": "..\/images\/albania.jpeg",
                     "cities": [
                         {
                             "id": 40201,
@@ -1076,15 +1372,15 @@
                         },
                         {
                             "id": 40202,
-                            "name": "Durrës"
+                            "name": "Durr\u00ebs"
                         },
                         {
                             "id": 40203,
-                            "name": "Vlorë"
+                            "name": "Vlor\u00eb"
                         },
                         {
                             "id": 40204,
-                            "name": "Shkodër"
+                            "name": "Shkod\u00ebr"
                         },
                         {
                             "id": 40205,
@@ -1096,7 +1392,7 @@
                         },
                         {
                             "id": 40207,
-                            "name": "Korçë"
+                            "name": "Kor\u00e7\u00eb"
                         },
                         {
                             "id": 40208,
@@ -1104,18 +1400,18 @@
                         },
                         {
                             "id": 40209,
-                            "name": "Lushnjë"
+                            "name": "Lushnj\u00eb"
                         },
                         {
                             "id": 40210,
-                            "name": "Kukës"
+                            "name": "Kuk\u00ebs"
                         }
                     ]
                 },
                 {
                     "id": 403,
                     "name": "North Macedonia",
-                    "images": "../images/macedonia.jpeg",
+                    "images": "..\/images\/macedonia.jpeg",
                     "cities": [
                         {
                             "id": 40301,
@@ -1162,7 +1458,7 @@
                 {
                     "id": 404,
                     "name": "Serbia",
-                    "images": "../images/serbia.jpeg",
+                    "images": "..\/images\/serbia.jpeg",
                     "cities": [
                         {
                             "id": 40401,
@@ -1174,7 +1470,7 @@
                         },
                         {
                             "id": 40403,
-                            "name": "Niš"
+                            "name": "Ni\u0161"
                         },
                         {
                             "id": 40404,
@@ -1190,11 +1486,11 @@
                         },
                         {
                             "id": 40407,
-                            "name": "Pančevo"
+                            "name": "Pan\u010devo"
                         },
                         {
                             "id": 40408,
-                            "name": "Čačak"
+                            "name": "\u010ca\u010dak"
                         },
                         {
                             "id": 40409,
@@ -1209,7 +1505,7 @@
                 {
                     "id": 405,
                     "name": "Montenegro",
-                    "images": "../images/montenegro.jpeg",
+                    "images": "..\/images\/montenegro.jpeg",
                     "cities": [
                         {
                             "id": 40501,
@@ -1217,7 +1513,7 @@
                         },
                         {
                             "id": 40502,
-                            "name": "Nikšić"
+                            "name": "Nik\u0161i\u0107"
                         },
                         {
                             "id": 40503,
@@ -1256,7 +1552,7 @@
                 {
                     "id": 406,
                     "name": "Bosnia and Herzegovina",
-                    "images": "../images/bosniaherzegovina.jpeg",
+                    "images": "..\/images\/bosniaherzegovina.jpeg",
                     "cities": [
                         {
                             "id": 40601,
@@ -1284,11 +1580,11 @@
                         },
                         {
                             "id": 40607,
-                            "name": "Bihać"
+                            "name": "Biha\u0107"
                         },
                         {
                             "id": 40608,
-                            "name": "Brčko"
+                            "name": "Br\u010dko"
                         },
                         {
                             "id": 40609,
@@ -1303,7 +1599,7 @@
                 {
                     "id": 407,
                     "name": "Croatia",
-                    "images": "../images/croatia.jpeg",
+                    "images": "..\/images\/croatia.jpeg",
                     "cities": [
                         {
                             "id": 40701,
@@ -1350,7 +1646,7 @@
                 {
                     "id": 408,
                     "name": "Slovenia",
-                    "images": "../images/slovenia.jpeg",
+                    "images": "..\/images\/slovenia.jpeg",
                     "cities": [
                         {
                             "id": 40801,
@@ -1397,7 +1693,7 @@
                 {
                     "id": 409,
                     "name": "Kosovo",
-                    "images": "../images/kosovo.jpeg",
+                    "images": "..\/images\/kosovo.jpeg",
                     "cities": [
                         {
                             "id": 40901,
@@ -1437,14 +1733,14 @@
                         },
                         {
                             "id": 40910,
-                            "name": "Fushë Kosovë"
+                            "name": "Fush\u00eb Kosov\u00eb"
                         }
                     ]
                 },
                 {
                     "id": 410,
                     "name": "Bulgaria",
-                    "images": "../images/bulgaria.jpeg",
+                    "images": "..\/images\/bulgaria.jpeg",
                     "cities": [
                         {
                             "id": 41001,
@@ -1497,7 +1793,7 @@
                 {
                     "id": 501,
                     "name": "Italy",
-                    "images": "../images/italy.jpeg",
+                    "images": "..\/images\/italy.jpeg",
                     "cities": [
                         {
                             "id": 50101,
@@ -1544,7 +1840,7 @@
                 {
                     "id": 502,
                     "name": "Spain",
-                    "images": "../images/spain.jpeg",
+                    "images": "..\/images\/spain.jpeg",
                     "cities": [
                         {
                             "id": 50201,
@@ -1568,7 +1864,7 @@
                         },
                         {
                             "id": 50206,
-                            "name": "Málaga"
+                            "name": "M\u00e1laga"
                         },
                         {
                             "id": 50207,
@@ -1591,7 +1887,7 @@
                 {
                     "id": 503,
                     "name": "Portugal",
-                    "images": "../images/portugal.jpeg",
+                    "images": "..\/images\/portugal.jpeg",
                     "cities": [
                         {
                             "id": 50301,
@@ -1627,7 +1923,7 @@
                         },
                         {
                             "id": 50309,
-                            "name": "Setúbal"
+                            "name": "Set\u00fabal"
                         },
                         {
                             "id": 50310,
@@ -1638,7 +1934,7 @@
                 {
                     "id": 504,
                     "name": "Malta",
-                    "images": "../images/malta.jpeg",
+                    "images": "..\/images\/malta.jpeg",
                     "cities": [
                         {
                             "id": 50401,
@@ -1666,7 +1962,7 @@
                         },
                         {
                             "id": 50407,
-                            "name": "Mellieħa"
+                            "name": "Mellie\u0127a"
                         },
                         {
                             "id": 50408,
@@ -1685,7 +1981,7 @@
                 {
                     "id": 505,
                     "name": "Cyprus",
-                    "images": "../images/cyprus.jpeg",
+                    "images": "..\/images\/cyprus.jpeg",
                     "cities": [
                         {
                             "id": 50501,
@@ -1732,7 +2028,7 @@
                 {
                     "id": 506,
                     "name": "Andorra",
-                    "images": "../images/andorra.jpeg",
+                    "images": "..\/images\/andorra.jpeg",
                     "cities": [
                         {
                             "id": 50601,
@@ -1748,7 +2044,7 @@
                         },
                         {
                             "id": 50604,
-                            "name": "Sant Julià de Lòria"
+                            "name": "Sant Juli\u00e0 de L\u00f2ria"
                         },
                         {
                             "id": 50605,
@@ -1779,7 +2075,7 @@
                 {
                     "id": 507,
                     "name": "Monaco",
-                    "images": "../images/monaco.jpeg",
+                    "images": "..\/images\/monaco.jpeg",
                     "cities": [
                         {
                             "id": 50701,
@@ -1790,7 +2086,7 @@
                 {
                     "id": 508,
                     "name": "San Marino",
-                    "images": "../images/sanmarino.jpeg",
+                    "images": "..\/images\/sanmarino.jpeg",
                     "cities": [
                         {
                             "id": 50801,
@@ -1837,7 +2133,7 @@
                 {
                     "id": 509,
                     "name": "Vatican City",
-                    "images": "../images/vatican.jpeg",
+                    "images": "..\/images\/vatican.jpeg",
                     "cities": [
                         {
                             "id": 50901,
@@ -1846,7 +2142,7 @@
                     ]
                 }
             ]
-        },  
+        },
         {
             "id": 6,
             "region": "Central Europe",
@@ -1854,7 +2150,7 @@
                 {
                     "id": 601,
                     "name": "Czech Republic",
-                    "images": "../images/czechrepublic.jpeg",
+                    "images": "..\/images\/czechrepublic.jpeg",
                     "cities": [
                         {
                             "id": 60101,
@@ -1870,7 +2166,7 @@
                         },
                         {
                             "id": 60104,
-                            "name": "Plzeň"
+                            "name": "Plze\u0148"
                         },
                         {
                             "id": 60105,
@@ -1882,11 +2178,11 @@
                         },
                         {
                             "id": 60107,
-                            "name": "České Budějovice"
+                            "name": "\u010cesk\u00e9 Bud\u011bjovice"
                         },
                         {
                             "id": 60108,
-                            "name": "Hradec Králové"
+                            "name": "Hradec Kr\u00e1lov\u00e9"
                         },
                         {
                             "id": 60109,
@@ -1901,7 +2197,7 @@
                 {
                     "id": 602,
                     "name": "Slovakia",
-                    "images": "../images/slovakia.jpeg",
+                    "images": "..\/images\/slovakia.jpeg",
                     "cities": [
                         {
                             "id": 60201,
@@ -1909,15 +2205,15 @@
                         },
                         {
                             "id": 60202,
-                            "name": "Košice"
+                            "name": "Ko\u0161ice"
                         },
                         {
                             "id": 60203,
-                            "name": "Prešov"
+                            "name": "Pre\u0161ov"
                         },
                         {
                             "id": 60204,
-                            "name": "Žilina"
+                            "name": "\u017dilina"
                         },
                         {
                             "id": 60205,
@@ -1933,7 +2229,7 @@
                         },
                         {
                             "id": 60208,
-                            "name": "Banská Bystrica"
+                            "name": "Bansk\u00e1 Bystrica"
                         },
                         {
                             "id": 60209,
@@ -1941,14 +2237,14 @@
                         },
                         {
                             "id": 60210,
-                            "name": "Trenčín"
+                            "name": "Tren\u010d\u00edn"
                         }
                     ]
                 },
                 {
                     "id": 603,
                     "name": "Hungary",
-                    "images": "../images/hungary.jpeg",
+                    "images": "..\/images\/hungary.jpeg",
                     "cities": [
                         {
                             "id": 60301,
@@ -1968,19 +2264,19 @@
                         },
                         {
                             "id": 60305,
-                            "name": "Pécs"
+                            "name": "P\u00e9cs"
                         },
                         {
                             "id": 60306,
-                            "name": "Győr"
+                            "name": "Gy\u0151r"
                         },
                         {
                             "id": 60307,
-                            "name": "Nyíregyháza"
+                            "name": "Ny\u00edregyh\u00e1za"
                         },
                         {
                             "id": 60308,
-                            "name": "Kecskemét"
+                            "name": "Kecskem\u00e9t"
                         },
                         {
                             "id": 60309,
@@ -1988,14 +2284,14 @@
                         },
                         {
                             "id": 60310,
-                            "name": "Székesfehérvár"
+                            "name": "Sz\u00e9kesfeh\u00e9rv\u00e1r"
                         }
                     ]
                 },
                 {
                     "id": 604,
                     "name": "Poland",
-                    "images": "../images/poland.jpeg",
+                    "images": "..\/images\/poland.jpeg",
                     "cities": [
                         {
                             "id": 60401,
@@ -2003,23 +2299,23 @@
                         },
                         {
                             "id": 60402,
-                            "name": "Kraków"
+                            "name": "Krak\u00f3w"
                         },
                         {
                             "id": 60403,
-                            "name": "Łódź"
+                            "name": "\u0141\u00f3d\u017a"
                         },
                         {
                             "id": 60404,
-                            "name": "Wrocław"
+                            "name": "Wroc\u0142aw"
                         },
                         {
                             "id": 60405,
-                            "name": "Poznań"
+                            "name": "Pozna\u0144"
                         },
                         {
                             "id": 60406,
-                            "name": "Gdańsk"
+                            "name": "Gda\u0144sk"
                         },
                         {
                             "id": 60407,
@@ -2048,7 +2344,7 @@
                 {
                     "id": 701,
                     "name": "Russia",
-                    "images": "../images/russia.jpeg",
+                    "images": "..\/images\/russia.jpeg",
                     "cities": [
                         {
                             "id": 70101,
@@ -2095,7 +2391,7 @@
                 {
                     "id": 702,
                     "name": "Ukraine",
-                    "images": "../images/ukraine.jpeg",
+                    "images": "..\/images\/ukraine.jpeg",
                     "cities": [
                         {
                             "id": 70201,
@@ -2142,7 +2438,7 @@
                 {
                     "id": 703,
                     "name": "Belarus",
-                    "images": "../images/belarus.jpeg",
+                    "images": "..\/images\/belarus.jpeg",
                     "cities": [
                         {
                             "id": 70301,
@@ -2189,7 +2485,7 @@
                 {
                     "id": 704,
                     "name": "Romania",
-                    "images": "../images/romania.jpeg",
+                    "images": "..\/images\/romania.jpeg",
                     "cities": [
                         {
                             "id": 70401,
@@ -2201,15 +2497,15 @@
                         },
                         {
                             "id": 70403,
-                            "name": "Timișoara"
+                            "name": "Timi\u0219oara"
                         },
                         {
                             "id": 70404,
-                            "name": "Iași"
+                            "name": "Ia\u0219i"
                         },
                         {
                             "id": 70405,
-                            "name": "Constanța"
+                            "name": "Constan\u021ba"
                         },
                         {
                             "id": 70406,
@@ -2217,15 +2513,15 @@
                         },
                         {
                             "id": 70407,
-                            "name": "Galați"
+                            "name": "Gala\u021bi"
                         },
                         {
                             "id": 70408,
-                            "name": "Brașov"
+                            "name": "Bra\u0219ov"
                         },
                         {
                             "id": 70409,
-                            "name": "Ploiești"
+                            "name": "Ploie\u0219ti"
                         },
                         {
                             "id": 70410,
@@ -2236,15 +2532,15 @@
                 {
                     "id": 705,
                     "name": "Moldova",
-                    "images": "../images/moldova.jpeg",
+                    "images": "..\/images\/moldova.jpeg",
                     "cities": [
                         {
                             "id": 70501,
-                            "name": "Chișinău"
+                            "name": "Chi\u0219in\u0103u"
                         },
                         {
                             "id": 70502,
-                            "name": "Bălți"
+                            "name": "B\u0103l\u021bi"
                         },
                         {
                             "id": 70503,
@@ -2256,7 +2552,7 @@
                         },
                         {
                             "id": 70505,
-                            "name": "Rîbnița"
+                            "name": "R\u00eebni\u021ba"
                         },
                         {
                             "id": 70506,
@@ -2281,6 +2577,6 @@
                     ]
                 }
             ]
-        }        
+        }
     ]
 }

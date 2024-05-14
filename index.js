@@ -21,5 +21,7 @@ const wrapper = document.querySelector("#wrapper");
 
 renderNav(wrapper, "Regions");
 renderHeader(wrapper, "Regions");
+
 renderRegionsCon(wrapper);
 renderFooter(wrapper);
+
