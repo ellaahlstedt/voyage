@@ -1,5 +1,10 @@
 "use strict"
 
+
+if (window.localStorage.getItem("username") === null || window.localStorage.getItem("token") === null) {
+    window.location.href = "../loginPage/login.html";
+}
+
 function renderCountriesPage(parent) {
     const countriesCon = document.createElement('div');
     countriesCon.id = "countriesCon";

@@ -2,337 +2,45 @@
     "users": [
         {
             "userId": 1,
-            "userName": "Test",
-            "userPassword": "Test123",
-            "liked": [
-                "303",
-                "10602"
-            ],
-            "been": []
-        },
-        {
-            "userId": 2,
-            "userName": "Test2",
-            "userPassword": "Test123",
-            "liked": [],
-            "been": [
-                "30409"
-            ]
-        },
-        {
-            "userId": 3,
-            "userName": "Test3",
-            "userPassword": "Test123",
+            "userName": "tyrla",
+            "userPassword": "tyrla",
             "liked": [],
             "been": []
         },
         {
             "userId": 4,
-            "userName": "Test4",
-            "userPassword": "Test123",
+            "userName": "adada",
+            "userPassword": "adada",
             "liked": [],
             "been": []
         },
         {
             "userId": 5,
-            "userName": "Test5",
-            "userPassword": "Test123",
+            "userName": "ararara",
+            "userPassword": "ararar",
             "liked": [],
             "been": []
         },
-        [
-            {
-                "userId": 1,
-                "userName": "Test",
-                "userPassword": "Test123",
-                "liked": [
-                    "303"
-                ],
-                "been": []
-            },
-            {
-                "userId": 2,
-                "userName": "Test2",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": [
-                    "30409"
-                ]
-            },
-            {
-                "userId": 3,
-                "userName": "Test3",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            {
-                "userId": 4,
-                "userName": "Test4",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            {
-                "userId": 5,
-                "userName": "Test5",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            }
-        ],
-        [
-            {
-                "userId": 1,
-                "userName": "Test",
-                "userPassword": "Test123",
-                "liked": [
-                    "303"
-                ],
-                "been": []
-            },
-            {
-                "userId": 2,
-                "userName": "Test2",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": [
-                    "30409"
-                ]
-            },
-            {
-                "userId": 3,
-                "userName": "Test3",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            {
-                "userId": 4,
-                "userName": "Test4",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            {
-                "userId": 5,
-                "userName": "Test5",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            [
-                {
-                    "userId": 1,
-                    "userName": "Test",
-                    "userPassword": "Test123",
-                    "liked": [
-                        "303"
-                    ],
-                    "been": []
-                },
-                {
-                    "userId": 2,
-                    "userName": "Test2",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": [
-                        "30409"
-                    ]
-                },
-                {
-                    "userId": 3,
-                    "userName": "Test3",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                {
-                    "userId": 4,
-                    "userName": "Test4",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                {
-                    "userId": 5,
-                    "userName": "Test5",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                }
-            ]
-        ],
-        [
-            {
-                "userId": 1,
-                "userName": "Test",
-                "userPassword": "Test123",
-                "liked": [
-                    "303"
-                ],
-                "been": []
-            },
-            {
-                "userId": 2,
-                "userName": "Test2",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": [
-                    "30409"
-                ]
-            },
-            {
-                "userId": 3,
-                "userName": "Test3",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            {
-                "userId": 4,
-                "userName": "Test4",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            {
-                "userId": 5,
-                "userName": "Test5",
-                "userPassword": "Test123",
-                "liked": [],
-                "been": []
-            },
-            [
-                {
-                    "userId": 1,
-                    "userName": "Test",
-                    "userPassword": "Test123",
-                    "liked": [
-                        "303"
-                    ],
-                    "been": []
-                },
-                {
-                    "userId": 2,
-                    "userName": "Test2",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": [
-                        "30409"
-                    ]
-                },
-                {
-                    "userId": 3,
-                    "userName": "Test3",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                {
-                    "userId": 4,
-                    "userName": "Test4",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                {
-                    "userId": 5,
-                    "userName": "Test5",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                }
-            ],
-            [
-                {
-                    "userId": 1,
-                    "userName": "Test",
-                    "userPassword": "Test123",
-                    "liked": [
-                        "303"
-                    ],
-                    "been": []
-                },
-                {
-                    "userId": 2,
-                    "userName": "Test2",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": [
-                        "30409"
-                    ]
-                },
-                {
-                    "userId": 3,
-                    "userName": "Test3",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                {
-                    "userId": 4,
-                    "userName": "Test4",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                {
-                    "userId": 5,
-                    "userName": "Test5",
-                    "userPassword": "Test123",
-                    "liked": [],
-                    "been": []
-                },
-                [
-                    {
-                        "userId": 1,
-                        "userName": "Test",
-                        "userPassword": "Test123",
-                        "liked": [
-                            "303"
-                        ],
-                        "been": []
-                    },
-                    {
-                        "userId": 2,
-                        "userName": "Test2",
-                        "userPassword": "Test123",
-                        "liked": [],
-                        "been": [
-                            "30409"
-                        ]
-                    },
-                    {
-                        "userId": 3,
-                        "userName": "Test3",
-                        "userPassword": "Test123",
-                        "liked": [],
-                        "been": []
-                    },
-                    {
-                        "userId": 4,
-                        "userName": "Test4",
-                        "userPassword": "Test123",
-                        "liked": [],
-                        "been": []
-                    },
-                    {
-                        "userId": 5,
-                        "userName": "Test5",
-                        "userPassword": "Test123",
-                        "liked": [],
-                        "been": []
-                    }
-                ]
-            ]
-        ]
+        {
+            "userId": 6,
+            "userName": "hejamig",
+            "userPassword": "hhh",
+            "liked": [],
+            "been": []
+        },
+        {
+            "userId": 7,
+            "userName": "hej",
+            "userPassword": "hej",
+            "liked": [],
+            "been": []
+        }
     ],
     "destinations": [
         {
             "id": 1,
             "region": "British Isles",
-            "regionImage": "../images/britishisles.jpeg",
+            "regionImage": "..\/images\/britishisles.jpeg",
             "countries": [
                 {
                     "id": 101,
@@ -574,7 +282,7 @@
         {
             "id": 2,
             "region": "Northern Europe",
-            "regionImage": "../images/northerneurope.jpg",
+            "regionImage": "..\/images\/northerneurope.jpg",
             "countries": [
                 {
                     "id": 201,
@@ -957,7 +665,7 @@
         {
             "id": 3,
             "region": "Western Europe",
-            "regionImage": "../images/westerneurope.jpg",
+            "regionImage": "..\/images\/westerneurope.jpg",
             "countries": [
                 {
                     "id": 301,
@@ -1316,7 +1024,7 @@
         {
             "id": 4,
             "region": "The Balkans",
-            "regionImage": "../images/thebalkans.jpg",
+            "regionImage": "..\/images\/thebalkans.jpg",
             "countries": [
                 {
                     "id": 401,
@@ -1793,7 +1501,7 @@
         {
             "id": 5,
             "region": "Southern Europe",
-            "regionImage": "../images/southerneurope.jpeg",
+            "regionImage": "..\/images\/southerneurope.jpeg",
             "countries": [
                 {
                     "id": 501,
@@ -2151,7 +1859,7 @@
         {
             "id": 6,
             "region": "Central Europe",
-            "regionImage": "../images/centraleurope.jpeg",
+            "regionImage": "..\/images\/centraleurope.jpeg",
             "countries": [
                 {
                     "id": 601,
@@ -2346,7 +2054,7 @@
         {
             "id": 7,
             "region": "Eastern Europe",
-            "regionImage": "../images/easterneurope.jpeg",
+            "regionImage": "..\/images\/easterneurope.jpeg",
             "countries": [
                 {
                     "id": 701,

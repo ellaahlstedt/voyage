@@ -2,7 +2,7 @@
 
 ini_set("display_errors", 1);
 
-$filename = "database.json";
+$filename = "./database.json";
 
 $requestMethods = $_SERVER["REQUEST_METHOD"];
 $allowedMethods = ["GET", "POST", "PATCH", "DELETE"];
@@ -67,14 +67,11 @@ if ($requestMethods == "POST") {
     if ($requestData["action"] == "login") {
         foreach ($users as $user) {
             if ($user["userName"] == $requestData["userName"]) {
-                $token = sha1($user["userName"] . $user["password"]);
-                sendJSON($token);
+                $token = sha1($user["userName"] . $user["userPassword"]);
+                sendJSON(["token" => $token, "username" => $user["userName"]]);
             }
         }
     }
-
-    $liked = $requestData["liked"];
-    $been = $requestData["been"];
     
     //create ID
     $highestId = 0;
@@ -92,7 +89,7 @@ if ($requestMethods == "POST") {
     }
 
     $nextId = $highestId + 1;
-    $newUser = ["userId" => $nextId, "userName" => $userName, "password" => $password, "liked" => [], "been" => []];
+    $newUser = ["userId" => $nextId, "userName" => $userName, "userPassword" => $password, "liked" => [], "been" => []];
     $users[] = $newUser;
     $full_db["users"] = $users;
     $json = json_encode($full_db, JSON_PRETTY_PRINT);
@@ -129,7 +126,7 @@ if ($requestMethods == "PATCH") {
     $token_valid = false;
     
     foreach($users as $user) {
-        $encrypted_user = sha1($user["userName"] . $user["password"] == $incoming_token);
+        $encrypted_user = sha1($user["userName"] . $user["userPassword"] == $incoming_token);
         if ($encrypted_user == $token) $token_valid = true;
         
     }
@@ -167,7 +164,7 @@ if ($requestMethods == "DELETE") {
     $token_valid = false;
     
     foreach($users as $user) {
-        $encrypted_user = sha1($user["userName"] . $user["password"] == $incoming_token);
+        $encrypted_user = sha1($user["userName"] . $user["userPassword"] == $incoming_token);
         if ($encrypted_user == $token) $token_valid = true;
         
     }

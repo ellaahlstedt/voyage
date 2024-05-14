@@ -1,5 +1,9 @@
 "use strict"
 
+if (window.localStorage.getItem("username") === null || window.localStorage.getItem("token") === null) {
+    window.location.href = "../loginPage/login.html";
+}
+
 function renderCitiesPage(parent) {
     const citiesCon = document.createElement('div');
     citiesCon.id = "citiesCon";

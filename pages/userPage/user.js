@@ -1,3 +1,9 @@
+"use strict"
+
+if (window.localStorage.getItem("username") === null || window.localStorage.getItem("token") === null) {
+    window.location.href = "../loginPage/login.html";
+}
+
 function renderUserHeader(parent) {
     let header = document.createElement("header");
     header.id = "header";

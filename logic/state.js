@@ -1,15 +1,19 @@
 
 const _state = {
     users: [],
-    destinations: []
+    destinations: [],
+
+    // Dessa två nycklar måste finnas med så att man kan skicka fetches osv.
+    token: window.localStorage.getItem("token"),
+    username: window.localStorage.getItem("username")
 }
 
 const state_handler = {
     async runApp() {
-        const usersResource = await fetch_handler("./logic/users.php");
+        // const usersResource = await fetch_handler("./logic/users.php");
         const destinationsResource = await fetch_handler("./logic/destinations.php");
 
-        _state.users = usersResource;
+        // _state.users = usersResource;
         _state.destinations = destinationsResource;
         const wrapper = document.querySelector("#wrapper");
         updateRegionsCon(_state.destinations);

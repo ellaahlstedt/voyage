@@ -44,7 +44,7 @@ function renderLogin() {
     loginForm.appendChild(inputCon);
 
     renderLoginInput(inputCon, "text", "Username");
-    renderLoginInput(inputCon, "text", "Password");
+    renderLoginInput(inputCon, "password", "Password");
 
     // button - sign in
     renderSignButton(loginForm, "Sign in");

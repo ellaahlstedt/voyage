@@ -59,7 +59,7 @@ function renderNav(parent, currentPage) {
 
     // Får ändras senare till localstorage username
     let username = document.createElement("p");
-    username.textContent = "username";
+    username.textContent = window.localStorage.getItem("username");
     username.classList.add("usernameNav");
     UserCon.appendChild(username);
 
@@ -98,12 +98,14 @@ function dropDownNav(event) {
 
         let logOut = document.createElement("p");
         logOut.textContent = "Log Out";
-        logOut.addEventListener("click", logOut);
+        logOut.addEventListener("click", logOut_event);
         LogOutListItem.appendChild(logOut);
     }
 }
 
-function logOut() {
+function logOut_event() {
     // clear localstorage
+    window.localStorage.clear();
+    window.location.reload();
 }
 
