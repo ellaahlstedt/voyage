@@ -13,10 +13,7 @@ if(!in_array($requestMethods, $allowedMethods)) {
     sendJSON($error, 405);
 }
 
-if ($contentType != "application/json") {
-        $error = ["error" => "Invalid Content Type"];
-        sendJSON($error, 405);
-}
+
 
 
 $users = [];
@@ -41,6 +38,9 @@ if ($requestMethods == "GET") {
         $error = ["error" => "Not Found"];
         sendJSON($error, 404);
     }
+    else { 
+        sendJSON($users);
+    }
     $error = ["error" => "No id passed for user."];
     sendJSON($error, 400);
 }
@@ -48,12 +48,12 @@ if ($requestMethods == "GET") {
 $requestJSON = file_get_contents("php://input");
 $requestData = json_decode($requestJSON, true);
 
-
+$contentType = $_SERVER["CONTENT_TYPE"];
 if ($contentType != "application/json") {
     $error = ["error" => "Invalid Content Type"];
     sendJSON($error, 400);
 }
-$contentType = $_SERVER["CONTENT_TYPE"];
+
 // lägg till ny användare. Lägg till tom array av been o liked + token
 if ($requestMethods == "POST") {
     if (!isset($requestData["userName"], $requestData["password"])) {
