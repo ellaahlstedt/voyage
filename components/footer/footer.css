@@ -3,13 +3,16 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 10px;
+    margin-top: 100px;
 }
 
 #logoBox {
     align-self: center;
+    margin-left: 50px;
 }
 
 #contactBox {
     align-self: center;
     font-family: Metrophobic;
+    margin-right: 50px;
 }

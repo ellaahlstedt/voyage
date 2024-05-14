@@ -43,7 +43,7 @@ function renderBeenfavCon (parent, type, containerId) {
     listCon.className = "listCon";
     beenFavCon.appendChild(listCon);
 
-    let deleteButton = document.createElement("button");
+    let deleteButton = document.createElement("div");
     deleteButton.id = "deleteButton";
     deleteButton.textContent = "UN-BEEN";
     if (containerId === "beenList") {

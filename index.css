@@ -40,7 +40,7 @@ body {
     margin: 0;
     color: white;
     writing-mode: sideways-lr;
-    font-size: 70px; /* Ändras sen beroende på namnlängden */
+    font-size: 50px; /* Ändras sen beroende på namnlängden */
     font-family: 'Metal';
     display: flex;
     align-items: center;
