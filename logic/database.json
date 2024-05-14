@@ -332,6 +332,7 @@
         {
             "id": 1,
             "region": "British Isles",
+            "regionImage": "../images/britishisles.jpeg",
             "countries": [
                 {
                     "id": 101,
@@ -573,6 +574,7 @@
         {
             "id": 2,
             "region": "Northern Europe",
+            "regionImage": "../images/northerneurope.jpeg",
             "countries": [
                 {
                     "id": 201,
@@ -955,6 +957,7 @@
         {
             "id": 3,
             "region": "Western Europe",
+            "regionImage": "../images/westerneurope.jpeg",
             "countries": [
                 {
                     "id": 301,
@@ -1313,6 +1316,7 @@
         {
             "id": 4,
             "region": "The Balkans",
+            "regionImage": "../images/thebalkans.jpeg",
             "countries": [
                 {
                     "id": 401,
@@ -1789,6 +1793,7 @@
         {
             "id": 5,
             "region": "Southern Europe",
+            "regionImage": "../images/southerneurope.jpeg",
             "countries": [
                 {
                     "id": 501,
@@ -2146,6 +2151,7 @@
         {
             "id": 6,
             "region": "Central Europe",
+            "regionImage": "../images/centraleurope.jpeg",
             "countries": [
                 {
                     "id": 601,
@@ -2340,6 +2346,7 @@
         {
             "id": 7,
             "region": "Eastern Europe",
+            "regionImage": "../images/easterneurope.jpeg",
             "countries": [
                 {
                     "id": 701,
