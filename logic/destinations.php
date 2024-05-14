@@ -6,17 +6,14 @@ $filename = "database.json";
 
 $requestMethods = $_SERVER["REQUEST_METHOD"];
 $allowedMethods = ["GET", "POST", "DELETE"];
-$contentType = $_SERVER["CONTENT_TYPE"];
+
 
 if(!in_array($requestMethods, $allowedMethods)) {
     $error = ["error" => "invalid HTTP method"];
     sendJSON($error, 405);
 }
 
-if ($contentType != "application/json") {
-        $error = ["error" => "Invalid Content Type"];
-        sendJSON($error, 405);
-}
+
 
 $destinations = [];
 $users = [];
@@ -62,6 +59,10 @@ if ($requestMethods == "GET") {
         }
         $error = ["error" => "Not Found"];
         sendJSON($error, 404);
+    } else {
+        sendJSON($destinations);
+    
+    
     }
     $error = ["error" => "No id passed for destination."];
     sendJSON($error, 400);
@@ -89,6 +90,8 @@ async function adam() {
 
 adam();*/
 }
+
+$contentType = $_SERVER["CONTENT_TYPE"];
 
 $requestJSON = file_get_contents("php://input");
 $requestData = json_decode($requestJSON, true);

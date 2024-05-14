@@ -1,7 +1,7 @@
 
 const _state = {
-        // const data = await fetcher(url, options);
-        // _state.token = data.token;
+    // const data = await fetcher(url, options);
+    // _state.token = data.token;
     token: "asokdaoskdasodkas",
     username: "Tyrla",
     destinations: [],
@@ -10,8 +10,8 @@ const _state = {
 
 const state_handler = {
     async runApp() {
-        const usersResource = await fetch_handler("");
-        const destinationsResource = await fetch_handler("");
+        const usersResource = await fetch_handler("./users.php");
+        const destinationsResource = await fetch_handler("./destinations.php");
 
         _state.users = usersResource;
         _state.destinations = destinationsResource;
