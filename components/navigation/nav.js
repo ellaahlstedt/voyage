@@ -128,7 +128,6 @@ function settingsPopup() {
     // parent
     let wrapper = document.querySelector("#wrapper");
     let parent = document.createElement("div");
-    parent.addEventListener("click", settingsPopupClose);
     parent.id = "settingsPopupCon";
     wrapper.appendChild(parent);
 
@@ -162,7 +161,16 @@ function settingsPopup() {
     let settingsPopupBtn = document.createElement("button");
     settingsPopupBtn.id = "settingsPopupBtn";
     settingsPopupBtn.textContent = "Save";
+    settingsPopupBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        updateUsername();
+    })
     settingsPopupCon.appendChild(settingsPopupBtn);
+
+    let formBackgroundCon = document.createElement("div");
+    formBackgroundCon.id = "formBackgroundCon";
+    formBackgroundCon.addEventListener("click", settingsPopupClose);
+    parent.appendChild(formBackgroundCon);
 
 }
 
@@ -176,3 +184,6 @@ function logOut() {
     // clear localstorage
 }
 
+function updateUsername() {
+    // patch
+}

@@ -122,7 +122,6 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 10;
 }
 
 #settingsPopupForm {
@@ -165,4 +164,13 @@
     font-size: 16px;
     padding: 5px 10px;
     width: 120px;
+}
+
+#settingsPopupBtn:hover {
+    cursor: pointer;
+}
+
+#formBackgroundCon {
+    height: 100%;
+    width: 100%;
 }
