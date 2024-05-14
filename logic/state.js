@@ -16,7 +16,7 @@ const state_handler = {
         _state.users = usersResource;
         _state.destinations = destinationsResource;
         const wrapper = document.querySelector("#wrapper");
-        renderRegionsCon(wrapper, _state.destinations);
+        updateRegionsCon(_state.destinations);
     },
     get(entity) {
         return JSON.parse(JSON.stringify(_state[entity]));
