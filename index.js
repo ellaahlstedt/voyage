@@ -1,5 +1,7 @@
 "use strict";
 
+state_handler.runApp();
+
 function renderRegionsCon (parent, destinations) {
     let regionsCon = document.createElement("div");
     regionsCon.id = "regionsCon";

@@ -574,7 +574,7 @@
         {
             "id": 2,
             "region": "Northern Europe",
-            "regionImage": "../images/northerneurope.jpeg",
+            "regionImage": "../images/northerneurope.jpg",
             "countries": [
                 {
                     "id": 201,
@@ -957,7 +957,7 @@
         {
             "id": 3,
             "region": "Western Europe",
-            "regionImage": "../images/westerneurope.jpeg",
+            "regionImage": "../images/westerneurope.jpg",
             "countries": [
                 {
                     "id": 301,
@@ -1316,7 +1316,7 @@
         {
             "id": 4,
             "region": "The Balkans",
-            "regionImage": "../images/thebalkans.jpeg",
+            "regionImage": "../images/thebalkans.jpg",
             "countries": [
                 {
                     "id": 401,
