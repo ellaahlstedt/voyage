@@ -6,7 +6,7 @@ $filename = "database.json";
 
 $requestMethods = $_SERVER["REQUEST_METHOD"];
 $allowedMethods = ["GET", "POST", "PATCH", "DELETE"];
-$contentType = $_SERVER["CONTENT_TYPE"];
+
 
 if(!in_array($requestMethods, $allowedMethods)) {
     $error = ["error" => "invalid HTTP method"];
@@ -53,7 +53,7 @@ if ($contentType != "application/json") {
     $error = ["error" => "Invalid Content Type"];
     sendJSON($error, 400);
 }
-
+$contentType = $_SERVER["CONTENT_TYPE"];
 // lägg till ny användare. Lägg till tom array av been o liked + token
 if ($requestMethods == "POST") {
     if (!isset($requestData["userName"], $requestData["password"])) {

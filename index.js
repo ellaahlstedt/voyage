@@ -1,6 +1,6 @@
 "use strict";
 
-function renderRegionsCon (parent, destinations) {
+function renderRegionsCon(parent, destinations) {
     let regionsCon = document.createElement("div");
     regionsCon.id = "regionsCon";
     parent.appendChild(regionsCon);
@@ -15,7 +15,7 @@ function renderRegionsCon (parent, destinations) {
         let regionsText = document.createElement("h1");
         regionsText.classList = "regionsText";
         regionsText.textContent = destination.region;
-        
+
         regionsItem.appendChild(regionsText);
         regionsCon.appendChild(regionsItem);
     }
