@@ -23,6 +23,7 @@ function renderRegionsCon (parent, destinations) {
 
 const wrapper = document.querySelector("#wrapper");
 const destinations = state_handler.get("destinations");
+console.log(destinations);
 
 renderNav(wrapper, "Regions");
 renderHeader(wrapper, "Regions");
