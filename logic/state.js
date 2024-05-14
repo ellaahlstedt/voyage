@@ -10,11 +10,13 @@ const _state = {
 
 const state_handler = {
     async runApp() {
-        const usersResource = await fetch_handler("./users.php");
-        const destinationsResource = await fetch_handler("./destinations.php");
+        const usersResource = await fetch_handler("./logic/users.php");
+        const destinationsResource = await fetch_handler("./logic/destinations.php");
 
         _state.users = usersResource;
         _state.destinations = destinationsResource;
+        const wrapper = document.querySelector("#wrapper");
+        renderRegionsCon(wrapper, _state.destinations);
     },
     get(entity) {
         return JSON.parse(JSON.stringify(_state[entity]));
