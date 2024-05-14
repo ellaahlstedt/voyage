@@ -1,3 +1,5 @@
+"use strict";
+
 function renderRegionsCon (parent) {
     let regionsCon = document.createElement("div");
     regionsCon.id = "regionsCon";
@@ -24,4 +26,3 @@ renderHeader(wrapper, "Regions");
 
 renderRegionsCon(wrapper);
 renderFooter(wrapper);
-
