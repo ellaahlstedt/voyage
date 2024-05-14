@@ -1,0 +1,47 @@
+#listItem {
+    border-radius: 10px;
+    position: relative;
+}
+
+#text {
+    width: 70%;
+    margin-left: -25px;
+    background-color: #FFBC85;
+    color: white;
+    padding: 5px 0 5px 7px;
+    margin-top: 30px;
+}
+
+#beenButton {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+#likeButton {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.countryItem > h1 {
+    font-size: 25px;
+}
+
+.countryItem > button {
+    height: 30px;
+    width: 70px;
+    font-size: 15px;
+}
+
+.cityItem > h1 {
+    font-size: 18px;
+}
+
+.cityItem > button {
+    height: 20px;
+    width: 40px;
+    font-size: 10px;
+}
