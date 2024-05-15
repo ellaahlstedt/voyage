@@ -1,6 +1,6 @@
 function renderNav(parent, currentPage) {
 
-    let imgSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/user.png" : "./fonts/icons/user.png"; // adams kod
+    let imgSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/user.png" : "./fonts/icons/user.png";
 
     let nav = document.createElement("nav");
     nav.id = "mainPagesNav";
@@ -64,7 +64,7 @@ function renderNav(parent, currentPage) {
     UserCon.appendChild(username);
 
     let userIcon = document.createElement("img");
-    userIcon.setAttribute("src", imgSrc); // Adams
+    userIcon.setAttribute("src", imgSrc);
     userIcon.setAttribute("alt", "User Icon");
     userIcon.classList.add("userIconNav");
     UserCon.appendChild(userIcon);
@@ -87,8 +87,11 @@ function dropDownNav(event) {
         let profileListItem = document.createElement("li");
         dropDownCon.appendChild(profileListItem);
 
-        let LogOutListItem = document.createElement("li");
-        dropDownCon.appendChild(LogOutListItem);
+        let settingsListItem = document.createElement("li");
+        dropDownCon.appendChild(settingsListItem);
+
+        let logOutListItem = document.createElement("li");
+        dropDownCon.appendChild(logOutListItem);
 
         let profileLink = document.createElement("a");
         const userSrc = window.location.href.toLowerCase().includes("pages") ? "../../pages/userPage/user.html" : "./pages/userPage/user.html";
@@ -96,10 +99,26 @@ function dropDownNav(event) {
         profileLink.textContent = "Profile";
         profileListItem.appendChild(profileLink);
 
+        let settings = document.createElement("p");
+        settings.textContent = "Settings";
+        settings.id = "navSettings";
+        settings.addEventListener("click", settingsPopup);
+        settingsListItem.appendChild(settings);
+
+
+        let settingsIcon = document.createElement("img");
+        let settingsSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/settings.png" : "./fonts/icons/settings.png";
+        settingsIcon.setAttribute("src", settingsSrc);
+        settingsIcon.setAttribute("alt", "Cogwheel");
+        settingsIcon.id = "navSettingsIcon";
+        settingsIcon.addEventListener("click", settingsPopup);
+        settingsListItem.appendChild(settingsIcon);
+
         let logOut = document.createElement("p");
         logOut.textContent = "Log Out";
+        logOut.id = "navLogout";
         logOut.addEventListener("click", logOut_event);
-        LogOutListItem.appendChild(logOut);
+        logOutListItem.appendChild(logOut);
     }
 }
 
@@ -109,3 +128,60 @@ function logOut_event() {
     window.location.reload();
 }
 
+function updateUsername() {
+    // patch
+}
+
+function settingsPopup() {
+    // parent
+    let wrapper = document.querySelector("#wrapper");
+    let parent = document.createElement("div");
+    parent.id = "settingsPopupCon";
+    wrapper.appendChild(parent);
+
+    // container
+    let settingsPopupCon = document.createElement("form");
+    settingsPopupCon.id = "settingsPopupForm";
+    parent.appendChild(settingsPopupCon);
+
+    // exit icon
+    let exitIcon = document.createElement("img");
+    let exitIconSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/close.png" : "./fonts/icons/close.png";
+    exitIcon.setAttribute("src", exitIconSrc);
+    exitIcon.setAttribute("alt", "Exit Icon");
+    exitIcon.id = "popupExitIcon";
+    exitIcon.addEventListener("click", settingsPopupClose);
+    settingsPopupCon.appendChild(exitIcon);
+
+    // h2
+    let settingsPopupHeader = document.createElement("h2");
+    settingsPopupHeader.textContent = "Change Username";
+    settingsPopupHeader.id = "settingsPopupHeader";
+    settingsPopupCon.appendChild(settingsPopupHeader);
+
+    // label & input
+    let settingsPopupInputCon = document.createElement("div");
+    settingsPopupInputCon.id = "settingsPopupInputCon";
+    settingsPopupCon.appendChild(settingsPopupInputCon);
+    renderLoginInput(settingsPopupInputCon, "text", "New Username");
+
+    // Save button
+    let settingsPopupBtn = document.createElement("button");
+    settingsPopupBtn.id = "settingsPopupBtn";
+    settingsPopupBtn.textContent = "Save";
+    settingsPopupBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        updateUsername();
+    })
+    settingsPopupCon.appendChild(settingsPopupBtn);
+
+    let formBackgroundCon = document.createElement("div");
+    formBackgroundCon.id = "formBackgroundCon";
+    formBackgroundCon.addEventListener("click", settingsPopupClose);
+    parent.appendChild(formBackgroundCon);
+
+}
+
+function settingsPopupClose() {
+    document.querySelector("#settingsPopupCon").remove();
+}
