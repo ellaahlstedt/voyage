@@ -24,9 +24,9 @@ function renderListItem (parent) {
         beenButton.textContent = "BEEN";
         listItem.appendChild(beenButton);
 
-        let likeButton = document.createElement("button");
+        let likeButton = document.createElement("img");
         likeButton.id = "likeButton";
-        likeButton.textContent = "Like";
+        likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
         listItem.appendChild(likeButton);
 
         parent.appendChild(listItem);

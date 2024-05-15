@@ -36,12 +36,22 @@
     font-size: 15px;
 }
 
+.countryItem > img {
+    height: 35px;
+    width: 45px;
+}
+
 .cityItem > h1 {
     font-size: 18px;
 }
 
 .cityItem > button {
-    height: 20px;
-    width: 40px;
+    height: 25px;
+    width: 45px;
     font-size: 10px;
+}
+
+.cityItem > img {
+    height: 25px;
+    width: 30px;
 }
