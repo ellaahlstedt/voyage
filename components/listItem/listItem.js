@@ -1,33 +1,33 @@
 "use strict";
 
-function renderListItem(parent, items) {
+function renderListItem(parent, items, image) {
 
-    /* // Adams kod 
-    let toLoopThrough = destination;
-
-    if (window.location.href.includes("country")) {
-        const country_name = window.location.href.split("country=")[1].replace("%20", " ");
-        toLoopThrough = destination.find(country => country.name === country_name);
-        console.log(toLoopThrough);
-    }
-    */
     for (const item of items) {
 
         const listItem = document.createElement("div");
-        listItem.id = "listItem";
+        listItem.classList.add("listItem");
 
         let text = document.createElement("h1");
         text.id = "text";
         listItem.appendChild(text);
 
-        listItem.style.backgroundImage = `url("../${item.images}")`
+        listItem.style.backgroundImage = parent.id == "countriesCon" ? `url("../${item.images}")` : `url("../${image}")`
 
         if (parent.id == "countriesCon") {
+            
             listItem.classList.add("countryItem");
+            listItem.setAttribute("id", `country-${item.id}`);
             text.textContent = item.name;
+            
+            listItem.addEventListener("click", function() {
+                getToCountryOrCityPage(item.name, "country");
+            })
 
         } else if (parent.id == "citiesCon") {
+    
             listItem.classList.add("cityItem")
+            listItem.setAttribute("id", `city-${item.id}`);
+            text.textContent = item.name;
         };
 
         let beenButton = document.createElement("button");
@@ -41,6 +41,5 @@ function renderListItem(parent, items) {
         listItem.appendChild(likeButton);
 
         parent.appendChild(listItem);
-
     }
 }

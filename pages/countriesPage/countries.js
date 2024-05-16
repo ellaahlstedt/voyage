@@ -16,9 +16,14 @@ async function renderCountriesPage (parent) {
 
     const destinations = await fetch_handler("../../logic/destinations.php");
     const regionName = window.location.href.split("region=")[1].replace("%20", " "); // Adams kod
-    const filteredRegion = getDestinationsInRegionOrCountry(destinations, regionName)
+    const filteredRegion = getDestinationsInRegionOrCountry(destinations, regionName, "region")
     
     renderListItem(countriesCon, filteredRegion.countries);
+    console.log(filteredRegion.countries);
+}
+
+renderCountriesPage(wrapper);
+
 
     /*
     const allCountries = [];
@@ -40,7 +45,6 @@ async function renderCountriesPage (parent) {
         renderListItem(countriesCon, allCountries);
     }    
     */
-}
 
 /*
 function filterCountriesByRegion (countriesCon, regionCountries) {
@@ -49,5 +53,3 @@ function filterCountriesByRegion (countriesCon, regionCountries) {
     renderListItem(countriesCon, regionCountries);
 }
 */
-
-renderCountriesPage(wrapper);

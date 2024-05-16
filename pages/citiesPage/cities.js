@@ -4,23 +4,22 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
     window.location.href = "../loginPage/login.html";
 }
 
-function renderCitiesPage(parent) {
+async function renderCitiesPage(parent) {
+    
     const citiesCon = document.createElement('div');
     citiesCon.id = "citiesCon";
 
-    //render NAV and header
-    renderNav(wrapper, 'Cities');
-    renderHeader(wrapper, 'Cities');
-
-    //render Container for Cities, css breaks after 12 items
+    renderNav(parent, 'Cities');
+    renderHeader(parent, 'Cities');
     parent.appendChild(citiesCon);
+    renderFooter(parent);
 
-    // renderListItem(); för alla items. CSS is finished. REMOVE border from citiesCon
-    renderListItem(citiesCon);
-    //render footer
-
-    renderFooter(wrapper);
-
+    const destinations = await fetch_handler("../../logic/destinations.php");
+    const countryName = window.location.href.split("country=")[1].replace("%20", " ");
+    const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryName, "country");
+    
+    renderListItem(citiesCon, filteredCountry.cities, filteredCountry.images);
+    console.log(filteredCountry.cities);
 }
 
 renderCitiesPage(wrapper);

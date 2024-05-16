@@ -1,6 +1,9 @@
-#listItem {
+.listItem {
     border-radius: 10px;
     position: relative;
+    cursor: pointer;
+
+    background-size: cover;
 }
 
 #text {

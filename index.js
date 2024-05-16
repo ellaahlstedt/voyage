@@ -15,7 +15,7 @@ function updateRegionsCon(destinations) {
 
         let regionsItem = document.createElement("div");
         regionsItem.classList = "regionsItem";
-        regionsItem.setAttribute("state_id", destination.id);
+        regionsItem.setAttribute("stateId", destination.id);
         regionsItem.style.backgroundImage = `url("images/${destination.regionImage}")`
 
         let regionsText = document.createElement("h1");
@@ -26,15 +26,9 @@ function updateRegionsCon(destinations) {
         parent.appendChild(regionsItem);
 
         regionsItem.addEventListener("click", function () {
-            getToCountriesPage(destination.region);
+            getToCountryOrCityPage(destination.region, "region");
         })
     }
-}
-
-function getToCountriesPage(region) {
-    const countriesPageLink = window.location.href.toLowerCase().includes("pages") ? "../countriesPage/countries.html" : "./pages/countriesPage/countries.html";
-    const destinationLink = `${countriesPageLink}?region=${region}`;
-    window.location.href = destinationLink;;
 }
 
 const wrapper = document.querySelector("#wrapper");
@@ -44,4 +38,3 @@ renderHeader(wrapper, "Regions");
 
 renderRegionsCon(wrapper);
 renderFooter(wrapper);
-
