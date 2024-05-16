@@ -1,4 +1,5 @@
 
+
 const _state = {
     users: [],
     destinations: [],
@@ -12,6 +13,7 @@ const state_handler = {
     async runApp() {
         // const usersResource = await fetch_handler("./logic/users.php");
         const destinationsResource = await fetch_handler("./logic/destinations.php");
+        console.log(destinationsResource);
 
         // _state.users = usersResource;
         _state.destinations = destinationsResource;
@@ -86,8 +88,6 @@ const state_handler = {
                 // update beenCon
                 break;
         }
-
-
     }
 }
 

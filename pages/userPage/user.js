@@ -48,7 +48,7 @@ function renderUserHeader(parent) {
     train.src = "../../images/train.png";
     header.appendChild(trainCon);
 
-    let total_countries = 50; 
+    let total_countries = 50;
     let beenList = _state.been.length;
     let percentage = beenList / 50 * 100;
 

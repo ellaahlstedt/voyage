@@ -10,13 +10,13 @@ function renderRegionsCon(parent) {
 
 function updateRegionsCon(destinations) {
     parent = document.querySelector("#regionsCon");
-    for (let i = 0; i < destinations.length; i++) {
-        let destination = destinations[i];
-        console.log(destination);
+
+    for (const destination of destinations) {
 
         let regionsItem = document.createElement("div");
         regionsItem.classList = "regionsItem";
-        regionsItem.style.backgroundImage = `url('images/${destination.regionImage} ')`  // Ska ändras la bara till för det visuella nu 
+        regionsItem.setAttribute("state_id", destination.id);
+        regionsItem.style.backgroundImage = `url("images/${destination.regionImage}")`
 
         let regionsText = document.createElement("h1");
         regionsText.classList = "regionsText";
@@ -24,12 +24,20 @@ function updateRegionsCon(destinations) {
 
         regionsItem.appendChild(regionsText);
         parent.appendChild(regionsItem);
+
+        regionsItem.addEventListener("click", function () {
+            getToCountriesPage(destination.region);
+        })
     }
 }
 
+function getToCountriesPage(region) {
+    const countriesPageLink = window.location.href.toLowerCase().includes("pages") ? "../countriesPage/countries.html" : "./pages/countriesPage/countries.html";
+    const destinationLink = `${countriesPageLink}?region=${region}`;
+    window.location.href = destinationLink;;
+}
+
 const wrapper = document.querySelector("#wrapper");
-// const destinations = state_handler.get("destinations");
-// console.log(destinations);
 
 renderNav(wrapper, "Regions");
 renderHeader(wrapper, "Regions");
