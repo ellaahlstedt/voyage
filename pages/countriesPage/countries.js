@@ -1,27 +1,53 @@
 "use strict"
 
-
 if (window.localStorage.getItem("username") === null || window.localStorage.getItem("token") === null) {
     window.location.href = "../loginPage/login.html";
 }
 
-function renderCountriesPage(parent) {
-    const countriesCon = document.createElement('div');
+async function renderCountriesPage (parent) {
+    
+    const countriesCon = document.createElement("div");
     countriesCon.id = "countriesCon";
 
-    //render NAV and header
-    renderNav(wrapper, 'Countries');
-    renderHeader(wrapper, 'Countries');
-
-    //render Container for Cities, css breaks after 12 items
+    renderNav(parent, 'Countries');
+    renderHeader(parent, 'Countries');
     parent.appendChild(countriesCon);
+    renderFooter(parent);
 
-    // renderListItem(); för alla items. CSS is finished. REMOVE border from citiesCon
-    renderListItem(countriesCon);
-    //render footer
+    const destinations = await fetch_handler("../../logic/destinations.php");
+    const regionName = window.location.href.split("region=")[1].replace("%20", " "); // Adams kod
+    const filteredRegion = getDestinationsInRegionOrCountry(destinations, regionName)
+    
+    renderListItem(countriesCon, filteredRegion.countries);
 
-    renderFooter(wrapper);
-
+    /*
+    const allCountries = [];
+    
+    for (const destination of destinations) {
+        for (const country of destination.countries) {
+            allCountries.push(country);
+        }
+    }
+    
+    const url = window.location.href;
+    const regionName = window.location.href.split("region=")[1].replace("%20", " "); // Adams kod
+    console.log(regionName);
+   
+    if (regionName) {
+        const regionCountries = getDestinationsInRegionOrCountry(destinations, regionName)
+        filterCountriesByRegion(countriesCon, regionCountries)
+    } else {
+        renderListItem(countriesCon, allCountries);
+    }    
+    */
 }
+
+/*
+function filterCountriesByRegion (countriesCon, regionCountries) {
+
+    countriesCon.innerHTML = "";
+    renderListItem(countriesCon, regionCountries);
+}
+*/
 
 renderCountriesPage(wrapper);

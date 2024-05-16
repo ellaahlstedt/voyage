@@ -10,14 +10,13 @@ function renderRegionsCon(parent) {
 
 function updateRegionsCon(destinations) {
     parent = document.querySelector("#regionsCon");
-    
-    for (let i = 0; i < destinations.length; i++) {
-        let destination = destinations[i];
-        console.log(destination);
+
+    for (const destination of destinations) {
 
         let regionsItem = document.createElement("div");
         regionsItem.classList = "regionsItem";
-        regionsItem.style.backgroundImage = `url('images/${destination.regionImage}')`
+        regionsItem.setAttribute("state_id", destination.id);
+        regionsItem.style.backgroundImage = `url("images/${destination.regionImage}")`
 
         let regionsText = document.createElement("h1");
         regionsText.classList = "regionsText";
@@ -25,17 +24,18 @@ function updateRegionsCon(destinations) {
 
         regionsItem.appendChild(regionsText);
         parent.appendChild(regionsItem);
+
+        regionsItem.addEventListener("click", function () {
+            getToCountriesPage(destination.region);
+        })
     }
 }
 
-/*
-const regionsItems = document.querySelector(".regionsItem");
-
-for (let i = 0; i < regionsItems.length; i++) {
-    let regionsItem = regionsItems[i];
-    regionsItem.addEventListener("click");
+function getToCountriesPage(region) {
+    const countriesPageLink = window.location.href.toLowerCase().includes("pages") ? "../countriesPage/countries.html" : "./pages/countriesPage/countries.html";
+    const destinationLink = `${countriesPageLink}?region=${region}`;
+    window.location.href = destinationLink;;
 }
-*/
 
 const wrapper = document.querySelector("#wrapper");
 
