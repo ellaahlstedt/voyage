@@ -41,6 +41,13 @@
             "userPassword": "hej",
             "liked": [],
             "been": []
+        },
+        {
+            "userId": 9,
+            "userName": "d\u00e5",
+            "userPassword": "hej",
+            "liked": [],
+            "been": []
         }
     ],
     "destinations": [
