@@ -50,28 +50,46 @@ function renderNav(parent, currentPage) {
 
     let profileCon = document.createElement("div");
     profileCon.id = "navProfileCon";
-    profileCon.addEventListener("click", dropDownNav);
+    if (localStorage.getItem("username")) {
+        profileCon.addEventListener("click", dropDownNav);
+    } else {
+        profileCon.addEventListener("click", function RedirectSignIn() {
+            window.location.href = "./pages/loginPage/login.html";
+        });
+    }
     nav.appendChild(profileCon);
 
     let UserCon = document.createElement("div");
     UserCon.id = "navUserCon";
     profileCon.appendChild(UserCon);
 
-    // Får ändras senare till localstorage username
-    let username = document.createElement("p");
-    username.textContent = window.localStorage.getItem("username");
-    username.classList.add("usernameNav");
-    UserCon.appendChild(username);
+    if (localStorage.getItem("username") === null) {
+        let signInText = document.createElement("p");
+        signInText.textContent = "Sign In";
+        signInText.classList.add("usernameNav");
+        UserCon.appendChild(signInText);
 
-    let userIcon = document.createElement("img");
-    userIcon.setAttribute("src", imgSrc);
-    userIcon.setAttribute("alt", "User Icon");
-    userIcon.classList.add("userIconNav");
-    UserCon.appendChild(userIcon);
+        let signInIcon = document.createElement("img");
+        signInIcon.setAttribute("src", "./fonts/icons/signInIcon.png");
+        signInIcon.setAttribute("alt", "Sign in Icon");
+        signInIcon.classList.add("userIconNav");
+        UserCon.appendChild(signInIcon);
+    } else {
+        let username = document.createElement("p");
+        username.textContent = window.localStorage.getItem("username");
+        username.classList.add("usernameNav");
+        UserCon.appendChild(username);
 
-    let dropDownCon = document.createElement("ul");
-    dropDownCon.id = "dropDownNav";
-    profileCon.appendChild(dropDownCon);
+        let userIcon = document.createElement("img");
+        userIcon.setAttribute("src", imgSrc);
+        userIcon.setAttribute("alt", "User Icon");
+        userIcon.classList.add("userIconNav");
+        UserCon.appendChild(userIcon);
+
+        let dropDownCon = document.createElement("ul");
+        dropDownCon.id = "dropDownNav";
+        profileCon.appendChild(dropDownCon);
+    }
 }
 
 let profileConClicked = false;
@@ -123,7 +141,6 @@ function dropDownNav(event) {
 }
 
 function logOut_event() {
-    // clear localstorage
     window.localStorage.clear();
     window.location.reload();
 }
@@ -133,18 +150,15 @@ function updateUsername() {
 }
 
 function settingsPopup() {
-    // parent
     let wrapper = document.querySelector("#wrapper");
     let parent = document.createElement("div");
     parent.id = "settingsPopupCon";
     wrapper.appendChild(parent);
 
-    // container
     let settingsPopupCon = document.createElement("form");
     settingsPopupCon.id = "settingsPopupForm";
     parent.appendChild(settingsPopupCon);
 
-    // exit icon
     let exitIcon = document.createElement("img");
     let exitIconSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/close.png" : "./fonts/icons/close.png";
     exitIcon.setAttribute("src", exitIconSrc);
@@ -153,19 +167,16 @@ function settingsPopup() {
     exitIcon.addEventListener("click", settingsPopupClose);
     settingsPopupCon.appendChild(exitIcon);
 
-    // h2
     let settingsPopupHeader = document.createElement("h2");
     settingsPopupHeader.textContent = "Change Username";
     settingsPopupHeader.id = "settingsPopupHeader";
     settingsPopupCon.appendChild(settingsPopupHeader);
 
-    // label & input
     let settingsPopupInputCon = document.createElement("div");
     settingsPopupInputCon.id = "settingsPopupInputCon";
     settingsPopupCon.appendChild(settingsPopupInputCon);
     renderLoginInput(settingsPopupInputCon, "text", "New Username");
 
-    // Save button
     let settingsPopupBtn = document.createElement("button");
     settingsPopupBtn.id = "settingsPopupBtn";
     settingsPopupBtn.textContent = "Save";
