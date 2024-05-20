@@ -32,3 +32,11 @@ function getToCountryOrCityPage(name, type) {
     const destinationLink = `${destinationPageLink}?${type}=${name}`;
     window.location.href = destinationLink;
 }
+
+function sortCountriesOrCities(a, b) {
+    if (b.name < a.name) {
+        return 1;
+    } else {
+        return -1;
+    }
+}

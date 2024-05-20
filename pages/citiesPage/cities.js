@@ -15,11 +15,33 @@ async function renderCitiesPage(parent) {
     renderFooter(parent);
 
     const destinations = await fetch_handler("../../logic/destinations.php");
-    const countryName = window.location.href.split("country=")[1].replace("%20", " ");
-    const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryName, "country");
+    const url = window.location.href;
+
+    let countryParameter = null;
+    if (url.includes("country=")) {
+        countryParameter = url.split("country=")[1].replace("%20", " "); // Adams kod
+    }
     
-    renderListItem(citiesCon, filteredCountry.cities, filteredCountry.images);
-    console.log(filteredCountry.cities);
+    if (countryParameter) {
+        citiesCon.classList.add("filteredCities");
+        const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryParameter, "country");
+        filteredCountry.cities.sort(sortCountriesOrCities);
+        renderListItem(citiesCon, filteredCountry.cities, filteredCountry.images);
+    } else {
+        const allCities = [];
+        for (const destination of destinations) {
+            for (const country of destination.countries) {
+                for (const city of country.cities) {
+                    allCities.push(city);
+                }
+            }
+        }
+        citiesCon.classList.add("allCities");
+        let image = "../../images/greece.jpeg"; // Ska ändras när vi har bilder för alla cities
+        allCities.sort(sortCountriesOrCities);
+        renderListItem(citiesCon, allCities, image);
+        console.log(allCities);
+    }
 }
 
 renderCitiesPage(wrapper);

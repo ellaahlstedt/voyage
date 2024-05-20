@@ -15,41 +15,30 @@ async function renderCountriesPage (parent) {
     renderFooter(parent);
 
     const destinations = await fetch_handler("../../logic/destinations.php");
-    const regionName = window.location.href.split("region=")[1].replace("%20", " "); // Adams kod
-    const filteredRegion = getDestinationsInRegionOrCountry(destinations, regionName, "region")
+    const url = window.location.href; 
     
-    renderListItem(countriesCon, filteredRegion.countries);
-    console.log(filteredRegion.countries);
+    let regionParameter = null;
+    if (url.includes("region=")) {
+        regionParameter = url.split("region=")[1].replace("%20", " "); // Adams kod
+    }
+    
+    if (regionParameter) {
+        countriesCon.classList.add("filteredCountries");
+        const filteredRegion = getDestinationsInRegionOrCountry(destinations, regionParameter, "region")
+        filteredRegion.countries.sort(sortCountriesOrCities);
+        renderListItem(countriesCon, filteredRegion.countries);
+    } else {
+        const allCountries = [];
+        for (const destination of destinations) {
+            for (const country of destination.countries) {
+                allCountries.push(country);
+            }
+        }
+        countriesCon.classList.add("allCountries");
+        allCountries.sort(sortCountriesOrCities);
+        renderListItem(countriesCon, allCountries);
+        console.log(allCountries);
+    }
 }
 
 renderCountriesPage(wrapper);
-
-
-    /*
-    const allCountries = [];
-    
-    for (const destination of destinations) {
-        for (const country of destination.countries) {
-            allCountries.push(country);
-        }
-    }
-    
-    const url = window.location.href;
-    const regionName = window.location.href.split("region=")[1].replace("%20", " "); // Adams kod
-    console.log(regionName);
-   
-    if (regionName) {
-        const regionCountries = getDestinationsInRegionOrCountry(destinations, regionName)
-        filterCountriesByRegion(countriesCon, regionCountries)
-    } else {
-        renderListItem(countriesCon, allCountries);
-    }    
-    */
-
-/*
-function filterCountriesByRegion (countriesCon, regionCountries) {
-
-    countriesCon.innerHTML = "";
-    renderListItem(countriesCon, regionCountries);
-}
-*/

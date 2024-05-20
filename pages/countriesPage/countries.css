@@ -10,9 +10,16 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    gap: 10%;
     overflow: auto;
     padding-left: 150px;
+}
+
+.filteredCountries {
+    gap: 12% 1%;
+}
+
+.allCountries {
+    gap: 100px 10px;
 }
 
 #countriesCon > div {

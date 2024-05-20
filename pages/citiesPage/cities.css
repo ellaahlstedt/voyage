@@ -10,9 +10,16 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: 5%;
     overflow: auto;
     padding-left: 30px;
+}
+
+.filteredCities {
+    gap: 10% 4%;
+}
+
+.allCities {
+    gap: 60px 50px;
 }
 
 #citiesCon > div {
