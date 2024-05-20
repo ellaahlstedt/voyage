@@ -92,6 +92,11 @@ function renderNav(parent, currentPage) {
     }
 }
 
+function update_navProfileCon() {
+    const usernameText = document.querySelector(".usernameNav");
+    usernameText.textContent = localStorage.getItem("username");
+}
+
 let profileConClicked = false;
 function dropDownNav(event) {
     if (profileConClicked) {
@@ -146,9 +151,12 @@ function logOut_event() {
 }
 
 function updateUsername() {
-    // patch
+    // username
+    const oldUsername = document.querySelector(".usernameNav").textContent;
+    const newUsername = document.querySelector("#loginInputtext").value;
+    const data = { id: 10, username: newUsername.toLowerCase() };
+    state_handler.patch(data);
 }
-
 function settingsPopup() {
     let wrapper = document.querySelector("#wrapper");
     let parent = document.createElement("div");

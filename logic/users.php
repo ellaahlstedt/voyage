@@ -126,8 +126,12 @@ if ($requestMethods == "PATCH") {
     $token_valid = false;
     
     foreach($users as $user) {
+        $name = $user["userName"];
+        $password = $user["userPassword"];
+        $userToken = sha1("$name$password");
+       
         $encrypted_user = sha1($user["userName"] . $user["userPassword"] == $incoming_token);
-        if ($encrypted_user == $token) $token_valid = true;
+        if ($userToken == $incoming_token) $token_valid = true;
         
     }
 
@@ -146,7 +150,8 @@ if ($requestMethods == "PATCH") {
             $full_db["users"] = $users;
             $json = json_encode($full_db, JSON_PRETTY_PRINT);
             file_put_contents($filename, $json);
-            sendJSON($user);
+            $token = sha1($user["userName"] . $user["userPassword"]);
+            sendJSON([$user, "token" => $token]);
         }
     }
     $error = ["error" => "Not Found"];
