@@ -1,8 +1,6 @@
 .listItem {
-    border-radius: 10px;
     position: relative;
-    cursor: pointer;
-
+    border-radius: 10px;
     background-size: cover;
 }
 
@@ -33,6 +31,7 @@
 #listItemImage {
     height: 100%;
     width: 100%;
+    cursor: pointer;
 }
 
 #likeButton {
@@ -55,6 +54,7 @@
 .countryItem>img {
     height: 40px;
     width: 40px;
+    border-radius: 10px;
 }
 
 .cityItem>h1 {
@@ -70,4 +70,5 @@
 .cityItem>img {
     height: 30px;
     width: 30px;
+    border-radius: 10px;
 }
