@@ -125,14 +125,12 @@ const state_handler = {
         console.log(options);
 
         if (field == "been") {
-            const resource = await fetch_handler("../../logic/destinations.php", options);
-            _state.user.been.push(resource);
+            await fetch_handler("../../logic/destinations.php", options);
+
         }
         else if (field == "liked") {
-            const resource = await fetch_handler("../../logic/destinations.php", options);
-            _state.user.liked.push(resource);
+            await fetch_handler("../../logic/destinations.php", options);
 
-            //lägg till för liked
         }
     },
 }
