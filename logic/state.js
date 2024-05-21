@@ -1,7 +1,6 @@
 
 
 const _state = {
-
     destinations: [],
 
     // Dessa två nycklar måste finnas med så att man kan skicka fetches osv.
@@ -9,10 +8,29 @@ const _state = {
     username: window.localStorage.getItem("username")
 }
 
+async function get_user(page) {
+    if (_state.username !== "" || _state.username !== undefined || _state.username !== null) {
+        let url = `./logic/users.php?token=${_state.token}`;
+
+        if (page !== undefined) url = `../../logic/users.php?token=${_state.token}`;
+
+        const resource = await fetch_handler(url);
+        console.log("hej tyrla");
+
+        if (resource !== undefined) {
+            _state.user = resource;
+            console.log(_state);
+        }
+    }
+}
+
 const state_handler = {
     async runApp() {
-        // const usersResource = await fetch_handler("./logic/users.php");
         const destinationsResource = await fetch_handler("./logic/destinations.php");
+
+        get_user();
+
+        console.log(_state);
 
         // _state.users = usersResource;
         _state.destinations = destinationsResource;
@@ -20,6 +38,7 @@ const state_handler = {
         updateRegionsCon(_state.destinations);
     },
     get(entity) {
+        console.log(_state);
         return JSON.parse(JSON.stringify(_state[entity]));
     },
     async post(data) {

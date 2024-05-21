@@ -4,7 +4,9 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
     window.location.href = "../loginPage/login.html";
 }
 
-function renderUserHeader(parent) {
+async function renderUserHeader(parent) {
+    let data = await get_user("user");
+    console.log(_state);
     let header = document.createElement("header");
     header.id = "header";
     parent.appendChild(header);
@@ -49,7 +51,9 @@ function renderUserHeader(parent) {
     header.appendChild(trainCon);
 
     let total_countries = 50;
-    let beenList = _state.been.length;
+    let user = state_handler.get("user");
+    console.log(_state.user);
+    let beenList = user.been.length;
     let percentage = beenList / 50 * 100;
 
     if (percentage > 75) percentage = 75;
@@ -59,10 +63,11 @@ function renderUserHeader(parent) {
     countriesAmount.id = "countriesAmount";
     countriesAmount.textContent = `${beenList} / ${total_countries} countries`;
     loadingBar.appendChild(countriesAmount);
+
+    renderBeenfavCon(wrapper, "beenList", "beenList");
+    renderBeenfavCon(wrapper, "wishlistList", "wishlistList");
+    renderFooter(wrapper);
 }
 
 renderNav(wrapper);
 renderUserHeader(wrapper);
-renderBeenfavCon(wrapper, "beenList", "beenList");
-renderBeenfavCon(wrapper, "wishlistList", "wishlistList");
-renderFooter(wrapper);

@@ -27,14 +27,31 @@ if (file_exists($filename)){
 
 //GET användare med ID
 if ($requestMethods == "GET") {
-    if (isset($_GET["id"])) {
-        $id = $_GET["id"];
+    if (isset($_GET["token"])) { //token
+        $token = $_GET["token"]; //token
+        $userId;
 
         foreach($users as $user) {
-            if($user["id"] == $id) {
-                sendJSON($user);
+            $name = $user["userName"];
+            $password = $user["userPassword"];
+            $userToken = sha1("$name$password");
+            
+            if ($userToken == $token) {
+                $user_to_send = [
+                    "userId" => $user["userId"],
+                    "been" => $user["been"],
+                    "liked" => $user["liked"]
+                ];
+
+                sendJSON($user_to_send);
             }
         }
+
+        //foreach($users as $user) {
+          //  if($user["id"] == $id) {
+                //sendJSON($user);
+          //  }
+        //}
         $error = ["error" => "Not Found"];
         sendJSON($error, 404);
     }
