@@ -147,10 +147,13 @@ if ($requestMethods == "PATCH") {
         $name = $user["userName"];
         $password = $user["userPassword"];
         $userToken = sha1("$name$password");
-        $userId = $user["userId"];
+        
        
         $encrypted_user = sha1($user["userName"] . $user["userPassword"] == $incoming_token);
-        if ($userToken == $incoming_token) $token_valid = true;
+        if ($userToken == $incoming_token) {
+            $userId = $user["userId"]; 
+            $token_valid = true;
+        }
         
     }
 

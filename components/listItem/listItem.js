@@ -1,6 +1,6 @@
 "use strict";
 
-function renderListItem(parent, items, image) {
+function renderListItem(parent, items, images) {
 
     for (const item of items) {
 
@@ -11,23 +11,23 @@ function renderListItem(parent, items, image) {
         text.id = "text";
         listItem.appendChild(text);
 
-        listItem.style.backgroundImage = parent.id == "countriesCon" ? `url("../${item.images}")` : `url("../${image}")`
-
         if (parent.id == "countriesCon") {
-            
             listItem.classList.add("countryItem");
             listItem.setAttribute("id", `country-${item.id}`);
             text.textContent = item.name;
-            
-            listItem.addEventListener("click", function() {
+            listItem.style.backgroundImage = `url("../${item.images}")`
+
+            listItem.addEventListener("click", function () {
                 getToCountryOrCityPage(item.name, "country");
             })
 
         } else if (parent.id == "citiesCon") {
-    
             listItem.classList.add("cityItem")
             listItem.setAttribute("id", `city-${item.id}`);
             text.textContent = item.name;
+
+            let randomImage = Math.floor(images.length * Math.random());
+            listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
         };
 
         let beenButton = document.createElement("button");
@@ -35,11 +35,25 @@ function renderListItem(parent, items, image) {
         beenButton.textContent = "BEEN";
         listItem.appendChild(beenButton);
 
+        beenButton.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            state_handler.postItem("been", item);
+
+        })
+
         let likeButton = document.createElement("img");
         likeButton.id = "likeButton";
         likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
         listItem.appendChild(likeButton);
 
         parent.appendChild(listItem);
+
+        likeButton.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            state_handler.postItem("liked", item);
+
+        })
     }
 }

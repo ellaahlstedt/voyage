@@ -6,20 +6,12 @@
 #countriesCon {
     min-height: 500px;
     width: 75%;
-    margin: 0 auto 0 auto;
     display: grid;
+    margin-left: 200px;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
-    overflow: auto;
+    gap: 130px 0;
     padding-left: 150px;
-}
-
-.filteredCountries {
-    gap: 12% 1%;
-}
-
-.allCountries {
-    gap: 100px 10px;
 }
 
 #countriesCon > div {
