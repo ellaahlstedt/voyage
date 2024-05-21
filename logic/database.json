@@ -372,8 +372,15 @@
             "userId": 10,
             "userName": "testar",
             "userPassword": "test",
-            "liked": [],
-            "been": []
+            "liked": [
+                30304,
+                30308,
+                30308
+            ],
+            "been": [
+                30308,
+                30304
+            ]
         }
     ],
     "destinations": [

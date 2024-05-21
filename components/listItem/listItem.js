@@ -20,7 +20,6 @@ function renderListItem(parent, items, images) {
             listItemImage.setAttribute("src", `../${item.images}`);
             listItemImage.id = "listItemImage";
             listItem.appendChild(listItemImage);
-            console.log(item.images);
             listItemImage.addEventListener("click", function () {
                 getToCountryOrCityPage(item.name, "country");
             })
