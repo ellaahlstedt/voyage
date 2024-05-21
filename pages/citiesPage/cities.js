@@ -16,19 +16,28 @@ async function renderCitiesPage(parent) {
 
     const destinations = await fetch_handler("../../logic/destinations.php");
     const url = window.location.href;
-
     let countryParameter = null;
+    
     if (url.includes("country=")) {
         countryParameter = url.split("country=")[1].replace("%20", " "); // Adams kod
     }
     
     if (countryParameter) {
-        citiesCon.classList.add("filteredCities");
+        
         const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryParameter, "country");
         filteredCountry.cities.sort(sortCountriesOrCities);
-        renderListItem(citiesCon, filteredCountry.cities, filteredCountry.images);
+        
+        for (const destination of destinations) {
+            for (const country of destination.countries) {
+                if (country.name == countryParameter) {
+                    renderListItem(citiesCon, filteredCountry.cities, destination.cityImages);
+                }
+            }
+        }
+        
     } else {
         const allCities = [];
+
         for (const destination of destinations) {
             for (const country of destination.countries) {
                 for (const city of country.cities) {
@@ -36,11 +45,17 @@ async function renderCitiesPage(parent) {
                 }
             }
         }
-        citiesCon.classList.add("allCities");
-        let image = "../../images/greece.jpeg"; // Ska ändras när vi har bilder för alla cities
+
+        let allCityImages = [];
+
+        for (const destination of destinations) {
+            for (const cityImage of destination.cityImages) {
+                allCityImages.push(cityImage);
+            }
+        }
+
         allCities.sort(sortCountriesOrCities);
-        renderListItem(citiesCon, allCities, image);
-        console.log(allCities);
+        renderListItem(citiesCon, allCities, allCityImages);
     }
 }
 

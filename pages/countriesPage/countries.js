@@ -16,28 +16,32 @@ async function renderCountriesPage (parent) {
 
     const destinations = await fetch_handler("../../logic/destinations.php");
     const url = window.location.href; 
-    
     let regionParameter = null;
+
     if (url.includes("region=")) {
         regionParameter = url.split("region=")[1].replace("%20", " "); // Adams kod
     }
     
     if (regionParameter) {
+        
         countriesCon.classList.add("filteredCountries");
         const filteredRegion = getDestinationsInRegionOrCountry(destinations, regionParameter, "region")
         filteredRegion.countries.sort(sortCountriesOrCities);
+
         renderListItem(countriesCon, filteredRegion.countries);
+
     } else {
         const allCountries = [];
+
         for (const destination of destinations) {
             for (const country of destination.countries) {
                 allCountries.push(country);
             }
         }
+
         countriesCon.classList.add("allCountries");
         allCountries.sort(sortCountriesOrCities);
         renderListItem(countriesCon, allCountries);
-        console.log(allCountries);
     }
 }
 
