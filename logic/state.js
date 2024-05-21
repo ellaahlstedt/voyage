@@ -10,7 +10,10 @@ const _state = {
 
 async function get_user(page) {
     if (_state.username !== "" || _state.username !== undefined || _state.username !== null) {
-        let url = `./logic/users.php?token=${_state.token}`;
+        let url = "";
+        if (_state.token) {
+            url = `./logic/users.php?token=${_state.token}`;
+        }
 
         if (page !== undefined) url = `../../logic/users.php?token=${_state.token}`;
 
