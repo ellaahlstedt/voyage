@@ -73,7 +73,6 @@ async function renderCitiesPage(parent) {
         buttonDiv.appendChild(pageButton);
 
         pageButton.addEventListener("click", function test() {
-            console.log("hej2");
             showMore(allCities, allCityImages, citiesCon);
         });
     }
@@ -81,7 +80,6 @@ async function renderCitiesPage(parent) {
 }
 
 function showMore(allCities, allCityImages, citiesCon) {
-    console.log(citiesCon)
     let currentAmount = document.getElementById("citiesCon").children.length;
 
     let citiesAmount = [];
@@ -90,7 +88,10 @@ function showMore(allCities, allCityImages, citiesCon) {
 	    citiesAmount.push(allCities[i]);
     }
     renderListItem(citiesCon, citiesAmount, allCityImages);
-    console.log(allCityImages);
+
+    if (currentAmount + 50 >= allCities.length) {
+        document.getElementById("buttonDiv").style.display = "none";
+    }
 }
 
 renderCitiesPage(wrapper);

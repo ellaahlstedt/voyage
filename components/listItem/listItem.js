@@ -43,7 +43,6 @@ function renderListItem(parent, items, images) {
             event.preventDefault();
 
             state_handler.postItem("been", item.id);
-
         })
 
         let likeButton = document.createElement("img");

@@ -48,7 +48,7 @@
         },
         {
             "userId": 8,
-            "userName": "johanna",
+            "userName": "johannah",
             "userPassword": "hej",
             "liked": [
                 {
@@ -199,7 +199,8 @@
                 {
                     "id": 30308,
                     "name": "Aalst"
-                }
+                },
+                506
             ],
             "been": [
                 {
@@ -358,7 +359,8 @@
                             "name": "Kuk\u00ebs"
                         }
                     ]
-                }
+                },
+                506
             ]
         },
         {

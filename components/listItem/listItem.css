@@ -49,7 +49,7 @@
 }
 
 .countryItem > img {
-    height: 35px;
+    height: 40px;
     width: 40px;
 }
 
@@ -64,6 +64,6 @@
 }
 
 .cityItem > img {
-    height: 25px;
+    height: 30px;
     width: 30px;
 }

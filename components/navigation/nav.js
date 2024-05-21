@@ -190,6 +190,7 @@ function settingsPopup() {
     settingsPopupBtn.addEventListener("click", function (event) {
         event.preventDefault();
         updateUsername();
+        document.getElementById("loginInputtext").value = "";
     })
     settingsPopupCon.appendChild(settingsPopupBtn);
 
@@ -197,7 +198,6 @@ function settingsPopup() {
     formBackgroundCon.id = "formBackgroundCon";
     formBackgroundCon.addEventListener("click", settingsPopupClose);
     parent.appendChild(formBackgroundCon);
-
 }
 
 function settingsPopupClose() {

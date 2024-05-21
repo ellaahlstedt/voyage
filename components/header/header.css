@@ -19,11 +19,11 @@ header {
     background-color: #ffdd95;
     color: rgb(70, 70, 70);
     font-family: 'Metrophobic';
-    height: 170px;
-    margin: 0 40px 0 40px;
+    height: 150px;
+    margin: 0 150px 0 150px;
     padding: 25px 240px 20px 30px;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.5;
 }
 
@@ -31,15 +31,15 @@ header {
     background-color: #ffbc85;
     color: white;
     font-family: 'Metal';
-    height: 175px;
-    width: 175px;
+    height: 165px;
+    width: 165px;
     border-radius: 100px;
     font-size: 27px;
     line-height: 1.5;
 
     position: absolute;
-    right: 100px;
-    top: 0;
+    right: 200px;
+    top: 20px;
 
     display: flex;
     align-items: center;

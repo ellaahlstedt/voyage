@@ -37,3 +37,7 @@
     border-radius: 10px;
     padding: 10px;
 }
+
+.hideButton {
+    display: none;
+}
