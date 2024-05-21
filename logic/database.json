@@ -7,7 +7,18 @@
             "liked": [
                 102,
                 103,
-                105
+                105,
+                402,
+                20104,
+                20104,
+                20104,
+                20104,
+                20104,
+                20104,
+                20104,
+                20104,
+                30308,
+                40304
             ],
             "been": [
                 102,
@@ -372,6 +383,13 @@
             "userId": 10,
             "userName": "testar",
             "userPassword": "test",
+            "liked": [],
+            "been": []
+        },
+        {
+            "userId": 11,
+            "userName": "tyrla1",
+            "userPassword": "tyrla",
             "liked": [],
             "been": []
         }

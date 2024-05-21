@@ -1,6 +1,6 @@
 "use strict";
 
-function renderBeenFavLists (parent, title) {
+function renderBeenFavLists(parent, title) {
     let listBox = document.createElement("div");
     listBox.className = "listBox";
     parent.appendChild(listBox);
@@ -11,12 +11,15 @@ function renderBeenFavLists (parent, title) {
 
     let list = document.createElement("ul");
     listBox.appendChild(list);
-
-    let listItems = document.createElement("li");
-    listBox.appendChild(listItems);
 }
 
-function renderBeenfavCon (parent, type, containerId) {
+function li(parent, item) {
+    let li = docuemnt.createElement("li").textContent = item.name;
+    li.id = item.id;
+    parent.appendChild(li);
+}
+
+function renderBeenfavCon(parent, type, containerId) {
     let beenFavCon = document.createElement("div");
     beenFavCon.className = "beenFavCon";
     beenFavCon.id = containerId;
@@ -43,12 +46,30 @@ function renderBeenfavCon (parent, type, containerId) {
     listCon.className = "listCon";
     beenFavCon.appendChild(listCon);
 
-    let deleteButton = document.createElement("div");
-    deleteButton.id = "deleteButton";
-    deleteButton.textContent = "UN-BEEN";
+    let unbeenButton = document.createElement("div");
+    unbeenButton.id = "unbeenButton";
+    unbeenButton.textContent = "UN-BEEN";
     if (containerId === "beenList") {
-        beenFavCon.appendChild(deleteButton);
+        beenFavCon.appendChild(unbeenButton);
     }
+
+    /*
+    unbeenButton.addEventListener("click", function () {
+        let trashCan = document.createElement("img");
+        trashCan.setAttribute = ("src", "../../fonts/icons/trashcan.png");
+        li.appendChild(trashCan);
+
+        trashCan.addEventListener("click", async (event) => {
+            const option = {
+                method:'DELETE',
+                header: {"Content-Type": "application/json"},
+                body: {}
+            }
+            let resource = await fetch_handler(url, option);
+            state_handler.delete(resource.id, );
+        })
+    })
+    */
 
     renderBeenFavLists(listCon, "Regions");
     renderBeenFavLists(listCon, "Countries");

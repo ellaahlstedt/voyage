@@ -58,11 +58,6 @@ async function renderUserHeader(parent) {
     if (percentage > 75) percentage = 75;
     loadingBar.style.width += `${percentage}%`
 
-    let countriesAmount = document.createElement("p");
-    countriesAmount.id = "countriesAmount";
-    countriesAmount.textContent = `${beenList} / ${total_countries} countries`;
-    loadingBar.appendChild(countriesAmount);
-
     renderBeenfavCon(wrapper, "beenList", "beenList");
     renderBeenfavCon(wrapper, "wishlistList", "wishlistList");
     renderFooter(wrapper);
