@@ -20,6 +20,8 @@
     bottom: 10px;
     left: 10px;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
 }
 
 #likeButton {
