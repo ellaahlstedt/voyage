@@ -1,6 +1,6 @@
 "use strict";
 
-function renderListItem(parent, items, images) {
+async function renderListItem(parent, items, images) {
 
     for (const item of items) {
 
@@ -46,7 +46,15 @@ function renderListItem(parent, items, images) {
 
         let likeButton = document.createElement("img");
         likeButton.id = "likeButton";
-        likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
+        // user.liked.includes(item.id)
+        let data = await get_user("user");
+        let user = state_handler.get("user");
+        if (user.liked.includes(item.id)) {
+            likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
+        } else {
+            likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
+        }
+
         listItem.appendChild(likeButton);
 
         parent.appendChild(listItem);
@@ -54,10 +62,12 @@ function renderListItem(parent, items, images) {
         likeButton.addEventListener("click", function (event) {
             event.preventDefault();
 
-            state_handler.postItem("liked", item.id);
+
             if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
+                state_handler.postItem("liked", item.id);
                 likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
             } else {
+                state_handler.delete(item.id, "liked");
                 likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
             }
 
