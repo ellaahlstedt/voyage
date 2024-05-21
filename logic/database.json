@@ -50,8 +50,167 @@
             "userId": 8,
             "userName": "johanna",
             "userPassword": "hej",
-            "liked": [],
-            "been": []
+            "liked": [
+                {
+                    "id": 307,
+                    "name": "Austria",
+                    "images": "..\/images\/austria.jpeg",
+                    "cities": [
+                        {
+                            "id": 30701,
+                            "name": "Vienna"
+                        },
+                        {
+                            "id": 30702,
+                            "name": "Graz"
+                        },
+                        {
+                            "id": 30703,
+                            "name": "Linz"
+                        },
+                        {
+                            "id": 30704,
+                            "name": "Salzburg"
+                        },
+                        {
+                            "id": 30705,
+                            "name": "Innsbruck"
+                        },
+                        {
+                            "id": 30706,
+                            "name": "Klagenfurt"
+                        },
+                        {
+                            "id": 30707,
+                            "name": "Villach"
+                        },
+                        {
+                            "id": 30708,
+                            "name": "Wels"
+                        },
+                        {
+                            "id": 30709,
+                            "name": "St. P\u00f6lten"
+                        },
+                        {
+                            "id": 30710,
+                            "name": "Dornbirn"
+                        }
+                    ]
+                }
+            ],
+            "been": [
+                {
+                    "id": 10101,
+                    "name": "London"
+                },
+                {
+                    "id": 10601,
+                    "name": "Copenhagen"
+                },
+                {
+                    "id": 10801,
+                    "name": "Oslo"
+                },
+                {
+                    "id": 40208,
+                    "name": "Berat"
+                },
+                {
+                    "id": 307,
+                    "name": "Austria",
+                    "images": "..\/images\/austria.jpeg",
+                    "cities": [
+                        {
+                            "id": 30701,
+                            "name": "Vienna"
+                        },
+                        {
+                            "id": 30702,
+                            "name": "Graz"
+                        },
+                        {
+                            "id": 30703,
+                            "name": "Linz"
+                        },
+                        {
+                            "id": 30704,
+                            "name": "Salzburg"
+                        },
+                        {
+                            "id": 30705,
+                            "name": "Innsbruck"
+                        },
+                        {
+                            "id": 30706,
+                            "name": "Klagenfurt"
+                        },
+                        {
+                            "id": 30707,
+                            "name": "Villach"
+                        },
+                        {
+                            "id": 30708,
+                            "name": "Wels"
+                        },
+                        {
+                            "id": 30709,
+                            "name": "St. P\u00f6lten"
+                        },
+                        {
+                            "id": 30710,
+                            "name": "Dornbirn"
+                        }
+                    ]
+                },
+                {
+                    "id": 307,
+                    "name": "Austria",
+                    "images": "..\/images\/austria.jpeg",
+                    "cities": [
+                        {
+                            "id": 30701,
+                            "name": "Vienna"
+                        },
+                        {
+                            "id": 30702,
+                            "name": "Graz"
+                        },
+                        {
+                            "id": 30703,
+                            "name": "Linz"
+                        },
+                        {
+                            "id": 30704,
+                            "name": "Salzburg"
+                        },
+                        {
+                            "id": 30705,
+                            "name": "Innsbruck"
+                        },
+                        {
+                            "id": 30706,
+                            "name": "Klagenfurt"
+                        },
+                        {
+                            "id": 30707,
+                            "name": "Villach"
+                        },
+                        {
+                            "id": 30708,
+                            "name": "Wels"
+                        },
+                        {
+                            "id": 30709,
+                            "name": "St. P\u00f6lten"
+                        },
+                        {
+                            "id": 30710,
+                            "name": "Dornbirn"
+                        }
+                    ]
+                }
+            ]
         },
         {
             "userId": 9,
