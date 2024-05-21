@@ -33,22 +33,33 @@ async function renderListItem(parent, items, images) {
             listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
         };
 
+        let data = await get_user("user");
+        let user = state_handler.get("user");
+
         let beenButton = document.createElement("button");
         beenButton.id = "beenButton";
         beenButton.textContent = "BEEN";
+        if (user.been.includes(item.id)) {
+            beenButton.classList.add("beenClicked");
+        }
         listItem.appendChild(beenButton);
 
         beenButton.addEventListener("click", function (event) {
             event.preventDefault();
 
-            state_handler.postItem("been", item.id);
+            if (beenButton.classList.contains("beenClicked")) {
+                state_handler.delete("been", item.id);
+                beenButton.classList.remove("beenClicked");
+            } else {
+                state_handler.postItem("been", item.id);
+                beenButton.classList.add("beenClicked");
+            }
+
         })
 
         let likeButton = document.createElement("img");
         likeButton.id = "likeButton";
-        // user.liked.includes(item.id)
-        let data = await get_user("user");
-        let user = state_handler.get("user");
+
         if (user.liked.includes(item.id)) {
             likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
         } else {

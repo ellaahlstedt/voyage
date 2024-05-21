@@ -24,6 +24,10 @@
     border-radius: 10px;
 }
 
+.beenClicked {
+    background-color: #aaaaaa;
+}
+
 #listItemImage {
     height: 100%;
     width: 100%;
@@ -37,33 +41,33 @@
     cursor: pointer;
 }
 
-.countryItem > h1 {
+.countryItem>h1 {
     font-size: 25px;
 }
 
-.countryItem > button {
+.countryItem>button {
     height: 30px;
     width: 70px;
     font-size: 15px;
 }
 
-.countryItem > img {
+.countryItem>img {
     height: 40px;
     width: 40px;
     border-radius: 10px;
 }
 
-.cityItem > h1 {
+.cityItem>h1 {
     font-size: 18px;
 }
 
-.cityItem > button {
+.cityItem>button {
     height: 25px;
     width: 45px;
     font-size: 10px;
 }
 
-.cityItem > img {
+.cityItem>img {
     height: 30px;
     width: 30px;
     border-radius: 10px;
