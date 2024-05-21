@@ -25,6 +25,10 @@
     border-radius: 10px;
 }
 
+#listItemImage {
+    height: 100%;
+}
+
 #likeButton {
     position: absolute;
     bottom: 10px;
