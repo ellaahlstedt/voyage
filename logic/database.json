@@ -4,7 +4,11 @@
             "userId": 1,
             "userName": "tyrla",
             "userPassword": "tyrla",
-            "liked": [102, 103, 105],
+            "liked": [
+                102,
+                103,
+                105
+            ],
             "been": []
         },
         {
@@ -46,6 +50,13 @@
             "userId": 9,
             "userName": "d\u00e5",
             "userPassword": "hej",
+            "liked": [],
+            "been": []
+        },
+        {
+            "userId": 10,
+            "userName": "testar",
+            "userPassword": "test",
             "liked": [],
             "been": []
         }

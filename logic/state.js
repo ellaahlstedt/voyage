@@ -13,7 +13,6 @@ const state_handler = {
     async runApp() {
         // const usersResource = await fetch_handler("./logic/users.php");
         const destinationsResource = await fetch_handler("./logic/destinations.php");
-        console.log(destinationsResource);
 
         // _state.users = usersResource;
         _state.destinations = destinationsResource;
@@ -42,7 +41,7 @@ const state_handler = {
         // data = {id: , username: }
 
         const token = localStorage.getItem("token");
-        const body = { token: token, id: data.id, username: data.username };
+        const body = { token: token, userName: data.username };
 
         const options = {
             method: "PATCH",
@@ -50,11 +49,10 @@ const state_handler = {
             body: JSON.stringify(body)
         };
 
-        const resource = await fetch_handler("", options);
-        const user = _state.users.find((x) => x.id == data.id);
-        user.username = resource.username;
-
-        // update navProfileCon
+        const resource = await fetch_handler("./logic/users.php", options);
+        localStorage.setItem("username", resource[0].userName);
+        localStorage.setItem("token", resource.token);
+        update_navProfileCon();
     },
     async delete(data) {
         // data = {id: , type: likedBy/beenIn}
