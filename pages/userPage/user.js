@@ -6,7 +6,6 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
 
 async function renderUserHeader(parent) {
     let data = await get_user("user");
-    console.log(_state);
     let header = document.createElement("header");
     header.id = "header";
     parent.appendChild(header);
