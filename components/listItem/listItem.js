@@ -15,9 +15,13 @@ function renderListItem(parent, items, images) {
             listItem.classList.add("countryItem");
             listItem.setAttribute("id", `country-${item.id}`);
             text.textContent = item.name;
-            listItem.style.backgroundImage = `url("../${item.images}")`
-
-            listItem.addEventListener("click", function () {
+            
+            const listItemImage = document.createElement("img")
+            listItemImage.setAttribute("src", "${item.images}");
+            listItemImage.id = "listItemImage";
+            listItem.appendChild(listItemImage);
+            console.log(item.images);
+            listItemImage.addEventListener("click", function () {
                 getToCountryOrCityPage(item.name, "country");
             })
 
