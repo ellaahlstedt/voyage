@@ -52,8 +52,7 @@ async function renderUserHeader(parent) {
 
     let total_countries = 50;
     let user = state_handler.get("user");
-    console.log(_state.user);
-    let beenList = user.been.length;
+    let beenList = user.been.filter(id => id.toString().length === 3).length;
     let percentage = beenList / 50 * 100;
 
     if (percentage > 75) percentage = 75;
