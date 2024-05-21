@@ -117,18 +117,20 @@ adam();*/
 
 //patchar userName
 if ($requestMethods == "PATCH") {
-    if (!isset($requestData["id"], $requestData["userName"], $requestData["token"])) {
+    if (!isset($requestData["userName"], $requestData["token"])) {
         $error = ["error" => "Bad Request"];
         sendJSON($error, 400);
     }
 
     $incoming_token = $requestData["token"];
     $token_valid = false;
+    $userId = 0;
     
     foreach($users as $user) {
         $name = $user["userName"];
         $password = $user["userPassword"];
         $userToken = sha1("$name$password");
+        $userId = $user["userId"];
        
         $encrypted_user = sha1($user["userName"] . $user["userPassword"] == $incoming_token);
         if ($userToken == $incoming_token) $token_valid = true;
@@ -140,11 +142,10 @@ if ($requestMethods == "PATCH") {
         sendJSON($error, 400);
     }
 
-    $id = $requestData["id"];
     $newName = $requestData["userName"];
 
     foreach ($users as $index => $user) {
-        if ($user["userId"] == $id) {
+        if ($user["userId"] == $userId) {
             $user["userName"] = $newName;
             $users[$index] = $user;
             $full_db["users"] = $users;

@@ -41,8 +41,7 @@ const state_handler = {
         // data = {id: , username: }
 
         const token = localStorage.getItem("token");
-        console.log(token);
-        const body = { token: token, id: data.id, userName: data.username };
+        const body = { token: token, userName: data.username };
 
         const options = {
             method: "PATCH",
@@ -53,7 +52,6 @@ const state_handler = {
         const resource = await fetch_handler("./logic/users.php", options);
         localStorage.setItem("username", resource[0].userName);
         localStorage.setItem("token", resource.token);
-        console.log(localStorage);
         update_navProfileCon();
     },
     async delete(data) {

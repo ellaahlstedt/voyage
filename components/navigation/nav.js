@@ -151,10 +151,9 @@ function logOut_event() {
 }
 
 function updateUsername() {
-    // username
     const oldUsername = document.querySelector(".usernameNav").textContent;
     const newUsername = document.querySelector("#loginInputtext").value;
-    const data = { id: 10, username: newUsername.toLowerCase() };
+    const data = { username: newUsername.toLowerCase() };
     state_handler.patch(data);
 }
 function settingsPopup() {
