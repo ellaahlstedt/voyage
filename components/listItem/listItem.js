@@ -38,7 +38,7 @@ function renderListItem(parent, items, images) {
         beenButton.addEventListener("click", function (event) {
             event.preventDefault();
 
-            state_handler.postItem("been", item);
+            state_handler.postItem("been", item.id);
 
         })
 
@@ -52,7 +52,7 @@ function renderListItem(parent, items, images) {
         likeButton.addEventListener("click", function (event) {
             event.preventDefault();
 
-            state_handler.postItem("liked", item);
+            state_handler.postItem("liked", item.id);
 
         })
     }
