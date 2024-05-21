@@ -49,7 +49,8 @@ const state_handler = {
             body: JSON.stringify(body)
         };
 
-        const resource = await fetch_handler("./logic/users.php", options);
+        let usersSrc = window.location.href.toLowerCase().includes("pages") ? "../../logic/users.php" : "./logic/users.php";
+        const resource = await fetch_handler(usersSrc, options);
         localStorage.setItem("username", resource[0].userName);
         localStorage.setItem("token", resource.token);
         update_navProfileCon();
