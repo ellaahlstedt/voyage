@@ -113,7 +113,7 @@ if ($contentType != "application/json") {
 
 //POST destination to  either liked or been //needs to find user and add value to right field // ADD REQUIRE TOKEN
 if ($requestMethods == "POST") {
-    if (!isset($requestData["userId"], $requestData["value"], $requestData["field"], $requestData["token"])) {
+    if (!isset($requestData["userName"], $requestData["value"], $requestData["field"], $requestData["token"])) {
         $error = ["error" => "Bad Request"];
         sendJSON($error, 400);
     }
@@ -127,14 +127,14 @@ if ($requestMethods == "POST") {
 
     } else {
 
-    $userId = $requestData["userId"];
+    $userName = $requestData["userName"];
     $value = $requestData["value"];
     $field = $requestData["field"];
     $token = $requestData["token"];
 
 
     foreach ($users as &$user) {
-        if ($user["userId"] == $userId) {
+        if ($user["userName"] == $userName) {
             $user[$field][] = $value;
             $modifiedUser = $user;
             break;
