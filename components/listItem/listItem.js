@@ -1,6 +1,6 @@
 "use strict";
 
-function renderListItem(parent, items) {
+function renderListItem(parent, items, images) {
 
     for (const item of items) {
 
@@ -25,7 +25,9 @@ function renderListItem(parent, items) {
             listItem.classList.add("cityItem")
             listItem.setAttribute("id", `city-${item.id}`);
             text.textContent = item.name;
-            // listItem.style.backgroundImage = `url("../${randomImage}")`;
+            
+            let randomImage = Math.floor(images.length * Math.random());
+            listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
         };
 
         let beenButton = document.createElement("button");

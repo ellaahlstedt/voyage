@@ -4,22 +4,14 @@
 }
 
 #citiesCon {
-    min-height: 500px;
     width: 75%;
-    margin: 0 auto 0 auto;
     display: grid;
+    margin-left: 200px;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
     justify-content: center;
-    overflow: auto;
+    gap: 50px 10px;
     padding-left: 30px;
-}
-
-.filteredCities {
-    gap: 10% 4%;
-}
-
-.allCities {
-    gap: 60px 50px;
 }
 
 #citiesCon > div {
