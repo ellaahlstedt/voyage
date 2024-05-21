@@ -17,7 +17,7 @@ function renderListItem(parent, items, images) {
             text.textContent = item.name;
             
             const listItemImage = document.createElement("img")
-            listItemImage.setAttribute("src", "${item.images}");
+            listItemImage.setAttribute("src", `../${item.images}`);
             listItemImage.id = "listItemImage";
             listItem.appendChild(listItemImage);
             console.log(item.images);
