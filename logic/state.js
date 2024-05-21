@@ -1,7 +1,7 @@
 
 
 const _state = {
-    users: [],
+
     destinations: [],
 
     // Dessa två nycklar måste finnas med så att man kan skicka fetches osv.
@@ -37,6 +37,7 @@ const state_handler = {
         const resource = await fetch_handler("", options);
         _state.users.push(resource);
     },
+
     async patch(data) {
         // data = {id: , username: }
 
@@ -87,6 +88,33 @@ const state_handler = {
                 // update beenCon
                 break;
         }
-    }
+    },
+    async postItem(field, data) {
+        //userId, field, value, token
+
+
+        const token = localStorage.getItem("token");
+        const userName = localStorage.getItem("username")
+        console.log(userName);
+        const body = { token: token, userName: userName, field: field, value: data };
+
+        const options = {
+            method: "POST",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify(body)
+        };
+        console.log(options);
+
+        if (field == "been") {
+            const resource = await fetch_handler("../../logic/destinations.php", options);
+            _state.user.been.push(resource);
+        }
+        else if (field == "liked") {
+            const resource = await fetch_handler("../../logic/destinations.php", options);
+            _state.user.liked.push(resource);
+
+            //lägg till för liked
+        }
+    },
 }
 
