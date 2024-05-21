@@ -15,12 +15,11 @@ function renderListItem(parent, items, images) {
             listItem.classList.add("countryItem");
             listItem.setAttribute("id", `country-${item.id}`);
             text.textContent = item.name;
-            
+
             const listItemImage = document.createElement("img")
             listItemImage.setAttribute("src", `../${item.images}`);
             listItemImage.id = "listItemImage";
             listItem.appendChild(listItemImage);
-            console.log(item.images);
             listItemImage.addEventListener("click", function () {
                 getToCountryOrCityPage(item.name, "country");
             })
@@ -56,6 +55,11 @@ function renderListItem(parent, items, images) {
             event.preventDefault();
 
             state_handler.postItem("liked", item.id);
+            if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
+                likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
+            } else {
+                likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
+            }
 
         })
     }

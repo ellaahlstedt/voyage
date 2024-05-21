@@ -15,11 +15,9 @@ async function get_user(page) {
         if (page !== undefined) url = `../../logic/users.php?token=${_state.token}`;
 
         const resource = await fetch_handler(url);
-        console.log("hej tyrla");
 
         if (resource !== undefined) {
             _state.user = resource;
-            console.log(_state);
         }
     }
 }
@@ -30,15 +28,12 @@ const state_handler = {
 
         get_user();
 
-        console.log(_state);
-
         // _state.users = usersResource;
         _state.destinations = destinationsResource;
         const wrapper = document.querySelector("#wrapper");
         updateRegionsCon(_state.destinations);
     },
     get(entity) {
-        console.log(_state);
         return JSON.parse(JSON.stringify(_state[entity]));
     },
     async post(data) {
@@ -113,8 +108,7 @@ const state_handler = {
 
 
         const token = localStorage.getItem("token");
-        const userName = localStorage.getItem("username")
-        console.log(userName);
+        const userName = localStorage.getItem("username");
         const body = { token: token, userName: userName, field: field, value: data };
 
         const options = {
@@ -122,7 +116,6 @@ const state_handler = {
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         };
-        console.log(options);
 
         if (field == "been") {
             await fetch_handler("../../logic/destinations.php", options);
