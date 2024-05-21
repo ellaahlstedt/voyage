@@ -55,6 +55,14 @@
                 {
                     "id": 10101,
                     "name": "London"
+                },
+                {
+                    "id": 10601,
+                    "name": "Copenhagen"
+                },
+                {
+                    "id": 10801,
+                    "name": "Oslo"
                 }
             ]
         },
