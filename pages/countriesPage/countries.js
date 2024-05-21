@@ -18,6 +18,7 @@ async function renderCountriesPage (parent) {
     const url = window.location.href; 
     
     let regionParameter = null;
+
     if (url.includes("region=")) {
         regionParameter = url.split("region=")[1].replace("%20", " "); // Adams kod
     }

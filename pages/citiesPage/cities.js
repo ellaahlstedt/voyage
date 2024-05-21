@@ -26,7 +26,7 @@ async function renderCitiesPage(parent) {
         citiesCon.classList.add("filteredCities");
         const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryParameter, "country");
         filteredCountry.cities.sort(sortCountriesOrCities);
-        renderListItem(citiesCon, filteredCountry.cities, filteredCountry.images);
+        renderListItem(citiesCon, filteredCountry.cities);
     } else {
         const allCities = [];
         for (const destination of destinations) {
@@ -37,9 +37,8 @@ async function renderCitiesPage(parent) {
             }
         }
         citiesCon.classList.add("allCities");
-        let image = "../../images/greece.jpeg"; // Ska ändras när vi har bilder för alla cities
         allCities.sort(sortCountriesOrCities);
-        renderListItem(citiesCon, allCities, image);
+        renderListItem(citiesCon, allCities);
         console.log(allCities);
     }
 }

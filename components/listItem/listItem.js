@@ -1,6 +1,6 @@
 "use strict";
 
-function renderListItem(parent, items, image) {
+function renderListItem(parent, items) {
 
     for (const item of items) {
 
@@ -11,23 +11,21 @@ function renderListItem(parent, items, image) {
         text.id = "text";
         listItem.appendChild(text);
 
-        listItem.style.backgroundImage = parent.id == "countriesCon" ? `url("../${item.images}")` : `url("../${image}")`
-
         if (parent.id == "countriesCon") {
-            
             listItem.classList.add("countryItem");
             listItem.setAttribute("id", `country-${item.id}`);
             text.textContent = item.name;
-            
+            listItem.style.backgroundImage = `url("../${item.images}")`
+
             listItem.addEventListener("click", function() {
                 getToCountryOrCityPage(item.name, "country");
             })
 
         } else if (parent.id == "citiesCon") {
-    
             listItem.classList.add("cityItem")
             listItem.setAttribute("id", `city-${item.id}`);
             text.textContent = item.name;
+            // listItem.style.backgroundImage = `url("../${randomImage}")`;
         };
 
         let beenButton = document.createElement("button");
