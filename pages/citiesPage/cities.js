@@ -90,6 +90,7 @@ function showMore(allCities, allCityImages, citiesCon) {
 	    citiesAmount.push(allCities[i]);
     }
     renderListItem(citiesCon, citiesAmount, allCityImages);
+    console.log(allCityImages);
 }
 
 renderCitiesPage(wrapper);
