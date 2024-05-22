@@ -1,35 +1,23 @@
 "use strict";
 
-function getDestinationsInRegionOrCountry (destinations, items, name, type) {
-    let filteredDestinations = [];
+function getDestinationsInRegionOrCountry (destinations, name, type) {
+    let filteredDestination;
 
-    if (type == "region") {
+    for (const region of destinations) {
         
-        for (const destination of destinations) {
-            if (destination.region == name) {
-                for (const item of items) {
-                    if (destination.id == item.region_id) {
-                        filteredDestinations.push(item);
-                    }
+        if (type == "region" && region.region == name) {
+            filteredDestination = region;
+
+        } else if (type == "country") {
+            for (const country of region.countries) {
+                if (country.name == name) {
+                    filteredDestination = country;
+                    break;
                 }
             }
-
         }
-    } else if (type == "country") {
-        
-        for (const destination of destinations) {
-            if (destination.name == name) {
-                for (const item of items) {
-                    if (destination.id == item.country_id) {
-                        filteredDestinations.push(item);
-                    }
-                }
-            }
-
-        } 
     }
-    return filteredDestinations;
-
+    return filteredDestination;
 }
 
 function getToCountryOrCityPage(name, type) {

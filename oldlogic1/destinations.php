@@ -151,6 +151,7 @@ if ($requestMethods == "POST") {
         $type = $requestData["type"];
         $destination_id = $requestData["id"];
 
+        $value = $full_destinations_db[$type][$destination_id - 1];
         $modifiedUser = "";
 
 
@@ -158,7 +159,7 @@ if ($requestMethods == "POST") {
             if ($user["userName"] == $userName) {
 //                $user[$field][] = $value;
 
-                $modifiedUser = handle_city_country_additions($destination_id, $type, $user, $full_destinations_db, $field);
+                $modifiedUser = handle_city_country_additions($destination_id, $type, $user, $full_destinations_db);
                 if ($modifiedUser == null) {
                     sendJSON(["error" => "Destination is already in that field!"], 400);
                 }
@@ -202,20 +203,22 @@ if ($requestMethods == "DELETE") {
 
 
         foreach ($users as $userIndex => $user) {
+
             if ($user["userId"] == $userId) {
                 foreach ($user[$field] as $index => $item) {
                     if ($item["id"] == $objectId and $item["type"] == $type) {
                         array_splice($user[$field], $index, 1);
                         $objectDeleted = true;
 
-                        $modifiedUser = handle_city_country_deletes($objectId, $type, $user, $full_destinations_db, $field);
+                        $modifiedUser = handle_city_country_deletes($objectId, $type, $user, $full_destinations_db);
+
                         // TODO
                         // 1. Hitta vad det är för type dvs land eller stad
                         // 2. Om det är en stad, så ska man kolla om det finns andra städer som har samma city_id
                         // 3. Om det är ett land, så ska man kolla om det finns fler länder som har samma region_id
 
                         $users[$userIndex] = $modifiedUser;
-                        $full_user_db = $users;
+                        $full_user_db[] = $users;
                         $users_json = json_encode($full_user_db, JSON_PRETTY_PRINT);
                         file_put_contents($users_file, $users_json);
                         sendJSON($modifiedUser);
@@ -248,39 +251,22 @@ function sendJSON($data, $statusCode = 200)
 }
 
 
-function handle_city_country_deletes($objectId, $type, $user, $full_destinations_db, $entity)
+function handle_city_country_deletes($objectId, $type, $user, $full_destinations_db)
 {
-
     if ($type == "city") {
         $current_city = $full_destinations_db["cities"][$objectId - 1];
-        $current_city_country = $full_destinations_db["countries"][$current_city["country_id"] - 1];
-        $current_country_region = $full_destinations_db["regions"][$current_city_country["region_id"] - 1];
+        $current_city_country = $current_city["country_id"];
 
-        $other_cities_same_country = array_filter($user[$entity], function ($data) use ($current_city_country) {
+        $other_cities_same_country = array_filter($user["liked"], function ($data) use ($current_city_country) {
             if (isset($data["country_id"]) and $data["country_id"] == $current_city_country) {
                 return $data;
             }
         });
 
-
         if (count($other_cities_same_country) == 0) {
-            foreach ($user[$entity] as $index => $liked_objects) {
+            foreach ($user["liked"] as $index => $liked_objects) {
                 if ($liked_objects["id"] == $current_city_country and $liked_objects["type"] == "country") {
-                    array_splice($user[$entity], $index, 1);
-
-                    $countries_in_same_region = array_filter($user[$entity], function ($data) use ($current_city_country) {
-                        if (isset($data["region_id"]) and $data["type"] == "country" and $current_city_country["region_id"] == $data["region_id"]) return $data;
-                    });
-
-                    if (count($countries_in_same_region) == 0) {
-                        foreach($user[$entity] as $region_index => $liked_regions) {
-                            if ($liked_regions["type"] == "region" and $liked_regions["id"] == $current_country_region["id"]) {
-                                array_splice($user[$entity], $region_index, 1);
-                                return $user;
-                            }
-                        }
-                    }
-
+                    array_splice($user["liked"], $index, 1);
                     return $user;
                 }
             }
@@ -293,17 +279,17 @@ function handle_city_country_deletes($objectId, $type, $user, $full_destinations
         $current_country = $full_destinations_db["countries"][$objectId - 1];
         $current_country_region = $current_country["region_id"];
 
-        $other_countries_same_region = array_filter($user[$entity], function ($data) use ($current_country_region) {
+        $other_countries_same_region = array_filter($user["liked"], function ($data) use ($current_country_region) {
             if (isset($data["region_id"]) and $data["region_id"] == $current_country_region) {
                 return $data;
             }
         });
 
         $i = 0;
-        while ($i < count($user[$entity])) {
-            $current_liked_object = $user[$entity][$i];
+        while ($i < count($user["liked"])) {
+            $current_liked_object = $user["liked"][$i];
             if (isset($current_liked_object["country_id"]) and $current_liked_object["country_id"] == $objectId) {
-                array_splice($user[$entity], $i, 1);
+                array_splice($user["liked"], $i, 1);
                 $i = 0;
                 continue;
             }
@@ -312,9 +298,9 @@ function handle_city_country_deletes($objectId, $type, $user, $full_destinations
         }
 
         if (count($other_countries_same_region) == 0) {
-            foreach ($user[$entity] as $index => $liked_objects) {
+            foreach ($user["liked"] as $index => $liked_objects) {
                 if ($liked_objects["id"] == $current_country_region and $liked_objects["type"] == "region") {
-                    array_splice($user[$entity], $index, 1);
+                    array_splice($user["liked"], $index, 1);
                     return $user;
                 }
             }
@@ -325,65 +311,47 @@ function handle_city_country_deletes($objectId, $type, $user, $full_destinations
 }
 
 
-function handle_city_country_additions($objectId, $type, $user, $full_destinations_db, $entity)
+function handle_city_country_additions($objectId, $type, $user, $full_destinations_db)
 {
     if ($type == "cities") {
         $current_city = $full_destinations_db["cities"][$objectId - 1];
-
-        if ($current_city == null) {
-            sendJSON(["error" => "City does not exist!"], 400);
-        }
-
         $current_city_country = $full_destinations_db["countries"][$current_city["country_id"] - 1];
         $current_country_region = $full_destinations_db["regions"][$current_city_country["region_id"] - 1];
         $country_exists = false;
         $region_exists = false;
 
-        foreach ($user[$entity] as $liked_objects) {
+        foreach ($user["liked"] as $index => $liked_objects) {
+            if ($liked_objects["type"] == "country" and $liked_objects["id"] == $current_city_country) $country_exists = true;
 
-            if ($liked_objects["type"] == "city" and $liked_objects["id"] == $objectId) {
-                return null;
-            }
-
-            if ($liked_objects["type"] == "country" and $liked_objects["id"] == $current_city_country["id"]) {
-                $country_exists = true;
-            }
-
-            if ($liked_objects["type"] == "region" and $liked_objects["id"] == $current_country_region["id"]) {
-                $region_exists = true;
-            }
+            if ($liked_objects["type"] == "region" and $liked_objects["id"] == $current_city_country["id"]) $region_exists = true;
         }
 
 
         if ($region_exists == false) {
-            $user[$entity][] = $current_country_region;
-            $user[$entity][] = $current_city_country;
-            $user[$entity][] = $current_city;
+            $user["liked"][] = $current_country_region;
+            $user["liked"][] = $current_city_country;
+            $user["liked"][] = $current_city;
             return $user;
         }
 
         if ($country_exists == false) {
-            $user[$entity][] = $current_city;
-            $user[$entity][] = $current_city_country;
+            $user["liked"][] = $current_city;
+            $user["liked"][] = $current_city_country;
             return $user;
         }
 
-        $user[$entity][] = $current_city;
+        $user["liked"][] = $current_city;
         return $user;
     }
 
     if ($type == "countries") {
         $current_country = $full_destinations_db["countries"][$objectId - 1];
-
-        if ($current_country == null) {
-            sendJSON(["error" => "Country does not exist!"], 400);
-        }
-
         $current_country_region = $full_destinations_db["regions"][$current_country["region_id"] - 1];
         $region_exists = false;
 
 
-        foreach ($user[$entity] as $liked_objects) {
+        foreach ($user["liked"] as $liked_objects) {
+
             if ($liked_objects["type"] == "country" and $liked_objects["id"] == $objectId) {
                 return null;
             }
@@ -392,12 +360,11 @@ function handle_city_country_additions($objectId, $type, $user, $full_destinatio
         }
 
         if ($region_exists == false) {
-            $user[$entity][] = $current_country;
-            $user[$entity][] = $current_country_region;
+            $user["liked"][] = $current_country;
+            $user["liked"][] = $current_country_region;
             return $user;
         }
 
-        $user[$entity][] = $current_country;
         return $user;
     }
 }
