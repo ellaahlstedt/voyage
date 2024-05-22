@@ -75,10 +75,8 @@ const state_handler = {
         update_navProfileCon();
     },
     async delete(data) {
-        // data = {id: , type: likedBy/beenIn}
 
-        const token = localStorage.getItem("token");
-        const body = { token: token, id: data.id, type: data.type };
+        const body = { data };
 
         const options = {
             method: "DELETE",
@@ -86,7 +84,7 @@ const state_handler = {
             body: JSON.stringify(body)
         }
 
-        const resource = await fetch_handler("", options);
+        const resource = await fetch_handler("./logic/destinations.php", options);
 
         switch (data.type) {
             case "liked":

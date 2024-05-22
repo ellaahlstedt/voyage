@@ -40,5 +40,72 @@
             }
         ],
         "been": []
+    },
+    {
+        "userId": 4,
+        "userName": "testar",
+        "userPassword": "test",
+        "liked": [
+            {
+                "id": 1,
+                "name": "England",
+                "images": "..\/images\/england.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 1,
+                "name": "British Isles",
+                "type": "region",
+                "regionImage": "..\/images\/britishisles.jpeg"
+            },
+            {
+                "id": 2,
+                "name": "Wales",
+                "images": "..\/images\/wales.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 11,
+                "type": "city",
+                "country_id": 2,
+                "name": "Cardiff"
+            }
+        ],
+        "been": [
+            {
+                "id": 1,
+                "name": "England",
+                "images": "..\/images\/england.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 1,
+                "name": "British Isles",
+                "type": "region",
+                "regionImage": "..\/images\/britishisles.jpeg"
+            },
+            {
+                "id": 2,
+                "name": "Wales",
+                "images": "..\/images\/wales.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 11,
+                "type": "city",
+                "country_id": 2,
+                "name": "Cardiff"
+            },
+            {
+                "id": 12,
+                "type": "city",
+                "country_id": 2,
+                "name": "Swansea"
+            }
+        ]
     }
 ]
