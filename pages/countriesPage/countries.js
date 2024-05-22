@@ -14,7 +14,12 @@ async function renderCountriesPage (parent) {
     parent.appendChild(countriesCon);
     renderFooter(parent);
 
-    const destinations = await fetch_handler("../../logic/destinations.php");
+    const allCountries = await fetch_handler("../../logic/destinations.php?type=country");
+    const allRegions = await fetch_handler("../../logic/destinations.php?type=region");
+    
+    renderListItem(countriesCon, allCountries);
+
+    /*
     const url = window.location.href; 
     let regionParameter = null;
 
@@ -43,6 +48,7 @@ async function renderCountriesPage (parent) {
         allCountries.sort(sortCountriesOrCities);
         renderListItem(countriesCon, allCountries);
     }
+    */
 }
 
 renderCountriesPage(wrapper);
