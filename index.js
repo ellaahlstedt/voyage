@@ -39,7 +39,8 @@ renderHeader(wrapper, "Regions");
 renderRegionsCon(wrapper);
 renderFooter(wrapper);
 
-async function test() {
+/*async function test() {
+    console.log("HEJ!")
 
     const body = {
 
@@ -47,7 +48,7 @@ async function test() {
         field: "liked",
         token: "58d1fd74a497b7647e6d1c629614e15d1023f742",
         type: "countries",
-        id: 2
+        id: "5"
     }
 
     const options = {
@@ -66,3 +67,4 @@ async function test() {
 test();
 
 
+*/

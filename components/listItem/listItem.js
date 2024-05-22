@@ -15,7 +15,7 @@ async function renderListItem(parent, items, images) {
         listItem.appendChild(text);
 
         if (parent.id == "countriesCon") {
-            
+
             listItem.classList.add("countryItem");
             listItem.setAttribute("id", `${item.id}`);
             listItem.setAttribute("type", item.type);
@@ -30,30 +30,30 @@ async function renderListItem(parent, items, images) {
             })
 
         } else if (parent.id == "citiesCon") {
-            
+
             listItem.classList.add("cityItem")
             listItem.setAttribute("id", `${item.id}`);
             listItem.setAttribute("type", "city");
             text.textContent = item.name;
-                
+
             const randomImage = Math.floor(images.length * Math.random());
             listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
-            
-                /*
-                let allCityImages = [];
-    
-                for (const region of allRegions) {
-                    let regionImageUrl = region.regionImage;
-                    let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-                    
-                    for (let i = 1; i < 20; i++) {
-                        let cityImage = `../../images/${regionName}${i}.jpeg`;
-                        allCityImages.push(cityImage);
-                    }
+
+            /*
+            let allCityImages = [];
+ 
+            for (const region of allRegions) {
+                let regionImageUrl = region.regionImage;
+                let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+                
+                for (let i = 1; i < 20; i++) {
+                    let cityImage = `../../images/${regionName}${i}.jpeg`;
+                    allCityImages.push(cityImage);
                 }
-                const randomImage = Math.floor(images.length * Math.random());
-                listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
-                */
+            }
+            const randomImage = Math.floor(images.length * Math.random());
+            listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
+            */
         };
 
         let data = await get_user("user");
@@ -70,11 +70,15 @@ async function renderListItem(parent, items, images) {
         beenButton.addEventListener("click", function (event) {
             event.preventDefault();
 
+            const itemType = event.target.parentElement.getAttribute("type");
+            console.log(itemType);
+            const itemId = event.target.parentElement.getAttribute("id");
+
             if (beenButton.classList.contains("beenClicked")) {
-                state_handler.delete("been", item.id);
+                state_handler.postItem("been", itemId, itemType);
                 beenButton.classList.remove("beenClicked");
             } else {
-                state_handler.postItem("been", item.id);
+                state_handler.postItem("been", itemId, itemType);
                 beenButton.classList.add("beenClicked");
             }
 
@@ -95,10 +99,12 @@ async function renderListItem(parent, items, images) {
 
         likeButton.addEventListener("click", function (event) {
             event.preventDefault();
+            const itemType = event.target.parentElement.getAttribute("type");
+            const itemId = event.target.parentElement.getAttribute("id");
 
 
             if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
-                state_handler.postItem("liked", item.id);
+                state_handler.postItem("liked", itemId, itemType);
                 likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
             } else {
                 state_handler.delete(item.id, "liked");
