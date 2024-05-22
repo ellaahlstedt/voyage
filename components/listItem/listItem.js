@@ -2,7 +2,8 @@
 
 async function renderListItem(parent, items, type) {
 
-    const allRegions = await fetch_handler("../../logic/destinations.php?type=region");
+    const response = await fetch("../../logic/destinations.php?type=region");
+    const allRegions = await response.json();
 
     for (const item of items) {
 
@@ -15,7 +16,8 @@ async function renderListItem(parent, items, type) {
 
         if (parent.id == "countriesCon") {
             listItem.classList.add("countryItem");
-            listItem.setAttribute("id", `country-${item.id}`);
+            listItem.setAttribute("id", `${item.id}`);
+            listItem.setAttribute("type", item.type);
             text.textContent = item.name;
 
             const listItemImage = document.createElement("img")
@@ -28,12 +30,26 @@ async function renderListItem(parent, items, type) {
 
         } else if (parent.id == "citiesCon") {
             listItem.classList.add("cityItem")
-            listItem.setAttribute("id", `city-${item.id}`);
+            listItem.setAttribute("id", `${item.id}`);
+            listItem.setAttribute("type", "city");
             text.textContent = item.name;
+            console.log(item);
 
             if (type == "filtered") {
                 
-                listItem.style.backgroundImage = `url("../${item.images}")`;
+                let allCityImages = [];
+    
+                for (const region of allRegions) {
+                    let regionImageUrl = region.regionImage;
+                    let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+                    
+                    for (let i = 1; i < 20; i++) {
+                        let cityImage = `../../images/${regionName}${i}.jpeg`;
+                        allCityImages.push(cityImage);
+                    }
+                }
+                const randomImage = Math.floor(allCityImages.length * Math.random());
+                listItem.style.backgroundImage = `url("../${allCityImages[randomImage]}")`;
 
             } else if (type == "all") {
 
@@ -48,8 +64,7 @@ async function renderListItem(parent, items, type) {
                         allCityImages.push(cityImage);
                     }
                 }
-                randomImage = Math.floor(allCityImages.length * Math.random());
-
+                const randomImage = Math.floor(allCityImages.length * Math.random());
                 listItem.style.backgroundImage = `url("../${allCityImages[randomImage]}")`;
             }
 

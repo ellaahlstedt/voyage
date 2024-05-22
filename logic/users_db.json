@@ -40,5 +40,12 @@
             }
         ],
         "been": []
+    },
+    {
+        "userId": 4,
+        "userName": "johanna",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
     }
 ]
