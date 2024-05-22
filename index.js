@@ -20,13 +20,13 @@ function updateRegionsCon(regions) {
 
         let regionsText = document.createElement("h1");
         regionsText.classList = "regionsText";
-        regionsText.textContent = region.region.toUpperCase();
+        regionsText.textContent = region.name.toUpperCase();
 
         regionsItem.appendChild(regionsText);
         parent.appendChild(regionsItem);
 
         regionsItem.addEventListener("click", function () {
-            getToCountryOrCityPage(region.region, "region");
+            getToCountryOrCityPage(region.name, "region");
         })
     }
 }
@@ -38,3 +38,31 @@ renderHeader(wrapper, "Regions");
 
 renderRegionsCon(wrapper);
 renderFooter(wrapper);
+
+async function test() {
+
+    const body = {
+
+        userName: "hej1",
+        field: "liked",
+        token: "58d1fd74a497b7647e6d1c629614e15d1023f742",
+        type: "countries",
+        id: 2
+    }
+
+    const options = {
+        method: "POST",
+        headers: {
+            "content-type": "application/json"
+        }
+        ,
+        body: JSON.stringify(body)
+    }
+    const response = await fetch("./logic/destinations.php", options)
+    const resource = await response.json();
+    console.log(resource);
+}
+
+test();
+
+

@@ -1,6 +1,8 @@
 "use strict";
 
-async function renderListItem(parent, items, images) {
+async function renderListItem(parent, items, type) {
+
+    const allRegions = await fetch_handler("../../logic/destinations.php?type=region");
 
     for (const item of items) {
 
@@ -29,13 +31,33 @@ async function renderListItem(parent, items, images) {
             listItem.setAttribute("id", `city-${item.id}`);
             text.textContent = item.name;
 
+            if (type == "filtered") {
+                
+                listItem.style.backgroundImage = `url("../${item.images}")`;
+
+            } else if (type == "all") {
+
+                let allCityImages = [];
+    
+                for (const region of allRegions) {
+                    let regionImageUrl = region.regionImage;
+                    let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+                    
+                    for (let i = 1; i < 20; i++) {
+                        let cityImage = `../../images/${regionName}${i}.jpeg`;
+                        allCityImages.push(cityImage);
+                    }
+                }
+                randomImage = Math.floor(allCityImages.length * Math.random());
+
+                listItem.style.backgroundImage = `url("../${allCityImages[randomImage]}")`;
+            }
+
+            /*
             const listItemImage = document.createElement("img")
             listItemImage.setAttribute("src", `../${item.images}`);
             listItemImage.id = "listItemImage";
             listItem.appendChild(listItemImage);
-            /*
-            let randomImage = Math.floor(images.length * Math.random());
-            listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
             */
         };
 
@@ -87,7 +109,6 @@ async function renderListItem(parent, items, images) {
                 state_handler.delete(item.id, "liked");
                 likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
             }
-
         })
     }
 }

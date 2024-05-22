@@ -3,45 +3,25 @@
         "userId": 1,
         "userName": "tyrla",
         "userPassword": "tyrla",
-        "liked": [
-            {
-                "id": 12,
-                "name": "Latvia",
-                "images": "..\/images\/latvia.jpeg",
-                "type": "country",
-                "region_id": 2
-            },
-            {
-                "id": 2,
-                "name": "Northern Europe",
-                "type": "region",
-                "regionImage": "..\/images\/northerneurope.jpg"
-            }
-        ],
-        "been": [
-            102,
-            103,
-            105,
-            1001,
-            2002,
-            3003
-        ]
+        "liked": [],
+        "been": []
     },
     {
         "userId": 2,
-        "userName": "testar",
-        "userPassword": "test",
+        "userName": "hej",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
+    },
+    {
+        "userId": 3,
+        "userName": "hej1",
+        "userPassword": "hej",
         "liked": [
             {
                 "id": 1,
-                "type": "city",
-                "country_id": 1,
-                "name": "London"
-            },
-            {
-                "id": 1,
                 "name": "England",
-                "images": "../images/england.jpeg",
+                "images": "..\/images\/england.jpeg",
                 "type": "country",
                 "region_id": 1
             },
@@ -49,29 +29,16 @@
                 "id": 1,
                 "name": "British Isles",
                 "type": "region",
-                "regionImage": "../images/britishisles.jpeg"
-            }
-        ],
-        "been": [
-            {
-                "id": 111,
-                "name": "Riga",
-                "type": "city",
-                "country_id": 12
-            },
-            {
-                "id": 12,
-                "name": "Latvia",
-                "images": "..\/images\/latvia.jpeg",
-                "type": "country",
-                "region_id": 2
+                "regionImage": "..\/images\/britishisles.jpeg"
             },
             {
                 "id": 2,
-                "name": "Northern Europe",
-                "type": "region",
-                "regionImage": "..\/images\/northerneurope.jpg"
+                "name": "Wales",
+                "images": "..\/images\/wales.jpeg",
+                "type": "country",
+                "region_id": 1
             }
-        ]
+        ],
+        "been": []
     }
 ]

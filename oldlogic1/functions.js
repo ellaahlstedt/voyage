@@ -1,12 +1,12 @@
 "use strict";
 
-function getDestinationsInRegionOrCountry(destinations, items, name, type) {
+function getDestinationsInRegionOrCountry (destinations, items, name, type) {
     let filteredDestinations = [];
 
     if (type == "region") {
-
+        
         for (const destination of destinations) {
-            if (destination.name == name) {
+            if (destination.region == name) {
                 for (const item of items) {
                     if (destination.id == item.region_id) {
                         filteredDestinations.push(item);
@@ -16,7 +16,7 @@ function getDestinationsInRegionOrCountry(destinations, items, name, type) {
 
         }
     } else if (type == "country") {
-
+        
         for (const destination of destinations) {
             if (destination.name == name) {
                 for (const item of items) {
@@ -26,7 +26,7 @@ function getDestinationsInRegionOrCountry(destinations, items, name, type) {
                 }
             }
 
-        }
+        } 
     }
     return filteredDestinations;
 

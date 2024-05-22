@@ -25,26 +25,11 @@ async function renderCitiesPage(parent) {
     }
 
     if (countryParameter) {
-        
-        const filteredCountries = getDestinationsInRegionOrCountry(allCountries, allCities, countryParameter, "country");
-        console.log(filteredCountries)
-        renderListItem(citiesCon, filteredCountries);
+        const filteredCities = getDestinationsInRegionOrCountry(allCountries, allCities, countryParameter, "country");
+        renderListItem(citiesCon, filteredCities, filtered);
 
     } else {
-        
         allCities.sort(sortCountriesOrCities);
-
-        let allCityImages = [];
-    
-        for (const region of allRegions) {
-            let regionImageUrl = region.regionImage;
-            let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-            
-            for (let i = 1; i < 20; i++) {
-                let cityImage = `../../images/${regionName}${i}.jpeg`;
-                allCityImages.push(cityImage);
-            }
-        }
         
         let currentAmount = 0;
         let citiesAmount = [];
@@ -53,7 +38,7 @@ async function renderCitiesPage(parent) {
             currentAmount = i;
         }
         
-        renderListItem(citiesCon, citiesAmount, allCityImages);
+        renderListItem(citiesCon, citiesAmount, all);
     
         const buttonDiv = document.createElement("div");
         buttonDiv.id = "buttonDiv";
