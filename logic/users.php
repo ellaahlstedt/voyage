@@ -2,7 +2,7 @@
 
 ini_set("display_errors", 1);
 
-$filename = "./database.json";
+$filename = "./users_db.json";
 
 $requestMethods = $_SERVER["REQUEST_METHOD"];
 $allowedMethods = ["GET", "POST", "PATCH", "DELETE"];
@@ -22,7 +22,7 @@ $users = [];
 if (file_exists($filename)){
     $json = file_get_contents($filename);
     $full_db = json_decode($json, true);
-    $users = $full_db["users"];
+    $users = $full_db;
 }
 
 //GET användare med ID
@@ -108,7 +108,7 @@ if ($requestMethods == "POST") {
     $nextId = $highestId + 1;
     $newUser = ["userId" => $nextId, "userName" => $userName, "userPassword" => $password, "liked" => [], "been" => []];
     $users[] = $newUser;
-    $full_db["users"] = $users;
+    $full_db = $users;
     $json = json_encode($full_db, JSON_PRETTY_PRINT);
     file_put_contents($filename, $json);
     sendJSON($newUser);
@@ -168,7 +168,7 @@ if ($requestMethods == "PATCH") {
         if ($user["userId"] == $userId) {
             $user["userName"] = $newName;
             $users[$index] = $user;
-            $full_db["users"] = $users;
+            $full_db = $users;
             $json = json_encode($full_db, JSON_PRETTY_PRINT);
             file_put_contents($filename, $json);
             $token = sha1($user["userName"] . $user["userPassword"]);
@@ -205,7 +205,7 @@ if ($requestMethods == "DELETE") {
     foreach($users as $index => $user) {
         if ($user["userId"] == $id) {
             array_splice($users, $index, 1);
-            $full_db["users"] = $users;
+            $full_db = $users;
             $json = json_encode($full_db, JSON_PRETTY_PRINT);
             file_put_contents($filename, $json);
             sendJSON($full_db);

@@ -29,8 +29,14 @@ async function renderListItem(parent, items, images) {
             listItem.setAttribute("id", `city-${item.id}`);
             text.textContent = item.name;
 
+            const listItemImage = document.createElement("img")
+            listItemImage.setAttribute("src", `../${item.images}`);
+            listItemImage.id = "listItemImage";
+            listItem.appendChild(listItemImage);
+            /*
             let randomImage = Math.floor(images.length * Math.random());
             listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
+            */
         };
 
         let data = await get_user("user");

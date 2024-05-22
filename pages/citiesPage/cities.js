@@ -6,54 +6,45 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
 
 async function renderCitiesPage(parent) {
     
-    const citiesCon = document.createElement('div');
+    const citiesCon = document.createElement("div");
     citiesCon.id = "citiesCon";
 
-    renderNav(parent, 'Cities');
-    renderHeader(parent, 'Cities');
+    renderNav(parent, "Cities");
+    renderHeader(parent, "Cities");
     parent.appendChild(citiesCon);
 
-    const destinations = await fetch_handler("../../logic/destinations.php");
-    const url = window.location.href;
+    const allCities = await fetch_handler("../../logic/destinations.php?type=city");
+    const allCountries = await fetch_handler("../../logic/destinations.php?type=country");
+    const allRegions = await fetch_handler("../../logic/destinations.php?type=region");
+
+    const url = window.location.href; 
     let countryParameter = null;
     
     if (url.includes("country=")) {
-        countryParameter = url.split("country=")[1].replace("%20", " "); // Adams kod
+        countryParameter = url.split("country=")[1].replace("%20", " ");
     }
-    
+
     if (countryParameter) {
         
-        const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryParameter, "country");
-        filteredCountry.cities.sort(sortCountriesOrCities);
-        
-        for (const destination of destinations) {
-            for (const country of destination.countries) {
-                if (country.name == countryParameter) {
-                    renderListItem(citiesCon, filteredCountry.cities, destination.cityImages);
-                }
-            }
-        }
-        
-    } else {
-        const allCities = [];
+        const filteredCountries = getDestinationsInRegionOrCountry(allCountries, allCities, countryParameter, "country");
+        console.log(filteredCountries)
+        renderListItem(citiesCon, filteredCountries);
 
-        for (const destination of destinations) {
-            for (const country of destination.countries) {
-                for (const city of country.cities) {
-                    allCities.push(city);
-                }
-            }
-        }
+    } else {
+        
+        allCities.sort(sortCountriesOrCities);
 
         let allCityImages = [];
-
-        for (const destination of destinations) {
-            for (const cityImage of destination.cityImages) {
+    
+        for (const region of allRegions) {
+            let regionImageUrl = region.regionImage;
+            let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+            
+            for (let i = 1; i < 20; i++) {
+                let cityImage = `../../images/${regionName}${i}.jpeg`;
                 allCityImages.push(cityImage);
             }
         }
-
-        allCities.sort(sortCountriesOrCities);
         
         let currentAmount = 0;
         let citiesAmount = [];
@@ -63,19 +54,20 @@ async function renderCitiesPage(parent) {
         }
         
         renderListItem(citiesCon, citiesAmount, allCityImages);
-        console.log(citiesCon)
-
+    
         const buttonDiv = document.createElement("div");
         buttonDiv.id = "buttonDiv";
         parent.appendChild(buttonDiv);
         const pageButton = document.createElement("button");
         pageButton.textContent = "SHOW MORE";
         buttonDiv.appendChild(pageButton);
-
+    
         pageButton.addEventListener("click", function test() {
             showMore(allCities, allCityImages, citiesCon);
         });
+    
     }
+
     renderFooter(parent);
 }
 

@@ -8,25 +8,25 @@ function renderRegionsCon(parent) {
     parent.appendChild(regionsCon);
 }
 
-function updateRegionsCon(destinations) {
+function updateRegionsCon(regions) {
     parent = document.querySelector("#regionsCon");
 
-    for (const destination of destinations) {
+    for (const region of regions) {
 
         let regionsItem = document.createElement("div");
         regionsItem.classList = "regionsItem";
-        regionsItem.setAttribute("stateId", destination.id);
-        regionsItem.style.backgroundImage = `url("images/${destination.regionImage}")`
+        regionsItem.setAttribute("stateId", region.id);
+        regionsItem.style.backgroundImage = `url("images/${region.regionImage}")`
 
         let regionsText = document.createElement("h1");
         regionsText.classList = "regionsText";
-        regionsText.textContent = destination.region.toUpperCase();
+        regionsText.textContent = region.region.toUpperCase();
 
         regionsItem.appendChild(regionsText);
         parent.appendChild(regionsItem);
 
         regionsItem.addEventListener("click", function () {
-            getToCountryOrCityPage(destination.region, "region");
+            getToCountryOrCityPage(region.region, "region");
         })
     }
 }
