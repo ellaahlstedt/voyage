@@ -2,7 +2,8 @@
 
 ini_set("display_errors", 1);
 
-$filename = "database.json";
+$users_file = "database.json";
+$destinations_db = "database.json";
 
 $requestMethods = $_SERVER["REQUEST_METHOD"];
 $allowedMethods = ["GET", "POST", "DELETE"];
@@ -18,11 +19,21 @@ $destinations = [];
 $users = [];
 
 //om användare finns
-if (file_exists($filename)) {
-    $json = file_get_contents($filename);
-    $full_db = json_decode($json, true);
-    $users = $full_db["users"];
-    $destinations = $full_db["destinations"];
+if (file_exists($users_file) and file_exists($destinations_db)) {
+    $users_json = file_get_contents($users_file);
+    $full_user_db = json_decode($users_json, true);
+    $users = $full_user_db["users"];
+
+    $destinations_json = file_get_contents($destinations_db);
+    $full_destinations_db = json_decode($destinations_json, true);
+    $non_separated_destinations = [
+        $full_destinations_db["regions"],
+        $full_destinations_db["countries"],
+        $full_destinations_db["cities"]
+    ];
+
+    $full_user_db["destinations"][] = $non_separated_destinations;
+
 }
 
 //validate token
@@ -34,70 +45,80 @@ function validateToken($token, $requestData, $users)
         }
     }
     return false;
-};
+}
 
 //GET destination by Id //lägg till så den tar emot token
 
 if ($requestMethods == "GET") {
-    if (isset($_GET["id"])) {
+
+    if (!isset($_GET["id"]) and !isset($_GET["all"]) and isset($_GET["type"])) {
+        $type = $_GET["type"];
+
+        if ($type == "region") sendJSON($full_destinations_db["regions"]);
+
+        if ($type == "country") sendJSON($full_destinations_db["countries"]);
+
+        if ($type == "city") sendJSON($full_destinations_db["cities"]);
+
+        sendJSON($full_destinations_db);
+    }
+
+    if (isset($_GET["id"]) and isset($_GET["type"]) and !isset($_GET["all"])) {
+        $type = $_GET["type"];
         $id = $_GET["id"];
 
-        foreach ($destinations as $destination) {
-            if ($destination["id"] == $id) {
-                sendJSON($destination);
-                break;
-            } else {
+        if ($type == "region") sendJSON($full_destinations_db["regions"][$id - 1]);
 
-                foreach ($destination["countries"] as $country) {
-                    if ($country["id"] == $id) {
-                        sendJSON($country);
-                        break;
-                    } else {
+        if ($type == "country") sendJSON($full_destinations_db["countries"][$id - 1]);
 
-                        foreach ($country["cities"] as $city) {
-                            if ($city["id"] == $id) {
-                                sendJSON($city);
-                            }
-                        }
-                    }
+        if ($type == "city") sendJSON($full_destinations_db["cities"][$id - 1]);
+    }
+
+    if (isset($_GET["id"], $_GET["type"], $_GET["all"])) {
+        $id = $_GET["id"];
+        $type = $_GET["type"];
+        $all = $_GET["all"];
+
+        if ($type == "region") {
+            if ($all == "true") {
+
+                $region_countries = ["name" => $full_destinations_db["regions"][$id - 1]["name"]];
+                $region_countries["countries"] = [];
+
+                foreach ($full_destinations_db["countries"] as $country) {
+                    if ($country["region_id"] == $id) $region_countries["countries"][] = $country;
                 }
-            }
 
+                sendJSON($region_countries);
+            }
         }
+
+        if ($type == "country") {
+            if ($all == "true") {
+                $country_cities = ["name" => $full_destinations_db["countries"][$id - 1]["name"]];
+                $country_cities["cities"] = [];
+
+                foreach ($full_destinations_db["cities"] as $city) {
+                    if ($city["country_id"] == $id) $country_cities["cities"][] = $city;
+                }
+
+                sendJSON($country_cities);
+            }
+        }
+
+        if ($type == "city") {
+            sendJSON($full_destinations_db["cities"][$id - 1]);
+        }
+
+
         $error = ["error" => "Not Found"];
         sendJSON($error, 404);
     } else {
-        sendJSON($destinations);
-
-
+        sendJSON($full_destinations_db);
     }
+
     $error = ["error" => "No id passed for destination."];
     sendJSON($error, 400);
-
-
-    /* GET test for destinations. change id in response to find your destination. Works for regions, country, city.
-
- async function adam() {
-     try {
-         const response = await fetch("./logic/destinations.php?id=1", {
-             method: "GET",
-             headers: { "Content-Type": "application/json" },
-
-         });
-
-         if (!response.ok) {
-             throw new Error(`HTTP error! Status: ${response.status}`);
-         }
-
-         const resource = await response.json();
-         console.log(resource);
-     } catch (error) {
-         console.error("Error:", error.message);
-         alert("Error occurred. Please check console for details.");
-     }
- }
-
- adam();*/
 }
 
 $contentType = $_SERVER["CONTENT_TYPE"];
@@ -113,74 +134,50 @@ if ($contentType != "application/json") {
 
 //POST destination to  either liked or been //needs to find user and add value to right field // ADD REQUIRE TOKEN
 if ($requestMethods == "POST") {
-    if (!isset($requestData["userName"], $requestData["value"], $requestData["field"], $requestData["token"])) {
+    if (!isset($requestData["userName"], $requestData["field"], $requestData["token"], $requestData["type"])) {
         $error = ["error" => "Bad Request"];
         sendJSON($error, 400);
     }
 
     $token = $requestData["token"];
-    
-    if (!validateToken($token,$requestData, $users)) {
+
+    if (!validateToken($token, $requestData, $users)) {
         $error = ["error" => "invalid Token"];
         sendJSON($error, 401);
         exit();
 
     } else {
 
-    $userName = $requestData["userName"];
-    $value = $requestData["value"];
-    $field = $requestData["field"];
-    $token = $requestData["token"];
+        $userName = $requestData["userName"];
+        $field = $requestData["field"];
+        $token = $requestData["token"];
+        $type = $requestData["type"];
+        $destination_id = $requestData["id"];
+
+        $value = $full_destinations_db[$type][$destination_id - 1];
 
 
-    foreach ($users as &$user) {
-        if ($user["userName"] == $userName) {
-            $user[$field][] = $value;
-            $modifiedUser = $user;
-            break;
-        }
-//Request POST example
-        /*async function adam() {
-        try {
-            const response = await fetch("./logic/destinations.php", {
-                method: "DELETE",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    userId: "1",
-                    field: "been",
-                    id: "10602"
-                })
-            });
 
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+        foreach ($users as &$user) {
+            if ($user["userName"] == $userName) {
+                $user[$field][] = $value;
+                $modifiedUser = $user;
+                break;
             }
 
-            const resource = await response.json(); // Get response text
-            console.log("Response Text:", response); // Log response text
-
-            console.log(resource);
-
-        } catch (error) {
-            console.error("Error:", error.message);
-            alert("Error occurred. Please check console for details.");
         }
-    }
-
-    adam();*/
-
-    } };
+    };
 
 
-    $full_db["users"] = $users;
-    $json = json_encode($full_db, JSON_PRETTY_PRINT);
-    file_put_contents($filename, $json);
+    $full_user_db["users"] = $users;
+    $users_json = json_encode($full_user_db, JSON_PRETTY_PRINT);
+    file_put_contents($users_file, $users_json);
     sendJSON($modifiedUser);
 }
 
 //Removes objects from Users BEEN or LIKED. Parameters: Object id(to be removed), userId, field. //add TOKEN requirement 
 if ($requestMethods == "DELETE") {
-    if (!isset($requestData["id"], $requestData["userId"], $requestData["field"], $requestData["token"])) {
+    if (!isset($requestData["id"], $requestData["userId"], $requestData["field"], $requestData["token"], $requestData["type"])) {
         $error = ["error" => "Bad Request"];
         sendJSON($error, 400);
         exit();
@@ -188,7 +185,7 @@ if ($requestMethods == "DELETE") {
 
     $token = $requestData["token"];
 
-    if (!validateToken($token,$requestData, $users)) {
+    if (!validateToken($token, $requestData, $users)) {
         $error = ["error" => "invalid Token"];
         sendJSON($error, 401);
         exit();
@@ -196,6 +193,7 @@ if ($requestMethods == "DELETE") {
     } else {
 
         $objectId = $requestData["id"];
+        $type = $requestData["type"];
         $userId = $requestData["userId"];
         $field = $requestData["field"];
         $objectDeleted = false; // used to check if object or user is found
@@ -206,14 +204,14 @@ if ($requestMethods == "DELETE") {
 
             if ($user["userId"] == $userId) {
                 foreach ($user[$field] as $index => $item) {
-                    if ($item == $objectId) {
+                    if ($item["id"] == $objectId and $item["type"] == $type) {
                         array_splice($user[$field], $index, 1);
                         $objectDeleted = true;
                         $modifiedUser = $user;
                         $users[$userIndex] = $modifiedUser;
-                        $full_db["users"] = $users;
-                        $json = json_encode($full_db, JSON_PRETTY_PRINT);
-                        file_put_contents($filename, $json);
+                        $full_user_db["users"] = $users;
+                        $users_json = json_encode($full_user_db, JSON_PRETTY_PRINT);
+                        file_put_contents($users_file, $users_json);
                         sendJSON($modifiedUser);
                         exit();
                     }
@@ -227,36 +225,6 @@ if ($requestMethods == "DELETE") {
             sendJSON($error, 404);
             exit();
         }
-        //Request DELETE example
-        /*async function adam() {
-        try {
-            const response = await fetch("./logic/destinations.php", {
-                method: "DELETE",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    userId: "1",
-                    field: "been",
-                    id: "10602"
-                })
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
-            const resource = await response.json(); // Get response text
-            console.log("Response Text:", response); // Log response text
-
-            console.log(resource);
-
-        } catch (error) {
-            console.error("Error:", error.message);
-            alert("Error occurred. Please check console for details.");
-        }
-    }
-
-    adam();*/
-
 
     }
 };
