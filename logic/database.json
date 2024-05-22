@@ -94,17 +94,17 @@
         {
             "id": 2,
             "region": "Northern Europe",
-            "regionImage": "..\/images\/northerneurope.jpg"
+            "regionImage": "..\/images\/northerneurope.jpeg"
         },
         {
             "id": 3,
             "region": "Western Europe",
-            "regionImage": "..\/images\/westerneurope.jpg"
+            "regionImage": "..\/images\/westerneurope.jpeg"
         },
         {
             "id": 4,
             "region": "The Balkans",
-            "regionImage": "..\/images\/thebalkans.jpg"
+            "regionImage": "..\/images\/thebalkans.jpeg"
         },
         {
             "id": 5,
