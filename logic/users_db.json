@@ -173,5 +173,26 @@
                 ]
             }
         ]
-    ]
+    ],
+    {
+        "userId": 2,
+        "userName": "johannah",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
+    },
+    {
+        "userId": 3,
+        "userName": "hejsan",
+        "userPassword": "hejsan",
+        "liked": [],
+        "been": []
+    },
+    {
+        "userId": 4,
+        "userName": "johanna",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
+    }
 ]

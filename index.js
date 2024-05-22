@@ -20,13 +20,13 @@ function updateRegionsCon(regions) {
 
         let regionsText = document.createElement("h1");
         regionsText.classList = "regionsText";
-        regionsText.textContent = region.region.toUpperCase();
+        regionsText.textContent = region.name.toUpperCase();
 
         regionsItem.appendChild(regionsText);
         parent.appendChild(regionsItem);
 
         regionsItem.addEventListener("click", function () {
-            getToCountryOrCityPage(region.region, "region");
+            getToCountryOrCityPage(region.name, "region");
         })
     }
 }

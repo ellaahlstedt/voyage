@@ -6,7 +6,7 @@ function getDestinationsInRegionOrCountry (destinations, items, name, type) {
     if (type == "region") {
         
         for (const destination of destinations) {
-            if (destination.region == name) {
+            if (destination.name == name) {
                 for (const item of items) {
                     if (destination.id == item.region_id) {
                         filteredDestinations.push(item);

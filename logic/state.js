@@ -1,7 +1,6 @@
 
 
 const _state = {
-    destinations: [],
 
     // Dessa två nycklar måste finnas med så att man kan skicka fetches osv.
     token: window.localStorage.getItem("token"),
