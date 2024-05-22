@@ -8,8 +8,19 @@ async function renderBeenFavLists(parent, title, listType) {
     h1.textContent = title;
     listBox.appendChild(h1);
 
+    let titleSingle = "";
+    switch (title) {
+        case "Regions":
+            titleSingle = "region";
+            break;
+        case "Countries":
+            titleSingle = "country";
+            break; case "Cities":
+            titleSingle = "city";
+            break;
+    }
     let list = document.createElement("ul");
-    list.id = "list" + listType + title;
+    list.id = "list" + listType + titleSingle;
     list.classList.add("lists")
     listBox.appendChild(list);
 
@@ -24,6 +35,7 @@ async function renderBeenFavLists(parent, title, listType) {
 }
 
 function renderBoxListItem(parent, list, listType, userId) {
+    parent.innerHTML = "";
     for (let item of list) {
         let li = document.createElement("li");
         li.classList.add("listItem");
@@ -50,7 +62,7 @@ function renderBoxListItem(parent, list, listType, userId) {
                     type: item.type,
                     id: item.id,
                 };
-                state_handler.delete(item);
+                state_handler.delete(data);
             });
         } else if (listType === "liked") {
             heartIcon.setAttribute("src", "../../fonts/icons/favouritered.png");
@@ -70,7 +82,7 @@ function renderBoxListItem(parent, list, listType, userId) {
             });
         }
 
-        if (parent.id.includes("Regions") && item.type === "region") {
+        if (parent.id.includes(item.type) && item.type === "region") {
             parent.appendChild(li);
             li.appendChild(listItemText);
             if (listType === "been") {
@@ -78,7 +90,7 @@ function renderBoxListItem(parent, list, listType, userId) {
             } else if (listType === "liked") {
                 li.appendChild(heartIcon);
             }
-        } else if (parent.id.includes("Countries") && item.type === "country") {
+        } else if (parent.id.includes(item.type) && item.type === "country") {
             parent.appendChild(li);
             li.appendChild(listItemText);
             if (listType === "been") {
@@ -86,7 +98,7 @@ function renderBoxListItem(parent, list, listType, userId) {
             } else if (listType === "liked") {
                 li.appendChild(heartIcon);
             }
-        } else if (parent.id.includes("Cities") && item.type === "city") {
+        } else if (parent.id.includes(item.type) && item.type === "city") {
             parent.appendChild(li);
             li.appendChild(listItemText);
             if (listType === "been") {

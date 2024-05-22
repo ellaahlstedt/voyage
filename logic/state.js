@@ -93,6 +93,13 @@ const state_handler = {
                         _state.users.likedBy.splice(i, 1);
                     }
                 }
+                const parent = document.querySelector(`list${data.field}${data.type}`);
+                if (data.field === "been") {
+                    renderBoxListItem(parent, _state.user.been, data.field, _state.user.userId);
+                } else if (data.field === "liked") {
+                    renderBoxListItem(parent, _state.user.liked, data.field, _state.user.userId);
+                }
+
                 // update likeCon
                 break;
             case "been":
