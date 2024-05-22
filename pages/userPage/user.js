@@ -49,13 +49,12 @@ async function renderUserHeader(parent) {
     train.src = "../../images/train.png";
     header.appendChild(trainCon);
 
-    let total_countries = 50;
     let user = state_handler.get("user");
-    let beenList = user.been.filter(id => id.toString().length === 3).length;
+    let beenList = user.been.filter(item => item.type === "country").length;
     let percentage = beenList / 50 * 100;
 
     if (percentage > 75) percentage = 75;
-    loadingBar.style.width += `${percentage}%`
+    loadingBar.style.width += `${percentage}%`;
 
     renderBeenfavCon(wrapper, "beenList", "beenList");
     renderBeenfavCon(wrapper, "wishlistList", "wishlistList");

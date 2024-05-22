@@ -25,7 +25,7 @@ async function onSignIn(event) {
 
     const options = {
         method: "POST",
-        headers: {"Content-type": "application/json"},
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(body)
     }
 
@@ -47,7 +47,7 @@ async function onRegister(event) {
 
     const options = {
         method: "POST",
-        headers: {"Content-type": "application/json"},
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(body)
     }
 
