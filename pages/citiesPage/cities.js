@@ -17,55 +17,56 @@ async function renderCitiesPage(parent) {
     const allCountries = await fetch_handler("../../logic/destinations.php?type=country");
     const allRegions = await fetch_handler("../../logic/destinations.php?type=region");
 
-    allCities.sort(sortCountriesOrCities);
-
-    let allCityImages = [];
-
-    for (const region of allRegions) {
-        let regionImageUrl = region.regionImage;
-        let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-        
-        for (let i = 1; i < 20; i++) {
-            let cityImage = `../../images/${regionName}${i}.jpeg`;
-            allCityImages.push(cityImage);
-        }
-    }
+    const url = window.location.href; 
+    let countryParameter = null;
     
-    let currentAmount = 0;
-    let citiesAmount = [];
-    for(let i = 0; i < 50; i++) {
-        citiesAmount.push(allCities[i]);
-        currentAmount = i;
+    if (url.includes("country=")) {
+        countryParameter = url.split("country=")[1].replace("%20", " ");
     }
-    
-    renderListItem(citiesCon, citiesAmount, allCityImages);
 
-    const buttonDiv = document.createElement("div");
-    buttonDiv.id = "buttonDiv";
-    parent.appendChild(buttonDiv);
-    const pageButton = document.createElement("button");
-    pageButton.textContent = "SHOW MORE";
-    buttonDiv.appendChild(pageButton);
-
-    pageButton.addEventListener("click", function test() {
-        showMore(allCities, allCityImages, citiesCon);
-    });
-
-    /*
     if (countryParameter) {
         
-        const filteredCountry = getDestinationsInRegionOrCountry(destinations, countryParameter, "country");
+        const filteredCountries = getDestinationsInRegionOrCountry(allCountries, allCities, countryParameter, "country");
+        console.log(filteredCountries)
+        renderListItem(citiesCon, filteredCountries);
+
+    } else {
         
-        for (const destination of destinations) {
-            for (const country of destination.countries) {
-                if (country.name == countryParameter) {
-                    renderListItem(citiesCon, filteredCountry.cities, destination.cityImages);
-                }
+        allCities.sort(sortCountriesOrCities);
+
+        let allCityImages = [];
+    
+        for (const region of allRegions) {
+            let regionImageUrl = region.regionImage;
+            let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+            
+            for (let i = 1; i < 20; i++) {
+                let cityImage = `../../images/${regionName}${i}.jpeg`;
+                allCityImages.push(cityImage);
             }
         }
         
+        let currentAmount = 0;
+        let citiesAmount = [];
+        for(let i = 0; i < 50; i++) {
+            citiesAmount.push(allCities[i]);
+            currentAmount = i;
+        }
+        
+        renderListItem(citiesCon, citiesAmount, allCityImages);
+    
+        const buttonDiv = document.createElement("div");
+        buttonDiv.id = "buttonDiv";
+        parent.appendChild(buttonDiv);
+        const pageButton = document.createElement("button");
+        pageButton.textContent = "SHOW MORE";
+        buttonDiv.appendChild(pageButton);
+    
+        pageButton.addEventListener("click", function test() {
+            showMore(allCities, allCityImages, citiesCon);
+        });
+    
     }
-    */
 
     renderFooter(parent);
 }
