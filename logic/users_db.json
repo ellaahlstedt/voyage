@@ -5,5 +5,40 @@
         "userPassword": "tyrla",
         "liked": [],
         "been": []
+    },
+    {
+        "userId": 2,
+        "userName": "hej",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
+    },
+    {
+        "userId": 3,
+        "userName": "hej1",
+        "userPassword": "hej",
+        "liked": [
+            {
+                "id": 1,
+                "name": "England",
+                "images": "..\/images\/england.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 1,
+                "name": "British Isles",
+                "type": "region",
+                "regionImage": "..\/images\/britishisles.jpeg"
+            },
+            {
+                "id": 2,
+                "name": "Wales",
+                "images": "..\/images\/wales.jpeg",
+                "type": "country",
+                "region_id": 1
+            }
+        ],
+        "been": []
     }
 ]
