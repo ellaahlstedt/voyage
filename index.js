@@ -39,7 +39,7 @@ renderHeader(wrapper, "Regions");
 renderRegionsCon(wrapper);
 renderFooter(wrapper);
 
-async function test() {
+/*async function test() {
 
     const body = {
 
@@ -63,6 +63,6 @@ async function test() {
     console.log(resource);
 }
 
-test();
+test();*/
 
 

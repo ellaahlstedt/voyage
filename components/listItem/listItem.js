@@ -32,17 +32,17 @@ async function renderListItem(parent, items, type) {
             text.textContent = item.name;
 
             if (type == "filtered") {
-                
+
                 listItem.style.backgroundImage = `url("../${item.images}")`;
 
             } else if (type == "all") {
 
                 let allCityImages = [];
-    
+
                 for (const region of allRegions) {
                     let regionImageUrl = region.regionImage;
                     let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-                    
+
                     for (let i = 1; i < 20; i++) {
                         let cityImage = `../../images/${regionName}${i}.jpeg`;
                         allCityImages.push(cityImage);
@@ -75,11 +75,14 @@ async function renderListItem(parent, items, type) {
         beenButton.addEventListener("click", function (event) {
             event.preventDefault();
 
+            const itemType = event.target.parentElement.getAttribute("type");
+            const itemId = event.target.parentElement.getAttribute("id");
+
             if (beenButton.classList.contains("beenClicked")) {
                 state_handler.delete("been", item.id);
                 beenButton.classList.remove("beenClicked");
             } else {
-                state_handler.postItem("been", item.id);
+                state_handler.postItem("been", itemType, itemId);
                 beenButton.classList.add("beenClicked");
             }
 
@@ -101,9 +104,14 @@ async function renderListItem(parent, items, type) {
         likeButton.addEventListener("click", function (event) {
             event.preventDefault();
 
+            const itemType = event.target.parentElement.getAttribute("type");
+            const itemId = item.id;
+
+            console.log(itemId);
+
 
             if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
-                state_handler.postItem("liked", item.id);
+                state_handler.postItem("liked", itemType, itemId);
                 likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
             } else {
                 state_handler.delete(item.id, "liked");

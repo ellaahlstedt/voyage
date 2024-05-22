@@ -107,19 +107,21 @@ const state_handler = {
                 break;
         }
     },
-    async postItem(field, data) {
-        //userId, field, value, token
+    async postItem(field, type, id) {
+        //userName, field, token, type, id (of object)
 
 
         const token = localStorage.getItem("token");
         const userName = localStorage.getItem("username");
-        const body = { token: token, userName: userName, field: field, value: data };
+        const body = { token: token, userName: userName, field: field, type: type, id: id };
+
 
         const options = {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         };
+        console.log(options);
 
         if (field == "been") {
             await fetch_handler("../../logic/destinations.php", options);
