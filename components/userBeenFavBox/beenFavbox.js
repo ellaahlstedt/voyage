@@ -1,5 +1,5 @@
 "use strict";
-async function renderBeenFavLists(parent, title, listType) {
+function renderBeenFavLists(parent, title, listType) {
     let listBox = document.createElement("div");
     listBox.className = "listBox";
     parent.appendChild(listBox);
