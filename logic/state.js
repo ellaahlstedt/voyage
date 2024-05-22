@@ -27,16 +27,14 @@ async function get_user(page) {
 
 const state_handler = {
     async runApp() {
-        const regionsResource = await fetch_handler("./logic/destinations.php?type=region");
-        const countriesResource = await fetch_handler("./logic/destinations.php?type=country");
-        const citiesResource = await fetch_handler("./logic/destinations.php?type=city");
+        const destinationsResource = await fetch_handler("./logic/destinations.php");
 
         get_user();
-        _state.regions = regionsResource;
-        _state.countries = countriesResource;
-        _state.cities = citiesResource;
 
-        updateRegionsCon(_state.regions);
+        // _state.users = usersResource;
+        _state.destinations = destinationsResource;
+        const wrapper = document.querySelector("#wrapper");
+        updateRegionsCon(_state.destinations);
     },
     get(entity) {
         return JSON.parse(JSON.stringify(_state[entity]));
