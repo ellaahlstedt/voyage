@@ -1,6 +1,6 @@
 "use strict";
 
-async function renderListItem(parent, items, type) {
+async function renderListItem(parent, items, images) {
 
     const response = await fetch("../../logic/destinations.php?type=region");
     const allRegions = await response.json();
@@ -15,6 +15,7 @@ async function renderListItem(parent, items, type) {
         listItem.appendChild(text);
 
         if (parent.id == "countriesCon") {
+            
             listItem.classList.add("countryItem");
             listItem.setAttribute("id", `${item.id}`);
             listItem.setAttribute("type", item.type);
@@ -29,14 +30,16 @@ async function renderListItem(parent, items, type) {
             })
 
         } else if (parent.id == "citiesCon") {
+            
             listItem.classList.add("cityItem")
             listItem.setAttribute("id", `${item.id}`);
             listItem.setAttribute("type", "city");
             text.textContent = item.name;
-            console.log(item);
-
-            if (type == "filtered") {
                 
+            const randomImage = Math.floor(images.length * Math.random());
+            listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
+            
+                /*
                 let allCityImages = [];
     
                 for (const region of allRegions) {
@@ -48,32 +51,9 @@ async function renderListItem(parent, items, type) {
                         allCityImages.push(cityImage);
                     }
                 }
-                const randomImage = Math.floor(allCityImages.length * Math.random());
-                listItem.style.backgroundImage = `url("../${allCityImages[randomImage]}")`;
-
-            } else if (type == "all") {
-
-                let allCityImages = [];
-    
-                for (const region of allRegions) {
-                    let regionImageUrl = region.regionImage;
-                    let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-                    
-                    for (let i = 1; i < 20; i++) {
-                        let cityImage = `../../images/${regionName}${i}.jpeg`;
-                        allCityImages.push(cityImage);
-                    }
-                }
-                const randomImage = Math.floor(allCityImages.length * Math.random());
-                listItem.style.backgroundImage = `url("../${allCityImages[randomImage]}")`;
-            }
-
-            /*
-            const listItemImage = document.createElement("img")
-            listItemImage.setAttribute("src", `../${item.images}`);
-            listItemImage.id = "listItemImage";
-            listItem.appendChild(listItemImage);
-            */
+                const randomImage = Math.floor(images.length * Math.random());
+                listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
+                */
         };
 
         let data = await get_user("user");
