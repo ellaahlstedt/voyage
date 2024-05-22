@@ -1,20 +1,18 @@
 "use strict";
 
-function getDestinationsInRegionOrCountry (destinations, name, type) {
-    let filteredDestination;
+function getDestinationsInRegionOrCountry (regions, countries, name, type) {
+    let filteredDestination = [];
 
-    for (const region of destinations) {
-        
+    for (const region of regions) {
+
         if (type == "region" && region.region == name) {
-            filteredDestination = region;
-
-        } else if (type == "country") {
-            for (const country of region.countries) {
-                if (country.name == name) {
-                    filteredDestination = country;
-                    break;
+            console.log(countries);
+            for (const country of countries) {
+                if (region.id == country.region_id) {
+                    filteredDestination.push(country);
                 }
             }
+
         }
     }
     return filteredDestination;
