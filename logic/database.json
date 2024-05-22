@@ -92,6 +92,13 @@
                 30308,
                 402
             ]
+        },
+        {
+            "userId": 11,
+            "userName": "johanna",
+            "userPassword": "hej",
+            "liked": [],
+            "been": []
         }
     ],
     "destinations": [
