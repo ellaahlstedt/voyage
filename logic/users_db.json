@@ -3,196 +3,42 @@
         "userId": 1,
         "userName": "tyrla",
         "userPassword": "tyrla",
-        "liked": [
-            {
-                "id": 12,
-                "name": "Latvia",
-                "images": "..\/images\/latvia.jpeg",
-                "type": "country",
-                "region_id": 2
-            },
-            {
-                "id": 2,
-                "name": "Northern Europe",
-                "type": "region",
-                "regionImage": "..\/images\/northerneurope.jpg"
-            }
-        ],
-        "been": [
-            102,
-            103,
-            105,
-            1001,
-            2002,
-            3003
-        ]
+        "liked": [],
+        "been": []
     },
-    [
-        {
-            "userId": 1,
-            "userName": "tyrla",
-            "userPassword": "tyrla",
-            "liked": [
-                {
-                    "id": 1,
-                    "name": "British Isles",
-                    "type": "region",
-                    "regionImage": "..\/images\/britishisles.jpeg"
-                },
-                {
-                    "id": 1,
-                    "name": "England",
-                    "images": "..\/images\/england.jpeg",
-                    "type": "country",
-                    "region_id": 1
-                },
-                {
-                    "id": 2,
-                    "type": "city",
-                    "country_id": 1,
-                    "name": "Birmingham"
-                },
-                {
-                    "id": 3,
-                    "type": "city",
-                    "country_id": 1,
-                    "name": "Manchester"
-                },
-                {
-                    "id": 1,
-                    "name": "England",
-                    "images": "..\/images\/england.jpeg",
-                    "type": "country",
-                    "region_id": 1
-                }
-            ],
-            "been": [
-                102,
-                103,
-                105,
-                1001,
-                2002,
-                3003
-            ]
-        }
-    ],
-    [
-        {
-            "userId": 1,
-            "userName": "tyrla",
-            "userPassword": "tyrla",
-            "liked": [
-                {
-                    "id": 1,
-                    "name": "British Isles",
-                    "type": "region",
-                    "regionImage": "..\/images\/britishisles.jpeg"
-                },
-                {
-                    "id": 1,
-                    "name": "England",
-                    "images": "..\/images\/england.jpeg",
-                    "type": "country",
-                    "region_id": 1
-                },
-                {
-                    "id": 2,
-                    "type": "city",
-                    "country_id": 1,
-                    "name": "Birmingham"
-                },
-                {
-                    "id": 3,
-                    "type": "city",
-                    "country_id": 1,
-                    "name": "Manchester"
-                },
-                {
-                    "id": 1,
-                    "name": "England",
-                    "images": "..\/images\/england.jpeg",
-                    "type": "country",
-                    "region_id": 1
-                }
-            ],
-            "been": [
-                102,
-                103,
-                105,
-                1001,
-                2002,
-                3003
-            ]
-        },
-        [
-            {
-                "userId": 1,
-                "userName": "tyrla",
-                "userPassword": "tyrla",
-                "liked": [
-                    {
-                        "id": 1,
-                        "name": "British Isles",
-                        "type": "region",
-                        "regionImage": "..\/images\/britishisles.jpeg"
-                    },
-                    {
-                        "id": 1,
-                        "name": "England",
-                        "images": "..\/images\/england.jpeg",
-                        "type": "country",
-                        "region_id": 1
-                    },
-                    {
-                        "id": 2,
-                        "type": "city",
-                        "country_id": 1,
-                        "name": "Birmingham"
-                    },
-                    {
-                        "id": 3,
-                        "type": "city",
-                        "country_id": 1,
-                        "name": "Manchester"
-                    },
-                    {
-                        "id": 1,
-                        "name": "England",
-                        "images": "..\/images\/england.jpeg",
-                        "type": "country",
-                        "region_id": 1
-                    }
-                ],
-                "been": [
-                    102,
-                    103,
-                    105,
-                    1001,
-                    2002,
-                    3003
-                ]
-            }
-        ]
-    ],
     {
         "userId": 2,
-        "userName": "johannah",
+        "userName": "hej",
         "userPassword": "hej",
         "liked": [],
         "been": []
     },
     {
         "userId": 3,
-        "userName": "hejsan",
-        "userPassword": "hejsan",
-        "liked": [],
-        "been": []
-    },
-    {
-        "userId": 4,
-        "userName": "johanna",
+        "userName": "hej1",
         "userPassword": "hej",
-        "liked": [],
+        "liked": [
+            {
+                "id": 1,
+                "name": "England",
+                "images": "..\/images\/england.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 1,
+                "name": "British Isles",
+                "type": "region",
+                "regionImage": "..\/images\/britishisles.jpeg"
+            },
+            {
+                "id": 2,
+                "name": "Wales",
+                "images": "..\/images\/wales.jpeg",
+                "type": "country",
+                "region_id": 1
+            }
+        ],
         "been": []
     }
 ]
