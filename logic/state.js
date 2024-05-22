@@ -88,27 +88,23 @@ const state_handler = {
 
         switch (data.type) {
             case "liked":
-                for (let i = 0; i < _state.users.likedBy.length; i++) {
-                    if (_state.users.likedBy[i] == resource.id) {
-                        _state.users.likedBy.splice(i, 1);
+                for (let i = 0; i < _state.user.liked.length; i++) {
+                    if (_state.users.liked[i] == resource.id) {
+                        _state.users.liked.splice(i, 1);
                     }
                 }
-                const parent = document.querySelector(`list${data.field}${data.type}`);
-                if (data.field === "been") {
-                    renderBoxListItem(parent, _state.user.been, data.field, _state.user.userId);
-                } else if (data.field === "liked") {
-                    renderBoxListItem(parent, _state.user.liked, data.field, _state.user.userId);
-                }
-
                 // update likeCon
+                const parent = document.querySelector(`list${data.field}${data.type}`);
+                renderBoxListItem(parent, _state.user.liked, data.field, _state.user.userId);
                 break;
             case "been":
-                for (let i = 0; i < _state.users.beenIn.length; i++) {
-                    if (_state.users.beenIn[i] == resource.id) {
-                        _state.users.beenIn.splice(i, 1);
+                for (let i = 0; i < _state.user.been.length; i++) {
+                    if (_state.users.been[i] == resource.id) {
+                        _state.users.been.splice(i, 1);
                     }
                 }
                 // update beenCon
+                renderBoxListItem(parent, _state.user.been, data.field, _state.user.userId);
                 break;
         }
     },
