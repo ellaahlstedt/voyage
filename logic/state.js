@@ -132,11 +132,6 @@ const state_handler = {
             await fetch_handler("../../logic/destinations.php", options);
 
         }
-    },
-    async runAppRegions() {
-        const regionsResource = await fetch_handler("../../logic/destinations.php?type=region");
-
-        _state.regions = regionsResource;
-    },
+    }
 }
 

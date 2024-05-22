@@ -1,6 +1,5 @@
 "use strict";
 async function renderBeenFavLists(parent, title, listType) {
-    const data = await state_handler.runAppRegions();
     let listBox = document.createElement("div");
     listBox.className = "listBox";
     parent.appendChild(listBox);
@@ -15,37 +14,20 @@ async function renderBeenFavLists(parent, title, listType) {
     listBox.appendChild(list);
 
     const user = state_handler.get("user");
-    let regions = state_handler.get("regions");
-    let regionsAdded = [];
     if (listType === "been") {
         const userBeenList = user.been;
-
         for (let i = 0; i < userBeenList.length; i++) {
-            if (userBeenList[i].region_id) {
-                let currentRegion = regions.find((region) => region.id == userBeenList[i].region_id);
-                renderBoxListItem(list, currentRegion, listType);
-            }
-            renderBoxListItem(list, userBeenList[i], listType);
-
+            renderBoxListItem(list, userBeenList[i], listType, user.userId);
         }
     } else if (listType === "liked") {
         const userLikedList = user.liked;
         for (let i = 0; i < userLikedList.length; i++) {
-            if (userLikedList[i].region_id) {
-                let currentRegion = regions.find((region) => region.id == userLikedList[i].region_id);
-                if (!regionsAdded.includes(currentRegion)) {
-                    renderBoxListItem(list, currentRegion, listType);
-                    regionsAdded.push(currentRegion);
-                }
-
-            }
-            renderBoxListItem(list, userLikedList[i], listType);
+            renderBoxListItem(list, userLikedList[i], listType, user.userId);
         }
     }
 }
 
-function renderBoxListItem(parent, item, listType) {
-
+function renderBoxListItem(parent, item, listType, userId) {
     let li = document.createElement("li");
     li.classList.add("listItem");
 
@@ -53,6 +35,7 @@ function renderBoxListItem(parent, item, listType) {
     listItemText.classList.add("listItemText");
     listItemText.textContent = item.name;
 
+    const user = state_handler.get("user");
     let trashCan = document.createElement("img");
     let heartIcon = document.createElement("img");
     if (listType === "been") {
@@ -63,16 +46,14 @@ function renderBoxListItem(parent, item, listType) {
         trashCan.classList.add("trashcanHide");
         trashCan.addEventListener("click", function removeItem(event) {
             const data = {
-                userId: localStorage.getItem("userId"), //ändra
+                userId: userId,
                 userName: localStorage.getItem("username"),
                 field: listType,
                 token: localStorage.getItem("token"),
                 type: item.type,
                 id: item.id,
             };
-            if (!item.type) data.type = "region";
-            console.log(data);
-            // state_handler.delete(item);
+            state_handler.delete(item);
         });
     } else if (listType === "liked") {
         heartIcon.setAttribute("src", "../../fonts/icons/favouritered.png");
@@ -81,48 +62,42 @@ function renderBoxListItem(parent, item, listType) {
         heartIcon.classList.add("heartIcon");
         heartIcon.addEventListener("click", function removeItem(event) {
             const data = {
-                // ändra
+                userId: userId,
+                userName: localStorage.getItem("username"),
+                field: listType,
+                token: localStorage.getItem("token"),
+                type: item.type,
+                id: item.id,
             };
-            // state_handler.delete(data);
+            state_handler.delete(data);
         });
     }
 
-    const parentIdRegion = parent.id.includes("Regions");
-    const parentIdCountry = parent.id.includes("Countries");
-    const parentIdCities = parent.id.includes("Cities");
-    if (parentIdRegion) {
-        if (!item.type) {
-
-            parent.appendChild(li);
-            li.appendChild(listItemText);
-            if (listType === "been") {
-                li.appendChild(trashCan);
-            } else if (listType === "liked") {
-                li.appendChild(heartIcon);
-            }
+    if (parent.id.includes("Regions") && item.type === "region") {
+        parent.appendChild(li);
+        li.appendChild(listItemText);
+        if (listType === "been") {
+            li.appendChild(trashCan);
+        } else if (listType === "liked") {
+            li.appendChild(heartIcon);
         }
-    } else if (parentIdCountry) {
-        if (item.type === "country") {
-            parent.appendChild(li);
-            li.appendChild(listItemText);
-            if (listType === "been") {
-                li.appendChild(trashCan);
-            } else if (listType === "liked") {
-                li.appendChild(heartIcon);
-            }
+    } else if (parent.id.includes("Countries") && item.type === "country") {
+        parent.appendChild(li);
+        li.appendChild(listItemText);
+        if (listType === "been") {
+            li.appendChild(trashCan);
+        } else if (listType === "liked") {
+            li.appendChild(heartIcon);
         }
-    } else if (parentIdCities) {
-        if (item.type === "city") {
-            parent.appendChild(li);
-            li.appendChild(listItemText);
-            if (listType === "been") {
-                li.appendChild(trashCan);
-            } else if (listType === "liked") {
-                li.appendChild(heartIcon);
-            }
+    } else if (parent.id.includes("Cities") && item.type === "city") {
+        parent.appendChild(li);
+        li.appendChild(listItemText);
+        if (listType === "been") {
+            li.appendChild(trashCan);
+        } else if (listType === "liked") {
+            li.appendChild(heartIcon);
         }
     }
-
 }
 
 function renderBeenfavCon(parent, type, containerId) {
