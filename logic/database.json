@@ -73,52 +73,87 @@
             "userName": "testar",
             "userPassword": "test",
             "liked": [
-                30304,
-                30308,
-                402,
-                20104
+                {
+                    "id": 2,
+                    "name": "Wales",
+                    "images": "..\/images\/england.jpeg",
+                    "type": "country",
+                    "region_id": 1
+                },
+                {
+                    "id": 2,
+                    "name": "Cardiff",
+                    "images": "..\/images\/england.jpeg",
+                    "type": "city",
+                    "country_id": 1
+                },
+                {
+                    "id": 3,
+                    "name": "Scotland",
+                    "images": "..\/images\/england.jpeg",
+                    "type": "country",
+                    "region_id": 1
+                }
             ],
             "been": [
-                30308,
-                30304,
-                402
+                {
+                    "id": 3,
+                    "name": "Scotland",
+                    "images": "..\/images\/england.jpeg",
+                    "type": "country",
+                    "region_id": 1
+                },
+                {
+                    "id": 21,
+                    "name": "Glasgow",
+                    "images": "..\/images\/england.jpeg",
+                    "type": "city",
+                    "country_id": 3
+                },
+                {
+                    "id": 22,
+                    "name": "EdinBurgh",
+                    "images": "..\/images\/england.jpeg",
+                    "type": "city",
+                    "country_id": 3
+                }
             ]
         }
     ],
     "regions": [
         {
             "id": 1,
-            "region": "British Isles",
+            "name": "British Isles",
             "regionImage": "..\/images\/britishisles.jpeg"
         },
         {
             "id": 2,
-            "region": "Northern Europe",
+            "name": "Northern Europe",
             "regionImage": "..\/images\/northerneurope.jpg"
         },
         {
             "id": 3,
-            "region": "Western Europe",
+            "name": "Western Europe",
             "regionImage": "..\/images\/westerneurope.jpg"
         },
         {
             "id": 4,
-            "region": "The Balkans",
+            "name": "The Balkans",
             "regionImage": "..\/images\/thebalkans.jpg"
         },
         {
             "id": 5,
-            "region": "Southern Europe",
+            "name": "Southern Europe",
             "regionImage": "..\/images\/southerneurope.jpeg"
         },
         {
             "id": 6,
-            "region": "Central Europe",
+            "name": "Central Europe",
             "regionImage": "..\/images\/centraleurope.jpeg"
         },
         {
             "id": 7,
-            "region": "Eastern Europe",
+            "name": "Eastern Europe",
             "regionImage": "..\/images\/easterneurope.jpeg"
         }
     ],

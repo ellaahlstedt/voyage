@@ -35,6 +35,10 @@
 
 .listBox li {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
+    height: 25px;
+    align-items: center;
 }
 
 .listCon {
@@ -77,4 +81,25 @@
 
 .beenFavCon#wishlistList .listBox:nth-of-type(3) {
     background-color: #FDDEC5;
+}
+
+.trashcan,
+.heartIcon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0 20px;
+}
+
+.listItem {}
+
+.trashcanHide {
+    display: none;
 }

@@ -1,7 +1,9 @@
 
 
 const _state = {
-    destinations: [],
+    regions: [],
+    countries: [],
+    cities: [],
 
     // Dessa två nycklar måste finnas med så att man kan skicka fetches osv.
     token: window.localStorage.getItem("token"),
@@ -130,6 +132,11 @@ const state_handler = {
             await fetch_handler("../../logic/destinations.php", options);
 
         }
+    },
+    async runAppRegions() {
+        const regionsResource = await fetch_handler("../../logic/destinations.php?type=region");
+
+        _state.regions = regionsResource;
     },
 }
 

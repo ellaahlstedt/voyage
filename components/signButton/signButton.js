@@ -25,13 +25,14 @@ async function onSignIn(event) {
 
     const options = {
         method: "POST",
-        headers: {"Content-type": "application/json"},
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(body)
     }
 
     const resource = await fetch_handler("../../logic/users.php", options);
     window.localStorage.setItem("token", resource.token);
     window.localStorage.setItem("username", resource.username);
+    window.localStorage.setItem("userId", resource.userId);
     window.location.href = "../../";
 }
 
@@ -47,7 +48,7 @@ async function onRegister(event) {
 
     const options = {
         method: "POST",
-        headers: {"Content-type": "application/json"},
+        headers: { "Content-type": "application/json" },
         body: JSON.stringify(body)
     }
 
