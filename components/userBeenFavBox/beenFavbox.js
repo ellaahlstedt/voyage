@@ -32,11 +32,9 @@ async function renderBeenFavLists(parent, title, listType, user, beenClicked = f
         const userLikedList = user.liked;
         renderBoxListItem(list, userLikedList, listType, user.userId, beenClicked);
     }
-    console.log(user.been);
 }
 
 function renderBoxListItem(parent, list, listType, userId, beenClicked = false) {
-    console.log(list);
     for (let item of list) {
         let li = document.createElement("li");
         li.classList.add("listItem");
@@ -74,6 +72,14 @@ function renderBoxListItem(parent, list, listType, userId, beenClicked = false) 
                 renderBeenFavLists(parent, "Regions", listType, newUser, true)
                 renderBeenFavLists(parent, "Countries", listType, newUser, true);
                 renderBeenFavLists(parent, "Cities", listType, newUser, true);
+
+
+                let beenList = newUser.been.filter(item => item.type === "country").length;
+                let percentage = beenList / 50 * 100;
+                document.getElementById("loadingBar").style.width = percentage + "%";
+                console.log("HOLALLALAL");
+
+
             });
         } else if (listType === "liked") {
             heartIcon.setAttribute("src", "../../fonts/icons/favouritered.png");

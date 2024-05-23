@@ -4,7 +4,7 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
     window.location.href = "../loginPage/login.html";
 }
 
-async function renderCountriesPage (parent) {
+async function renderCountriesPage(parent) {
     const countriesCon = document.createElement("div");
     countriesCon.id = "countriesCon";
 
@@ -15,8 +15,8 @@ async function renderCountriesPage (parent) {
 
     const allCountries = await fetch_handler("../../logic/destinations.php?type=country");
     const allRegions = await fetch_handler("../../logic/destinations.php?type=region");
-    
-    const url = window.location.href; 
+
+    const url = window.location.href;
     let regionParameter = null;
 
     if (url.includes("region=")) {
@@ -24,17 +24,16 @@ async function renderCountriesPage (parent) {
     }
 
     if (regionParameter) {
-        
+
         countriesCon.classList.add("filteredCountries");
         const filteredCountries = getDestinationsInRegionOrCountry(allRegions, allCountries, regionParameter, "region")
-        console.log(filteredCountries);
         renderListItem(countriesCon, filteredCountries);
 
     } else {
 
         countriesCon.classList.add("allCountries");
         allCountries.sort(sortCountriesOrCities);
-        
+
         renderListItem(countriesCon, allCountries);
     }
 }
