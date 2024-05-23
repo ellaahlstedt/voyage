@@ -85,6 +85,11 @@ const state_handler = {
             id: data.id,
         };
 
+        console.log(body);
+
+
+
+
         const options = {
             method: "DELETE",
             headers: { "Content-type": "application/json" },
@@ -115,16 +120,24 @@ const state_handler = {
     async postItem(field, data, type) {
         //userId, field, value, token
 
-
         const token = localStorage.getItem("token");
         const userName = localStorage.getItem("username");
         const body = { token: token, userName: userName, field: field, id: data, type: type };
+
+        console.log("field", field);
+        console.log("id", data);
+        console.log("type", type);
+        console.log("token", token);
+        console.log("userName");
+
 
         const options = {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         };
+
+
 
         if (field == "been") {
             await fetch_handler("../../logic/destinations.php", options);
