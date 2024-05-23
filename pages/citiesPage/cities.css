@@ -14,12 +14,12 @@
     padding-left: 3vw;
 }
 
-#citiesCon > div {
+#citiesCon>div {
     height: 200px;
     width: 200px;
 }
 
-#citiesCon > button {
+#citiesCon>button {
     align-self: center;
 }
 
@@ -31,7 +31,7 @@
     justify-content: center;
 }
 
-#buttonDiv > button {
+#buttonDiv>button {
     cursor: pointer;
     border: none;
     border-radius: 10px;
