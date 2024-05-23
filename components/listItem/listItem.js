@@ -71,9 +71,11 @@ async function renderListItem(parent, items, images) {
             event.preventDefault();
 
             if (beenButton.classList.contains("beenClicked")) {
+                const gotUser = state_handler.get("user");
+                const userId = gotUser.userId;
                 const data = {
                     id: event.target.parentElement.getAttribute("id"),
-                    userId: localStorage.getItem("userId"),
+                    userId: userId,
                     field: "been",
                     token: localStorage.getItem("token"),
                     type: item.type,
@@ -86,7 +88,7 @@ async function renderListItem(parent, items, images) {
 
                 if (item.type === "country") entity = "countries";
                 else if (item.type === "city") entity = "cities";
-                console.log(entity);
+
 
                 state_handler.postItem("been", item.id, entity);
                 beenButton.classList.add("beenClicked");
@@ -112,10 +114,34 @@ async function renderListItem(parent, items, images) {
 
 
             if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
-                state_handler.postItem("liked", item.id);
+                let entity;
+                if (item.type === "country") entity = "countries";
+                else if (item.type === "city") entity = "cities";
+
+                state_handler.postItem("liked", item.id, entity);
                 likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
             } else {
-                state_handler.delete(item.id, "liked");
+
+
+                const userName = localStorage.getItem("username");
+                const token = localStorage.getItem("token");
+                const gotUser = state_handler.get("user");
+                const userId = gotUser.userId;
+
+
+
+
+                let data = {
+                    userId: userId,
+                    userName: userName,
+                    field: "liked",
+                    token: token,
+                    type: item.type,
+                    id: item.id
+                }
+
+
+                state_handler.delete(data);
                 likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
             }
         })
