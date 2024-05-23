@@ -40,19 +40,6 @@
                 "name": "Almada"
             },
             {
-                "id": 23,
-                "name": "Albania",
-                "images": "..\/images\/albania.jpeg",
-                "type": "country",
-                "region_id": 4
-            },
-            {
-                "id": 4,
-                "name": "The Balkans",
-                "type": "region",
-                "regionImage": "..\/images\/thebalkans.jpeg"
-            },
-            {
                 "id": 41,
                 "name": "Czech Republic",
                 "images": "..\/images\/czechrepublic.jpeg",
@@ -83,6 +70,19 @@
                 "type": "city",
                 "country_id": 19,
                 "name": "Bern"
+            },
+            {
+                "id": 23,
+                "name": "Albania",
+                "images": "..\/images\/albania.jpeg",
+                "type": "country",
+                "region_id": 4
+            },
+            {
+                "id": 4,
+                "name": "The Balkans",
+                "type": "region",
+                "regionImage": "..\/images\/thebalkans.jpeg"
             }
         ]
     },
