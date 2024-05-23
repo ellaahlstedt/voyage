@@ -6,20 +6,20 @@
 #citiesCon {
     width: 75%;
     display: grid;
-    margin-left: 200px;
+    margin-left: 13vw;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
     justify-content: center;
     gap: 50px 10px;
-    padding-left: 30px;
+    padding-left: 3vw;
 }
 
-#citiesCon > div {
+#citiesCon>div {
     height: 200px;
     width: 200px;
 }
 
-#citiesCon > button {
+#citiesCon>button {
     align-self: center;
 }
 
@@ -31,7 +31,7 @@
     justify-content: center;
 }
 
-#buttonDiv > button {
+#buttonDiv>button {
     cursor: pointer;
     border: none;
     border-radius: 10px;
