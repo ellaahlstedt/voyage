@@ -85,10 +85,6 @@ const state_handler = {
             id: data.id,
         };
 
-        console.log(body);
-
-
-
 
         const options = {
             method: "DELETE",
@@ -115,7 +111,7 @@ const state_handler = {
                 _state.cities = citiesResource;
                 break;
         }
-        console.log(_state)
+
     },
     async postItem(field, data, type) {
         //userId, field, value, token
@@ -124,19 +120,11 @@ const state_handler = {
         const userName = localStorage.getItem("username");
         const body = { token: token, userName: userName, field: field, id: data, type: type };
 
-        console.log("field", field);
-        console.log("id", data);
-        console.log("type", type);
-        console.log("token", token);
-        console.log("userName");
-
-
         const options = {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         };
-
 
 
         if (field == "been") {
