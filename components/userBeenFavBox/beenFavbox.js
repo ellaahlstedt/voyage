@@ -1,5 +1,5 @@
 "use strict";
-async function renderBeenFavLists(parent, title, listType, user = false) {
+async function renderBeenFavLists(parent, title, listType, user, beenClicked = false) {
 
     let listBox = document.createElement("div");
     listBox.className = "listBox";
@@ -28,16 +28,15 @@ async function renderBeenFavLists(parent, title, listType, user = false) {
 
     if (listType === "been") {
         const userBeenList = user.been;
-        if (userBeenList.length != 0)
-            renderBoxListItem(list, userBeenList, listType, user.userId);
+        renderBoxListItem(list, userBeenList, listType, user.userId, beenClicked);
     } else if (listType === "liked") {
         const userLikedList = user.liked;
-        if (userLikedList.length != 0)
-            renderBoxListItem(list, userLikedList, listType, user.userId);
+        renderBoxListItem(list, userLikedList, listType, user.userId, beenClicked);
     }
 }
 
-function renderBoxListItem(parent, list, listType, userId) {
+function renderBoxListItem(parent, list, listType, userId, beenClicked = false) {
+    console.log(list);
     for (let item of list) {
         let li = document.createElement("li");
         li.classList.add("listItem");
@@ -54,7 +53,9 @@ function renderBoxListItem(parent, list, listType, userId) {
             trashCan.setAttribute("alt", "Trashcan");
             trashCan.id = "trash_" + item.id;
             trashCan.classList.add("trashcan");
-            trashCan.classList.add("trashcanHide");
+            if (!beenClicked) {
+                trashCan.classList.add("trashcanHide");
+            }
             trashCan.addEventListener("click", async function removeItem(event) {
                 const data = {
                     userId: userId,
@@ -66,20 +67,20 @@ function renderBoxListItem(parent, list, listType, userId) {
                 };
                 state_handler.delete(data);
                 let updateUser = await get_user("page");
-                user = state_handler.get("user");
+                const newUser = state_handler.get("user");
 
                 const parent = document.querySelector(`#listConbeen`);
                 parent.innerHTML = "";
-                renderBeenFavLists(parent, "Regions", listType, user)
-                renderBeenFavLists(parent, "Countries", listType, user);
-                renderBeenFavLists(parent, "Cities", listType, user);
+                renderBeenFavLists(parent, "Regions", listType, newUser, true)
+                renderBeenFavLists(parent, "Countries", listType, newUser, true);
+                renderBeenFavLists(parent, "Cities", listType, newUser, true);
             });
         } else if (listType === "liked") {
             heartIcon.setAttribute("src", "../../fonts/icons/favouritered.png");
             heartIcon.setAttribute("alt", "Heart Icon");
             heartIcon.id = "heartIcon_" + item.id;
             heartIcon.classList.add("heartIcon");
-            heartIcon.addEventListener("click", function removeItem(event) {
+            heartIcon.addEventListener("click", async function removeItem(event) {
                 const data = {
                     userId: userId,
                     userName: localStorage.getItem("username"),
@@ -89,12 +90,14 @@ function renderBoxListItem(parent, list, listType, userId) {
                     id: item.id,
                 };
                 state_handler.delete(data);
+                let updateUser = await get_user("page");
+                const newUser = state_handler.get("user");
 
                 const parent = document.querySelector(`#listConliked`);
                 parent.innerHTML = "";
-                renderBeenFavLists(parent, "Regions", listType)
-                renderBeenFavLists(parent, "Countries", listType);
-                renderBeenFavLists(parent, "Cities", listType);
+                renderBeenFavLists(parent, "Regions", listType, newUser)
+                renderBeenFavLists(parent, "Countries", listType, newUser);
+                renderBeenFavLists(parent, "Cities", listType, newUser);
             });
         }
 
