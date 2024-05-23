@@ -70,15 +70,25 @@ async function renderListItem(parent, items, images) {
         beenButton.addEventListener("click", function (event) {
             event.preventDefault();
 
-            const itemType = event.target.parentElement.getAttribute("type");
-            console.log(itemType);
-            const itemId = event.target.parentElement.getAttribute("id");
-
             if (beenButton.classList.contains("beenClicked")) {
-                state_handler.postItem("been", itemId, itemType);
+                const data = {
+                    id: event.target.parentElement.getAttribute("id"),
+                    userId: localStorage.getItem("userId"),
+                    field: "been",
+                    token: localStorage.getItem("token"),
+                    type: item.type,
+                    userName: localStorage.getItem("username")
+                };
+                state_handler.delete(data);
                 beenButton.classList.remove("beenClicked");
             } else {
-                state_handler.postItem("been", itemId, itemType);
+                let entity;
+
+                if (item.type === "country") entity = "countries";
+                else if (item.type === "city") entity = "cities";
+                console.log(entity);
+
+                state_handler.postItem("been", item.id, entity);
                 beenButton.classList.add("beenClicked");
             }
 
@@ -99,12 +109,10 @@ async function renderListItem(parent, items, images) {
 
         likeButton.addEventListener("click", function (event) {
             event.preventDefault();
-            const itemType = event.target.parentElement.getAttribute("type");
-            const itemId = event.target.parentElement.getAttribute("id");
 
 
             if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
-                state_handler.postItem("liked", itemId, itemType);
+                state_handler.postItem("liked", item.id);
                 likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
             } else {
                 state_handler.delete(item.id, "liked");

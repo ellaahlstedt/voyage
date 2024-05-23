@@ -85,7 +85,7 @@ if ($requestMethods == "POST") {
         foreach ($users as $user) {
             if ($user["userName"] == $requestData["userName"]) {
                 $token = sha1($user["userName"] . $user["userPassword"]);
-                sendJSON(["token" => $token, "username" => $user["userName"]]);
+                sendJSON(["token" => $token, "username" => $user["userName"], "userId" => $user["userId"]]);
             }
         }
     }
