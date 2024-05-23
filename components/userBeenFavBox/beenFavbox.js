@@ -1,5 +1,6 @@
 "use strict";
-function renderBeenFavLists(parent, title, listType) {
+async function renderBeenFavLists(parent, title, listType, user = false) {
+
     let listBox = document.createElement("div");
     listBox.className = "listBox";
     parent.appendChild(listBox);
@@ -24,18 +25,19 @@ function renderBeenFavLists(parent, title, listType) {
     list.classList.add("lists")
     listBox.appendChild(list);
 
-    const user = state_handler.get("user");
+
     if (listType === "been") {
         const userBeenList = user.been;
-        renderBoxListItem(list, userBeenList, listType, user.userId);
+        if (userBeenList.length != 0)
+            renderBoxListItem(list, userBeenList, listType, user.userId);
     } else if (listType === "liked") {
         const userLikedList = user.liked;
-        renderBoxListItem(list, userLikedList, listType, user.userId);
+        if (userLikedList.length != 0)
+            renderBoxListItem(list, userLikedList, listType, user.userId);
     }
 }
 
 function renderBoxListItem(parent, list, listType, userId) {
-    parent.innerHTML = "";
     for (let item of list) {
         let li = document.createElement("li");
         li.classList.add("listItem");
@@ -53,7 +55,7 @@ function renderBoxListItem(parent, list, listType, userId) {
             trashCan.id = "trash_" + item.id;
             trashCan.classList.add("trashcan");
             trashCan.classList.add("trashcanHide");
-            trashCan.addEventListener("click", function removeItem(event) {
+            trashCan.addEventListener("click", async function removeItem(event) {
                 const data = {
                     userId: userId,
                     userName: localStorage.getItem("username"),
@@ -63,6 +65,14 @@ function renderBoxListItem(parent, list, listType, userId) {
                     id: item.id,
                 };
                 state_handler.delete(data);
+                let updateUser = await get_user("page");
+                user = state_handler.get("user");
+
+                const parent = document.querySelector(`#listConbeen`);
+                parent.innerHTML = "";
+                renderBeenFavLists(parent, "Regions", listType, user)
+                renderBeenFavLists(parent, "Countries", listType, user);
+                renderBeenFavLists(parent, "Cities", listType, user);
             });
         } else if (listType === "liked") {
             heartIcon.setAttribute("src", "../../fonts/icons/favouritered.png");
@@ -79,6 +89,12 @@ function renderBoxListItem(parent, list, listType, userId) {
                     id: item.id,
                 };
                 state_handler.delete(data);
+
+                const parent = document.querySelector(`#listConliked`);
+                parent.innerHTML = "";
+                renderBeenFavLists(parent, "Regions", listType)
+                renderBeenFavLists(parent, "Countries", listType);
+                renderBeenFavLists(parent, "Cities", listType);
             });
         }
 
@@ -138,6 +154,7 @@ function renderBeenfavCon(parent, type, containerId) {
 
     let listCon = document.createElement("div");
     listCon.className = "listCon";
+    listCon.id = "listCon" + listType;
     beenFavCon.appendChild(listCon);
 
     let unbeenButton = document.createElement("div");
@@ -157,7 +174,8 @@ function renderBeenfavCon(parent, type, containerId) {
         }
     })
 
-    renderBeenFavLists(listCon, "Regions", listType);
-    renderBeenFavLists(listCon, "Countries", listType);
-    renderBeenFavLists(listCon, "Cities", listType);
+    const user = state_handler.get("user");
+    renderBeenFavLists(listCon, "Regions", listType, user);
+    renderBeenFavLists(listCon, "Countries", listType, user);
+    renderBeenFavLists(listCon, "Cities", listType, user);
 }

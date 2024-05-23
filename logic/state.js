@@ -76,37 +76,41 @@ const state_handler = {
     },
     async delete(data) {
 
-        const body = { data };
+        const body = {
+            userId: data.userId,
+            userName: data.userName,
+            field: data.field,
+            token: data.token,
+            type: data.type,
+            id: data.id,
+        };
 
         const options = {
             method: "DELETE",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         }
-
-        const resource = await fetch_handler("./logic/destinations.php", options);
-
+        const resource = await fetch_handler("../../logic/destinations.php", options);
         switch (data.type) {
             case "liked":
-                for (let i = 0; i < _state.user.liked.length; i++) {
-                    if (_state.users.liked[i] == resource.id) {
-                        _state.users.liked.splice(i, 1);
-                    }
-                }
-                // update likeCon
-                const parent = document.querySelector(`list${data.field}${data.type}`);
-                renderBoxListItem(parent, _state.user.liked, data.field, _state.user.userId);
+                const regionsResource = await fetch_handler("./logic/destinations.php?type=region");
+                const countriesResource = await fetch_handler("./logic/destinations.php?type=country");
+                const citiesResource = await fetch_handler("./logic/destinations.php?type=city");
+
+                get_user();
+                _state.regions = regionsResource;
+                _state.countries = countriesResource;
+                _state.cities = citiesResource;
                 break;
             case "been":
-                for (let i = 0; i < _state.user.been.length; i++) {
-                    if (_state.users.been[i] == resource.id) {
-                        _state.users.been.splice(i, 1);
-                    }
-                }
-                // update beenCon
-                renderBoxListItem(parent, _state.user.been, data.field, _state.user.userId);
+
+                get_user();
+                _state.regions = regionsResource;
+                _state.countries = countriesResource;
+                _state.cities = citiesResource;
                 break;
         }
+        console.log(_state)
     },
     async postItem(field, data) {
         //userId, field, value, token
