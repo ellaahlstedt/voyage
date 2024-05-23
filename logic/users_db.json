@@ -26,5 +26,73 @@
         "userPassword": "hej",
         "liked": [],
         "been": []
+
+    },
+    {
+        "userId": 5,
+        "userName": "testar",
+        "userPassword": "test",
+        "liked": [],
+        "been": [
+            {
+                "id": 332,
+                "type": "city",
+                "country_id": 34,
+                "name": "Almada"
+            },
+            {
+                "id": 23,
+                "name": "Albania",
+                "images": "..\/images\/albania.jpeg",
+                "type": "country",
+                "region_id": 4
+            },
+            {
+                "id": 4,
+                "name": "The Balkans",
+                "type": "region",
+                "regionImage": "..\/images\/thebalkans.jpeg"
+            },
+            {
+                "id": 41,
+                "name": "Czech Republic",
+                "images": "..\/images\/czechrepublic.jpeg",
+                "type": "country",
+                "region_id": 6
+            },
+            {
+                "id": 6,
+                "name": "Central Europe",
+                "type": "region",
+                "regionImage": "..\/images\/centraleurope.jpeg"
+            },
+            {
+                "id": 3,
+                "name": "Western Europe",
+                "type": "region",
+                "regionImage": "..\/images\/westerneurope.jpeg"
+            },
+            {
+                "id": 19,
+                "name": "Switzerland",
+                "images": "..\/images\/switzerland.jpeg",
+                "type": "country",
+                "region_id": 3
+            },
+            {
+                "id": 184,
+                "type": "city",
+                "country_id": 19,
+                "name": "Bern"
+            }
+        ]
+    },
+    {
+        "userId": 6,
+        "userName": "johanna2",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
+
     }
 ]

@@ -24,22 +24,22 @@ async function renderCitiesPage(parent) {
         countryParameter = url.split("country=")[1].replace("%20", " ");
     }
 
-    let allCityImages = [];
-    
-    for (const region of allRegions) {
-        let regionImageUrl = region.regionImage;
-        let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-        
-        for (let i = 1; i < 20; i++) {
-            let cityImage = `../../images/${regionName}${i}.jpeg`;
-            allCityImages.push(cityImage);
-        }
-    }
+    let cityImages = [];
 
     if (countryParameter) {
         const filteredCities = getDestinationsInRegionOrCountry(allCountries, allCities, countryParameter, "country");
-        // skicka bara med bilderna för de städer som finns i regionen staden ligger i
-        renderListItem(citiesCon, filteredCities, allCityImages);
+        
+        let filteredRegion = getRegion(allRegions, allCountries, countryParameter);
+
+        let regionImageUrl = filteredRegion.regionImage;
+        let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+        
+        for (let i = 1; i <= 20; i++) {
+            let cityImage = `../../images/${regionName}${i}.jpeg`;
+            cityImages.push(cityImage);
+        }
+
+        renderListItem(citiesCon, filteredCities, cityImages);
 
     } else {
         allCities.sort(sortCountriesOrCities);
@@ -50,8 +50,18 @@ async function renderCitiesPage(parent) {
             citiesAmount.push(allCities[i]);
             currentAmount = i;
         }
+    
+        for (const region of allRegions) {
+            let regionImageUrl = region.regionImage;
+            let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
+            
+            for (let i = 1; i <= 20; i++) {
+                let cityImage = `../../images/${regionName}${i}.jpeg`;
+                cityImages.push(cityImage);
+            }
+        }
         
-        renderListItem(citiesCon, citiesAmount, allCityImages);
+        renderListItem(citiesCon, citiesAmount, cityImages);
     
         const buttonDiv = document.createElement("div");
         buttonDiv.id = "buttonDiv";
@@ -61,7 +71,7 @@ async function renderCitiesPage(parent) {
         buttonDiv.appendChild(pageButton);
 
         pageButton.addEventListener("click", function test() {
-            showMore(allCities, allCityImages, citiesCon);
+            showMore(allCities, cityImages, citiesCon);
         });
     
     }
