@@ -38,22 +38,6 @@ async function renderListItem(parent, items, images) {
 
             const randomImage = Math.floor(images.length * Math.random());
             listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
-
-            /*
-            let allCityImages = [];
- 
-            for (const region of allRegions) {
-                let regionImageUrl = region.regionImage;
-                let regionName = regionImageUrl.split("../images/")[1].replace(".jpeg", "");
-                
-                for (let i = 1; i < 20; i++) {
-                    let cityImage = `../../images/${regionName}${i}.jpeg`;
-                    allCityImages.push(cityImage);
-                }
-            }
-            const randomImage = Math.floor(images.length * Math.random());
-            listItem.style.backgroundImage = `url("../${images[randomImage]}")`;
-            */
         };
 
         let data = await get_user("user");
