@@ -1,8 +1,6 @@
 
 
 const _state = {
-
-    // Dessa två nycklar måste finnas med så att man kan skicka fetches osv.
     token: window.localStorage.getItem("token"),
     username: window.localStorage.getItem("username")
 }

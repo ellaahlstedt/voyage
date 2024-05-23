@@ -33,18 +33,15 @@ if (file_exists($users_file) and file_exists($destinations_db)) {
     ];
 }
 
-//validate token
 function validateToken($token, $requestData, $users)
 {
     foreach ($users as $user) {
         if ($user["userName"] == $requestData["userName"] && sha1($user["userName"] . $user["userPassword"]) == $token) {
-            return true; // Token is valid
+            return true; 
         }
     }
     return false;
 }
-
-//GET destination by Id //lägg till så den tar emot token
 
 if ($requestMethods == "GET") {
 
@@ -128,8 +125,6 @@ if ($contentType != "application/json") {
     sendJSON($error, 400);
 }
 
-
-//POST destination to  either liked or been //needs to find user and add value to right field // ADD REQUIRE TOKEN
 if ($requestMethods == "POST") {
     if (!isset($requestData["userName"], $requestData["field"], $requestData["token"], $requestData["type"], $requestData["id"])) {
         $error = ["error" => "Bad Request"];
@@ -176,7 +171,6 @@ if ($requestMethods == "POST") {
     sendJSON($modifiedUser);
 }
 
-//Removes objects from Users BEEN or LIKED. Parameters: Object id(to be removed), userId, field. //add TOKEN requirement 
 if ($requestMethods == "DELETE") {
     if (!isset($requestData["id"], $requestData["userId"], $requestData["field"], $requestData["token"], $requestData["type"])) {
         $error = ["error" => "Bad Request"];
@@ -197,7 +191,7 @@ if ($requestMethods == "DELETE") {
         $type = $requestData["type"];
         $userId = $requestData["userId"];
         $field = $requestData["field"];
-        $objectDeleted = false; // used to check if object or user is found
+        $objectDeleted = false; 
         $modifiedUser = null;
 
 
@@ -209,10 +203,6 @@ if ($requestMethods == "DELETE") {
                         $objectDeleted = true;
 
                         $modifiedUser = handle_city_country_deletes($objectId, $type, $user, $full_destinations_db, $field);
-                        // TODO
-                        // 1. Hitta vad det är för type dvs land eller stad
-                        // 2. Om det är en stad, så ska man kolla om det finns andra städer som har samma city_id
-                        // 3. Om det är ett land, så ska man kolla om det finns fler länder som har samma region_id
 
                         $users[$userIndex] = $modifiedUser;
                         $full_user_db = $users;

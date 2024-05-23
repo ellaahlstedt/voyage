@@ -13,22 +13,17 @@ if(!in_array($requestMethods, $allowedMethods)) {
     sendJSON($error, 405);
 }
 
-
-
-
 $users = [];
 
-//om användare finns
 if (file_exists($filename)){
     $json = file_get_contents($filename);
     $full_db = json_decode($json, true);
     $users = $full_db;
 }
 
-//GET användare med ID
 if ($requestMethods == "GET") {
-    if (isset($_GET["token"])) { //token
-        $token = $_GET["token"]; //token
+    if (isset($_GET["token"])) { 
+        $token = $_GET["token"]; 
         $userId;
 
         foreach($users as $user) {
@@ -47,11 +42,6 @@ if ($requestMethods == "GET") {
             }
         }
 
-        //foreach($users as $user) {
-          //  if($user["id"] == $id) {
-                //sendJSON($user);
-          //  }
-        //}
         $error = ["error" => "Not Found"];
         sendJSON($error, 404);
     }
@@ -71,7 +61,7 @@ if ($contentType != "application/json") {
     sendJSON($error, 400);
 }
 
-// lägg till ny användare. Lägg till tom array av been o liked + token
+// Add user
 if ($requestMethods == "POST") {
     if (!isset($requestData["userName"], $requestData["password"])) {
         $error = ["error" => "Bad Request"];
@@ -90,9 +80,8 @@ if ($requestMethods == "POST") {
         }
     }
     
-    //create ID
     $highestId = 0;
-    //array for existing users
+    
     foreach ($users as $user) {
 
         if ($user["userName"] == $userName) {
@@ -112,27 +101,9 @@ if ($requestMethods == "POST") {
     $json = json_encode($full_db, JSON_PRETTY_PRINT);
     file_put_contents($filename, $json);
     sendJSON($newUser);
-    //request POST example
-    /*async function adam() {
-    try {
-        const response = await fetch("./logic/users.php", {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify({
-                id: "1"
-            })
-        });
-        console.log(response);
-        const resource = await response.json();
-        console.log(resource);
-    } catch (e) {
-        alert("error");
-    }
-}
-adam();*/
+  
 }
 
-//patchar userName
 if ($requestMethods == "PATCH") {
     if (!isset($requestData["userName"], $requestData["token"])) {
         $error = ["error" => "Bad Request"];
