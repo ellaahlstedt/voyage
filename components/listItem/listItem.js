@@ -100,12 +100,14 @@ async function renderListItem(parent, items, images) {
         let likeButton = document.createElement("img");
         likeButton.id = "likeButton";
 
-        let getUserLikedId = user.been.find(liked => liked.id == listItem.id);
+        let getUserLikedId = user.liked.find(liked => liked.id == listItem.id);
         if (getUserLikedId) {
             likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
         } else {
             likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
         }
+
+
 
         listItem.appendChild(likeButton);
 

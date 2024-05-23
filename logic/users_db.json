@@ -31,46 +31,35 @@
         "userId": 5,
         "userName": "testar",
         "userPassword": "test",
-        "liked": [],
-        "been": [
+        "liked": [
             {
-                "id": 332,
-                "type": "city",
-                "country_id": 34,
-                "name": "Almada"
-            },
-            {
-                "id": 41,
-                "name": "Czech Republic",
-                "images": "..\/images\/czechrepublic.jpeg",
+                "id": 23,
+                "name": "Albania",
+                "images": "..\/images\/albania.jpeg",
                 "type": "country",
-                "region_id": 6
+                "region_id": 4
             },
             {
-                "id": 6,
-                "name": "Central Europe",
+                "id": 4,
+                "name": "The Balkans",
                 "type": "region",
-                "regionImage": "..\/images\/centraleurope.jpeg"
+                "regionImage": "..\/images\/thebalkans.jpeg"
+            },
+            {
+                "id": 20,
+                "name": "Austria",
+                "images": "..\/images\/austria.jpeg",
+                "type": "country",
+                "region_id": 3
             },
             {
                 "id": 3,
                 "name": "Western Europe",
                 "type": "region",
                 "regionImage": "..\/images\/westerneurope.jpeg"
-            },
-            {
-                "id": 19,
-                "name": "Switzerland",
-                "images": "..\/images\/switzerland.jpeg",
-                "type": "country",
-                "region_id": 3
-            },
-            {
-                "id": 184,
-                "type": "city",
-                "country_id": 19,
-                "name": "Bern"
-            },
+            }
+        ],
+        "been": [
             {
                 "id": 23,
                 "name": "Albania",
