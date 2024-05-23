@@ -105,9 +105,4 @@ function updateForm() {
         const updateFormButton = document.querySelector("#updateFormButton");
         updateFormButton.textContent = "Register";
     }
-
-
-
 }
-
-// loginBackground

@@ -2,9 +2,6 @@
 
 async function renderListItem(parent, items, images) {
 
-    const response = await fetch("../../logic/destinations.php?type=region");
-    const allRegions = await response.json();
-
     for (const item of items) {
 
         const listItem = document.createElement("div");
@@ -74,11 +71,9 @@ async function renderListItem(parent, items, images) {
                 if (item.type === "country") entity = "countries";
                 else if (item.type === "city") entity = "cities";
 
-
                 state_handler.postItem("been", item.id, entity);
                 beenButton.classList.add("beenClicked");
             }
-
         })
 
         let likeButton = document.createElement("img");
@@ -91,16 +86,11 @@ async function renderListItem(parent, items, images) {
             likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
         }
 
-
-
         listItem.appendChild(likeButton);
-
         parent.appendChild(listItem);
 
         likeButton.addEventListener("click", function (event) {
             event.preventDefault();
-
-
             if (likeButton.getAttribute("src") == "../../fonts/icons/favourite.png") {
                 let entity;
                 if (item.type === "country") entity = "countries";
@@ -109,15 +99,10 @@ async function renderListItem(parent, items, images) {
                 state_handler.postItem("liked", item.id, entity);
                 likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
             } else {
-
-
                 const userName = localStorage.getItem("username");
                 const token = localStorage.getItem("token");
                 const gotUser = state_handler.get("user");
                 const userId = gotUser.userId;
-
-
-
 
                 let data = {
                     userId: userId,
@@ -127,8 +112,7 @@ async function renderListItem(parent, items, images) {
                     type: item.type,
                     id: item.id
                 }
-
-
+                
                 state_handler.delete(data);
                 likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
             }

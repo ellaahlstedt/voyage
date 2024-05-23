@@ -128,7 +128,6 @@ function dropDownNav(event) {
         settings.addEventListener("click", settingsPopup);
         settingsListItem.appendChild(settings);
 
-
         let settingsIcon = document.createElement("img");
         let settingsSrc = window.location.href.toLowerCase().includes("pages") ? "../../fonts/icons/settings.png" : "./fonts/icons/settings.png";
         settingsIcon.setAttribute("src", settingsSrc);

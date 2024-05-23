@@ -5,7 +5,6 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
 }
 
 async function renderCitiesPage(parent) {
-    
     const citiesCon = document.createElement("div");
     citiesCon.id = "citiesCon";
 
@@ -73,9 +72,7 @@ async function renderCitiesPage(parent) {
         pageButton.addEventListener("click", function test() {
             showMore(allCities, cityImages, citiesCon);
         });
-    
     }
-
     renderFooter(parent);
 }
 

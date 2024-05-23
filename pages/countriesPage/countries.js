@@ -5,7 +5,6 @@ if (window.localStorage.getItem("username") === null || window.localStorage.getI
 }
 
 async function renderCountriesPage (parent) {
-    
     const countriesCon = document.createElement("div");
     countriesCon.id = "countriesCon";
 

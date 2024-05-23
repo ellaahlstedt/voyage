@@ -8,7 +8,6 @@ function renderLoginInput(parent, type, text) {
     label.textContent = text;
     inputCon.appendChild(label);
 
-
     const input = document.createElement("input");
     input.setAttribute("type", type);
     input.id = "loginInput" + type;

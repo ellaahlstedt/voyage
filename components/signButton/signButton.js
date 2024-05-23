@@ -10,7 +10,6 @@ function renderSignButton(parent, text) {
     }
 
     parent.appendChild(button);
-
 }
 
 async function onSignIn(event) {
