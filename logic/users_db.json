@@ -26,7 +26,6 @@
         "userPassword": "hej",
         "liked": [],
         "been": []
-
     },
     {
         "userId": 5,
@@ -39,19 +38,6 @@
                 "type": "city",
                 "country_id": 34,
                 "name": "Almada"
-            },
-            {
-                "id": 23,
-                "name": "Albania",
-                "images": "..\/images\/albania.jpeg",
-                "type": "country",
-                "region_id": 4
-            },
-            {
-                "id": 4,
-                "name": "The Balkans",
-                "type": "region",
-                "regionImage": "..\/images\/thebalkans.jpeg"
             },
             {
                 "id": 41,
@@ -84,6 +70,19 @@
                 "type": "city",
                 "country_id": 19,
                 "name": "Bern"
+            },
+            {
+                "id": 23,
+                "name": "Albania",
+                "images": "..\/images\/albania.jpeg",
+                "type": "country",
+                "region_id": 4
+            },
+            {
+                "id": 4,
+                "name": "The Balkans",
+                "type": "region",
+                "regionImage": "..\/images\/thebalkans.jpeg"
             }
         ]
     },

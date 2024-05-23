@@ -62,7 +62,8 @@ async function renderListItem(parent, items, images) {
         let beenButton = document.createElement("button");
         beenButton.id = "beenButton";
         beenButton.textContent = "BEEN";
-        if (user.been.includes(item.id)) {
+        let getUserBeenId = user.been.find(been => been.id == listItem.id);
+        if (getUserBeenId) {
             beenButton.classList.add("beenClicked");
         }
         listItem.appendChild(beenButton);
@@ -99,7 +100,8 @@ async function renderListItem(parent, items, images) {
         let likeButton = document.createElement("img");
         likeButton.id = "likeButton";
 
-        if (user.liked.includes(item.id)) {
+        let getUserLikedId = user.been.find(liked => liked.id == listItem.id);
+        if (getUserLikedId) {
             likeButton.setAttribute("src", "../../fonts/icons/favouritered.png");
         } else {
             likeButton.setAttribute("src", "../../fonts/icons/favourite.png");
