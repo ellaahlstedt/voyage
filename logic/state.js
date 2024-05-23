@@ -112,20 +112,37 @@ const state_handler = {
         }
         console.log(_state)
     },
-    async postItem(field, data) {
-        //userId, field, value, token
+    async postItem(field, id, type) {
+        //userName, field, token, type, id (of object)
 
 
+        if (type == "country") {
+            type = "countries";
+        }
+        if (type == "city") {
+            type = "cities";
+        }
+
+        console.log(field);
+        console.log(id);
+        console.log(type);
         const token = localStorage.getItem("token");
         const userName = localStorage.getItem("username");
-        const body = { token: token, userName: userName, field: field, value: data };
+        const body = {
+
+            token: token,
+            userName: userName,
+            field: field,
+            type: type,
+            id: id
+        };
 
         const options = {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(body)
         };
-
+        console.log(body);
         if (field == "been") {
             await fetch_handler("../../logic/destinations.php", options);
 
