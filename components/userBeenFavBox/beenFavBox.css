@@ -27,7 +27,7 @@
     height: 450px;
     border-radius: 10px;
     justify-self: center;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .listBox h1 {
@@ -62,26 +62,32 @@
 
 .beenFavCon#beenList .listBox:nth-of-type(1) {
     background-color: #83ADF6;
+    border-bottom: 15px solid #83ADF6;
 }
 
 .beenFavCon#beenList .listBox:nth-of-type(2) {
     background-color: #B1CEFF;
+    border-bottom: 15px solid #B1CEFF;
 }
 
 .beenFavCon#beenList .listBox:nth-of-type(3) {
     background-color: #D1E2FF;
+    border-bottom: 15px solid #D1E2FF;
 }
 
 .beenFavCon#wishlistList .listBox:nth-of-type(1) {
     background-color: #FFBC85;
+    border-bottom: 15px solid #FFBC85;
 }
 
 .beenFavCon#wishlistList .listBox:nth-of-type(2) {
     background-color: #FFD1AB;
+    border-bottom: 15px solid #FFD1AB;
 }
 
 .beenFavCon#wishlistList .listBox:nth-of-type(3) {
     background-color: #FDDEC5;
+    border-bottom: 15px solid #FDDEC5;
 }
 
 .trashcan,

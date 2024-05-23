@@ -33,6 +33,7 @@ async function renderBeenFavLists(parent, title, listType, user, beenClicked = f
         const userLikedList = user.liked;
         renderBoxListItem(list, userLikedList, listType, user.userId, beenClicked);
     }
+    console.log(user.been);
 }
 
 function renderBoxListItem(parent, list, listType, userId, beenClicked = false) {
