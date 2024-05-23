@@ -77,7 +77,6 @@ function renderBoxListItem(parent, list, listType, userId, beenClicked = false) 
                 let beenList = newUser.been.filter(item => item.type === "country").length;
                 let percentage = beenList / 50 * 100;
                 document.getElementById("loadingBar").style.width = percentage + "%";
-                console.log("HOLALLALAL");
 
 
             });
