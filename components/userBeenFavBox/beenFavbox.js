@@ -105,11 +105,6 @@ function renderBoxListItem(parent, list, listType, userId, beenClicked = false) 
         if (parent.id.includes(item.type) && item.type === "region") {
             parent.appendChild(li);
             li.appendChild(listItemText);
-            if (listType === "been") {
-                li.appendChild(trashCan);
-            } else if (listType === "liked") {
-                li.appendChild(heartIcon);
-            }
         } else if (parent.id.includes(item.type) && item.type === "country") {
             parent.appendChild(li);
             li.appendChild(listItemText);

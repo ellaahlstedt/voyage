@@ -33,45 +33,82 @@
         "userPassword": "test",
         "liked": [
             {
-                "id": 23,
-                "name": "Albania",
-                "images": "..\/images\/albania.jpeg",
-                "type": "country",
-                "region_id": 4
-            },
-            {
-                "id": 4,
-                "name": "The Balkans",
+                "id": 3,
+                "name": "Western Europe",
                 "type": "region",
-                "regionImage": "..\/images\/thebalkans.jpeg"
+                "regionImage": "..\/images\/westerneurope.jpeg"
             },
             {
-                "id": 20,
-                "name": "Austria",
-                "images": "..\/images\/austria.jpeg",
+                "id": 16,
+                "name": "Belgium",
+                "images": "..\/images\/belgium.jpeg",
                 "type": "country",
                 "region_id": 3
             },
+            {
+                "id": 158,
+                "type": "city",
+                "country_id": 16,
+                "name": "Aalst"
+            },
+            {
+                "id": 2,
+                "name": "Northern Europe",
+                "type": "region",
+                "regionImage": "..\/images\/northerneurope.jpeg"
+            },
+            {
+                "id": 6,
+                "name": "Denmark",
+                "images": "..\/images\/denmark.jpeg",
+                "type": "country",
+                "region_id": 2
+            },
+            {
+                "id": 52,
+                "type": "city",
+                "country_id": 6,
+                "name": "Aarhus"
+            }
+        ],
+        "been": [
             {
                 "id": 3,
                 "name": "Western Europe",
                 "type": "region",
                 "regionImage": "..\/images\/westerneurope.jpeg"
-            }
-        ],
-        "been": [
-            {
-                "id": 23,
-                "name": "Albania",
-                "images": "..\/images\/albania.jpeg",
-                "type": "country",
-                "region_id": 4
             },
             {
-                "id": 4,
-                "name": "The Balkans",
+                "id": 16,
+                "name": "Belgium",
+                "images": "..\/images\/belgium.jpeg",
+                "type": "country",
+                "region_id": 3
+            },
+            {
+                "id": 158,
+                "type": "city",
+                "country_id": 16,
+                "name": "Aalst"
+            },
+            {
+                "id": 2,
+                "name": "Northern Europe",
                 "type": "region",
-                "regionImage": "..\/images\/thebalkans.jpeg"
+                "regionImage": "..\/images\/northerneurope.jpeg"
+            },
+            {
+                "id": 6,
+                "name": "Denmark",
+                "images": "..\/images\/denmark.jpeg",
+                "type": "country",
+                "region_id": 2
+            },
+            {
+                "id": 52,
+                "type": "city",
+                "country_id": 6,
+                "name": "Aarhus"
             }
         ]
     },
