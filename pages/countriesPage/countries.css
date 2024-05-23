@@ -7,11 +7,12 @@
     min-height: 500px;
     width: 75%;
     display: grid;
-    margin-left: 200px;
+    margin-left: 13vw;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 130px 0;
-    padding-left: 150px;
+    justify-content: center;
+    padding-left: 10vw;
 }
 
 #countriesCon > div {

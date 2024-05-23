@@ -116,7 +116,168 @@
         "userId": 6,
         "userName": "johanna2",
         "userPassword": "hej",
-        "liked": [],
+        "liked": [
+            {
+                "id": 2,
+                "name": "Wales",
+                "images": "..\/images\/wales.jpeg",
+                "type": "country",
+                "region_id": 1
+            },
+            {
+                "id": 1,
+                "name": "British Isles",
+                "type": "region",
+                "regionImage": "..\/images\/britishisles.jpeg"
+            },
+            {
+                "id": 46,
+                "name": "Ukraine",
+                "images": "..\/images\/ukraine.jpeg",
+                "type": "country",
+                "region_id": 7
+            },
+            {
+                "id": 7,
+                "name": "Eastern Europe",
+                "type": "region",
+                "regionImage": "..\/images\/easterneurope.jpeg"
+            },
+            {
+                "id": 40,
+                "name": "Vatican City",
+                "images": "..\/images\/vatican.jpeg",
+                "type": "country",
+                "region_id": 5
+            },
+            {
+                "id": 5,
+                "name": "Southern Europe",
+                "type": "region",
+                "regionImage": "..\/images\/southerneurope.jpeg"
+            },
+            {
+                "id": 3,
+                "name": "Western Europe",
+                "type": "region",
+                "regionImage": "..\/images\/westerneurope.jpeg"
+            },
+            {
+                "id": 16,
+                "name": "Belgium",
+                "images": "..\/images\/belgium.jpeg",
+                "type": "country",
+                "region_id": 3
+            },
+            {
+                "id": 158,
+                "type": "city",
+                "country_id": 16,
+                "name": "Aalst"
+            },
+            {
+                "id": 2,
+                "name": "Northern Europe",
+                "type": "region",
+                "regionImage": "..\/images\/northerneurope.jpeg"
+            },
+            {
+                "id": 10,
+                "name": "Iceland",
+                "images": "..\/images\/iceland.jpeg",
+                "type": "country",
+                "region_id": 2
+            },
+            {
+                "id": 100,
+                "type": "city",
+                "country_id": 10,
+                "name": "Akranes"
+            },
+            {
+                "id": 94,
+                "type": "city",
+                "country_id": 10,
+                "name": "Akureyri"
+            },
+            {
+                "id": 332,
+                "type": "city",
+                "country_id": 34,
+                "name": "Almada"
+            },
+            {
+                "id": 34,
+                "name": "Portugal",
+                "images": "..\/images\/portugal.jpeg",
+                "type": "country",
+                "region_id": 5
+            },
+            {
+                "id": 161,
+                "type": "city",
+                "country_id": 17,
+                "name": "Amsterdam"
+            },
+            {
+                "id": 17,
+                "name": "Netherlands",
+                "images": "..\/images\/netherlands.jpeg",
+                "type": "country",
+                "region_id": 3
+            },
+            {
+                "id": 328,
+                "type": "city",
+                "country_id": 34,
+                "name": "Amadora"
+            },
+            {
+                "id": 126,
+                "type": "city",
+                "country_id": 13,
+                "name": "Alytus"
+            },
+            {
+                "id": 13,
+                "name": "Lithuania",
+                "images": "..\/images\/lithuania.jpeg",
+                "type": "country",
+                "region_id": 2
+            },
+            {
+                "id": 168,
+                "type": "city",
+                "country_id": 17,
+                "name": "Almere"
+            },
+            {
+                "id": 355,
+                "type": "city",
+                "country_id": 37,
+                "name": "Andorra la Vella"
+            },
+            {
+                "id": 37,
+                "name": "Andorra",
+                "images": "..\/images\/andorra.jpeg",
+                "type": "country",
+                "region_id": 5
+            },
+            {
+                "id": 39,
+                "type": "city",
+                "country_id": 4,
+                "name": "Antrim"
+            },
+            {
+                "id": 4,
+                "name": "Northern Ireland",
+                "images": "..\/images\/northernireland.jpeg",
+                "type": "country",
+                "region_id": 1
+            }
+        ],
         "been": []
     }
 ]
