@@ -131,7 +131,7 @@ if ($contentType != "application/json") {
 
 //POST destination to  either liked or been //needs to find user and add value to right field // ADD REQUIRE TOKEN
 if ($requestMethods == "POST") {
-    if (!isset($requestData["userName"], $requestData["field"], $requestData["token"], $requestData["type"])) {
+    if (!isset($requestData["userName"], $requestData["field"], $requestData["token"], $requestData["type"], $requestData["id"])) {
         $error = ["error" => "Bad Request"];
         sendJSON($error, 400);
     }
@@ -264,8 +264,8 @@ function handle_city_country_deletes($objectId, $type, $user, $full_destinations
 
 
         if (count($other_cities_same_country) == 0) {
-            foreach ($user[$entity] as $index => $liked_objects) {
-                if ($liked_objects["id"] == $current_city_country and $liked_objects["type"] == "country") {
+            foreach ($user[$entity] as $index => $liked_object) {
+                if ($liked_object["id"] == $current_city_country and $liked_object["type"] == "country") {
                     array_splice($user[$entity], $index, 1);
 
                     $countries_in_same_region = array_filter($user[$entity], function ($data) use ($current_city_country) {
@@ -273,7 +273,7 @@ function handle_city_country_deletes($objectId, $type, $user, $full_destinations
                     });
 
                     if (count($countries_in_same_region) == 0) {
-                        foreach($user[$entity] as $region_index => $liked_regions) {
+                        foreach ($user[$entity] as $region_index => $liked_regions) {
                             if ($liked_regions["type"] == "region" and $liked_regions["id"] == $current_country_region["id"]) {
                                 array_splice($user[$entity], $region_index, 1);
                                 return $user;
@@ -312,13 +312,66 @@ function handle_city_country_deletes($objectId, $type, $user, $full_destinations
         }
 
         if (count($other_countries_same_region) == 0) {
-            foreach ($user[$entity] as $index => $liked_objects) {
-                if ($liked_objects["id"] == $current_country_region and $liked_objects["type"] == "region") {
+            foreach ($user[$entity] as $index => $liked_object) {
+                if ($liked_object["id"] == $current_country_region and $liked_object["type"] == "region") {
                     array_splice($user[$entity], $index, 1);
                     return $user;
                 }
             }
         }
+
+        return $user;
+    }
+
+    if ($type == "region") {
+        $current_region = $full_destinations_db["regions"][$objectId - 1];
+        $current_region_id = $current_region["id"];
+        $country_ids_to_del = [];
+
+
+        $index = 0;
+
+        while ($index < count($user[$entity])) {
+            $liked_object = $user[$entity][$index];
+            if ($liked_object["id"] == $current_region_id and $liked_object["type"] == "region") {
+                array_splice($user[$entity], $index, 1);
+                $index = 0;
+                break;
+            }
+            $index++;
+        }
+
+        $index = 0;
+
+
+        while ($index < count($user[$entity])) {
+            $liked_object = $user[$entity][$index];
+            if ($liked_object["type"] == "country" and isset($liked_object["region_id"]) and $liked_object["region_id"] == $current_region_id) {
+                $country_ids_to_del[] = $liked_object["id"];
+                array_splice($user[$entity], $index, 1);
+                $index = 0;
+                continue;
+            }
+
+            $index++;
+        }
+
+        $index = 0;
+
+        for ($i = 0; $i < count($country_ids_to_del); $i++) {
+            $country_id = $country_ids_to_del[$i];
+            while ($index < count($user[$entity])) {
+                $liked_object = $user[$entity][$index];
+                if ($liked_object["type"] == "city" and isset($liked_object["country_id"]) and $country_id == $liked_object["country_id"]) {
+                    array_splice($user[$entity], $index, 1);
+                    $index = 0;
+                    continue;
+                }
+
+                $index++;
+            }
+        }
+
 
         return $user;
     }

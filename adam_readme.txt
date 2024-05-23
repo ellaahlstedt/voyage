@@ -50,7 +50,7 @@ DELETE REQUESTS FÖR DESTINATIONS
 	userId: id för användaren,
 	userName: användarnamn_här,
 	field: "been" eller "liked",
-	token: TOKEN_HÄR,
+	token: TOKEN_HÄR,	
 	type: "region" eller "country" eller "city" !!!OBS, INGET "s" eller "ies" i slutet som i POST-requests!!!!,
 	id: id för regionen/landet/staden
 }
