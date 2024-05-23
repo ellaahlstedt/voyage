@@ -85,5 +85,12 @@
                 "name": "Bern"
             }
         ]
+    },
+    {
+        "userId": 6,
+        "userName": "johanna2",
+        "userPassword": "hej",
+        "liked": [],
+        "been": []
     }
 ]

@@ -32,6 +32,29 @@ function getDestinationsInRegionOrCountry(destinations, items, name, type) {
 
 }
 
+function getRegion (allRegions, allCountries, countryParameter) {
+    let filteredCountry = null;
+    let filteredRegion = null;
+
+    for (const country of allCountries) {
+        if (country.name == countryParameter) {
+            filteredCountry = country;
+            break;
+        }
+    }
+
+    if (filteredCountry) {
+        for (const region of allRegions) {
+            if (region.id == filteredCountry.region_id) {
+                filteredRegion = region;
+                break;
+            }
+        }
+    }
+
+    return filteredRegion;
+}
+
 function getToCountryOrCityPage(name, type) {
     let destinationPageLink;
 
